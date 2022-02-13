@@ -5,16 +5,23 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs";
 
 
 export const Section = styled.section`
-  padding-right: 300px;
-  padding-left: 300px;
+padding: 50px 300px 50px 300px;
   background: #252525;
   height: 500px;
+
+  @media screen and (max-width: 575px){
+    padding:30px 10px;
+    width: 100%;
+    height: 80vh;
+  }
 `;
 
 export const Div = styled.div`
   display: flex;
   gap: 10px 30px;
   padding-top: 50px;
+
+ 
 `;
 
 export const LDiv = styled.div`
@@ -54,6 +61,11 @@ export const H1 = styled.h1`
   font-size: 24px;
   width: 100%;
   line-height: 40px;
+
+  @media screen and (max-width: 575px){
+    font-size: 20px;
+    line-height: 30px;
+  }
 `;
 export const MiDiv = styled.div`
   display: flex;

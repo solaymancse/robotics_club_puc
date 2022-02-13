@@ -11,17 +11,22 @@ export const Nav = styled.nav `
     display: flex;
     justify-content: space-between;
     padding: 0.5rem calc((100vw-1000px) / 2);
-    transition: 0.6s;
     z-index:10;
     position: sticky;
     top: 0;
     transition: all 0.2s ease-in-out;
 
+    @media screen and (max-width: 575px){
+        width:100%;
+        padding: 0;
+        margin: 0;
+    };
+
     @media screen and (max-width: 768px) {
         margin-left: 0;
         height: 70px;
         padding: 0;
-    }
+    };
 
     @media screen and (max-width: 1024px) {
         margin-left: 0;
@@ -57,6 +62,10 @@ export const Image = styled.img`
     width: 100px;
     height: 100px;
 
+    @media screen and (max-width: 575px){
+        padding: 0;
+        margin: 0;
+    };
     @media screen and (max-width: 768px){
         height: 50px;
         width: 50px;
@@ -74,6 +83,9 @@ export const H1 = styled.h1`
     font-weight: bold;
     color:  #27363B;
   
+    @media screen and (max-width: 575px){
+       font-size: 26px;
+    };
     @media screen and (max-width: 768px) {
         font-size: 16px;
 
@@ -100,6 +112,11 @@ export const SPAN = styled.span`
 export const Bars = styled(FaBars)`
     display: none;
     color: #333;
+
+    @media screen and (max-width: 575px){
+        margin-top: 15px;
+
+    };
 
     @media screen and (max-width: 768px) {
         display: block;

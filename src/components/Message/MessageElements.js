@@ -9,7 +9,13 @@ export const Section = styled.div`
   justify-content: center;
  
   
- 
+  @media screen and (max-width: 575px){
+    margin-top: -100px;
+    margin-bottom: 40px;
+
+  };
+
+
   @media screen and (max-width: 768px) {
     height: 400px;
     width: 100%;
@@ -19,7 +25,7 @@ export const Section = styled.div`
     padding-bottom: 10px;
     background: none;
     
-  }
+  };
 `;
  
 export const Div = styled.div`
@@ -92,11 +98,15 @@ export const Intro = styled.div`
   text-align:center;
   margin-top: -300px;
 
+  @media screen and (max-width: 575px){
+    font-size: 16px;
+  };
+
   @media screen and (max-width: 768px){
     font-size: 12px;
     margin-top: -100px;
     margin-left: 150px;
    
-  }
+  };
 
 `;

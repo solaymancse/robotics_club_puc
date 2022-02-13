@@ -24,7 +24,7 @@ export const Message2 = () => {
           <hr />
           <LDiv>
           <Img src={img7} alt="" />
-          <p>
+          <p style={{color:'gray', fontSize:'14px'}}>
             Prof. Dr. Taufique Sayeed <br/>Dean, Faculty of Engineering <br/>Professor and
             Chairman<br/> Department of CSE
           </p>
@@ -41,7 +41,7 @@ export const Message2 = () => {
           <hr />
           <LDiv>
           <Img src={img9} alt="" />
-          <p>
+          <p style={{color:'gray', fontSize:'14px'}}>
             Tuton Chandra Mallick <br/>Associate Professor & Chairman <br/>Department of
             EEE
           </p>

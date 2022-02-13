@@ -6,27 +6,51 @@ export const Section = styled.section`
     padding-right: 20px;
     height: 700px;
     
+    
+    @media screen and (max-width: 575px){
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        
+    };
     @media screen and (max-width: 768px){
         width: 100%;
         height: 520px;
-    }
+    };
 
 
 `;
 
-export const Div = styled.div`
-    display: flex;
-    margin-bottom: 10px;
+export const Card = styled.div`
+      display: flex;
+      margin-bottom: 10px;
 
-    @media screen and (max-width: 768px){
+      @media screen and (max-width: 575px){
         width: 100%;
-        height: 80px;
+      
+
+  };
+
+`;
+
+// export const Div = styled.div`
+//     display: flex;
+//     margin-bottom: 10px;
+
+//     @media screen and (max-width: 575px){
+//         width: 400px;
+      
+
+//     };
+//     @media screen and (max-width: 768px){
+//         width: 100%;
+//         height: 80px;
         
-    }
+//     };
    
 
 
-`;
+// `;
 
 export const Img = styled.img`
     margin-right: 15px;

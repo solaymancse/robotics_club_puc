@@ -1,17 +1,18 @@
 import React from "react";
-import { Div, Section, Img , Links, H2, H1, LDiv, MDiv ,MiDiv, P, RDiv, Youtube, Facebook, Square, Instagram, ArrowRight } from "./FooterElements";
+import { Section, Img , Links, H2, H1, MDiv,P, RDiv, Youtube, Facebook, Square, Instagram, ArrowRight } from "./FooterElements";
 
 
 
 
 import logo from "../../images/logo.jpg";
 import { Registration } from "../Registration/Registration";
+import { Col, Row } from "react-bootstrap";
 
 export const Footer = () => {
   return (
     <Section>
-      <Div>
-        <LDiv>
+      <Row>
+        <Col>
             <MDiv>
                 <Img src={logo} />
                 <H1>
@@ -34,28 +35,24 @@ export const Footer = () => {
           </div>
           
          
-        </LDiv>
-        <MiDiv>
+        </Col>
+        <Col>
           <H2>Quick Links</H2>
           <hr style={{color:"#fff", width:"70px"}}/>
             <hr style={{color:"#fff", width:"140px",marginTop:"-10px"}}/>
-          
-          <Links to={Registration}><ArrowRight />Apply For Membership</Links>
-         
-          <Links to="/"> <ArrowRight />How to apply</Links>
-     
-          <Links to="/"> <ArrowRight />Rules and Regulations</Links>
-  
-          <Links to="/"> <ArrowRight />Events Details</Links>
-          <Links to="/"> <ArrowRight /> Blog</Links>
-          
-          <Links to="/"> <ArrowRight />Gallary</Links>
-         
-          <Links to="/"> <ArrowRight />Premier University Chittagong</Links>
-          <Links to="/"> <ArrowRight />UGC, Bangladesh </Links>
-          <Links to="/"> <ArrowRight />Minister of Education, Bangladesh</Links>
-        </MiDiv>
-        <div>
+          <Row  xs={1} md={2}>
+            <Col><Links to={Registration}><ArrowRight />Apply For Membership</Links></Col>
+            <Col><Links to="/"> <ArrowRight />How to apply</Links></Col>
+            <Col><Links to="/"> <ArrowRight />Rules and Regulations</Links></Col>
+            <Col><Links to="/"> <ArrowRight />Events Details</Links></Col>
+            <Col><Links to="/"> <ArrowRight /> Blog</Links></Col>
+            <Col><Links to="/"> <ArrowRight />Gallary</Links></Col>
+            <Col><Links to="/"> <ArrowRight />Premier University Chittagong</Links></Col>
+            <Col><Links to="/"> <ArrowRight />UGC, Bangladesh </Links></Col>
+            <Col><Links to="/"> <ArrowRight />Minister of Education, Bangladesh</Links></Col>
+          </Row> 
+        </Col>
+        <Col>
           <H2>Contact Us</H2>
           <hr style={{color:"#fff", width:"70px"}}/>
             <hr style={{color:"#fff", width:"140px",marginTop:"-10px"}}/>
@@ -66,8 +63,8 @@ export const Footer = () => {
               <a href="/"><Square/></a>
              <a href="/"> <Instagram/></a>
           </RDiv>
-        </div>
-      </Div>
+        </Col>
+      </Row>
     </Section>
   );
 };

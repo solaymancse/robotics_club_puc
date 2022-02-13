@@ -10,11 +10,17 @@ export const FlexBox = styled.div`
 
 export const Div = styled.div`
   width: 525px;
+
+  @media screen and (max-width: 575px){
+    width: 100%;
+  };
   
 `;
 export const Img = styled.img`
   width: 520px;
   height: 300px;
+
+ 
 `;
 
 export const H3 = styled.h3`

@@ -3,14 +3,18 @@ import styled from 'styled-components'
 export const Section = styled.div`
     border-top: 1px solid lightgray;
     padding: 20px 150px 30px 150px;
-    
 
+    @media screen and (max-width: 575px){
+     width: 100%;
+     padding: 10px;
+    }
 
 `;
 
 export const Div = styled.div`
     margin-top: 30px;
-    
+
+
 
 `;
 
