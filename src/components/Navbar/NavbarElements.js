@@ -23,6 +23,12 @@ export const Nav = styled.nav `
         padding: 0;
     }
 
+    @media screen and (max-width: 1024px) {
+        margin-left: 0;
+        height: 100px;
+        padding: 10px 20px;
+    }
+
 `;
 
 export const NavLink = styled(Link)`
@@ -52,10 +58,15 @@ export const Image = styled.img`
     height: 100px;
 
     @media screen and (max-width: 768px){
-        height: 70px;
-        width: 70px;
+        height: 50px;
+        width: 50px;
+        margin-left: 20px;
     }
 
+    @media screen and (max-width: 1024px) {
+        width: 80px;
+        height: 80px;
+    }
 `;
 
 export const H1 = styled.h1`
@@ -66,15 +77,24 @@ export const H1 = styled.h1`
     @media screen and (max-width: 768px) {
         font-size: 16px;
 
-    }
+    };
+
+    @media screen and (max-width: 1024px) {
+        font-size: 24px;
+    };
 
 `;
 export const SPAN = styled.span`
     letter-spacing: 5.2px;
 
     @media screen and (max-width: 768px){
-        letter-spacing: 2.5px;
-    }
+        letter-spacing: 2px;
+    };
+
+    @media screen and (max-width: 1024px) {
+        letter-spacing: 3.5px;
+    };
+    
 `;
 
 export const Bars = styled(FaBars)`
@@ -133,4 +153,8 @@ export const NavBtnLink = styled(Link)`
 export const Div = styled.div`
     display: flex;
     align-items: center;
+   
+   @media screen and (max-width: 768px){
+    margin-top: 10px;
+   }
 `;

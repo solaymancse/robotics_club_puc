@@ -1,10 +1,10 @@
 import React from 'react';
 import img11 from '../../images/image11.jpg'
-import { Div, Img ,Rdiv} from './LatestEventsElements';
+import { Div, Img ,Rdiv, H1} from './LatestEventsElements';
 
 export const LatestEvent = () => {
   return <div>
-      <h1>Latest Events</h1>
+      <H1>Latest Events</H1>
       <hr/>
       <Div>
           <Img src={img11} height={100} width={100} alt=""/>

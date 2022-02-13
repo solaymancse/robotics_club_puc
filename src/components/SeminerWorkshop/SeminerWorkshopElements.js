@@ -4,13 +4,13 @@ export const FlexBox = styled.div`
   display: flex;
   flex-wrap: wrap;
   width:100%;
-  gap: 10px 13px;
+  gap: 10px;
   
 `;
 
 export const Div = styled.div`
   width: 525px;
-  flex: 1 1 auto;
+  
 `;
 export const Img = styled.img`
   width: 520px;

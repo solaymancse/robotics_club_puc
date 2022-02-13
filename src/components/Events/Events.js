@@ -1,12 +1,16 @@
 import React from 'react';
 import { LatestEvent } from '../LatestEvent/LatestEvent';
 import { UpComingEvents } from '../UpComingEvents/UpComingEvents';
-import { Div } from './EventsElements';
+import { Div , LeftDiv } from './EventsElements';
+
 
 
 export const Events = () => {
+
   return <Div>
-      <UpComingEvents/>
+     <LeftDiv>
+     <UpComingEvents/>
+     </LeftDiv>
       <LatestEvent/>
   </Div>;
 };

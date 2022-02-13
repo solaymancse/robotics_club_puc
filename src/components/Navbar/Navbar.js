@@ -1,10 +1,14 @@
 import React, { useState } from "react"
 import logo  from '../../images/logo.jpg'
-import { NavDropdown } from "react-bootstrap";
+import { NavDropdown, Offcanvas } from "react-bootstrap";
 import { Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink, Image, H1, SPAN, Div} from './NavbarElements'
 import { Registration } from "../Registration/Registration";
 
 export const Navbar = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   
   const [modalShow, setModalShow] = useState(false);
 
@@ -17,7 +21,15 @@ export const Navbar = () => {
           <Image src={logo} alt=""/> 
           <H1>Premier University <br/> <SPAN>Robotics Club</SPAN></H1>
           </Div>    
-        <Bars />
+        <Bars onClick={handleShow}/>
+        <Offcanvas show={show} onHide={handleClose}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title></Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+         This is Mobile Nav
+        </Offcanvas.Body>
+      </Offcanvas>
         <NavMenu>
           <NavLink to="/home" activeStyle>
             Home

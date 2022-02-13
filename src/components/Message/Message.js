@@ -15,7 +15,12 @@ export const Message = () => {
         <Div data-aos="fade-up">
           <LeftSection>
             <Img src={img6} alt="vc_sir" />
-            
+            <Intro>
+              Prof. Dr. Anupam Sen
+              <br />
+              Honorable Vice Chancellor<br/>
+              Premier University of Chittagong
+            </Intro>
           </LeftSection>
           <P>
             <FaQuoteLeft />
@@ -28,12 +33,7 @@ export const Message = () => {
             <br />
             <br/>
             <hr/>
-            <Intro>
-              Prof. Dr. Anupam Sen
-              <br />
-              Honorable Vice Chancellor<br/>
-              Premier University of Chittagong
-            </Intro>
+           
           </P>
         </Div>
       </Section>

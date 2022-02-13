@@ -19,3 +19,12 @@ export const Rdiv = styled.div`
 
 
 `;
+
+export const H1 = styled.h1`
+    font-size: 20px;
+
+    @media screen and (max-width: 768px){
+        font-size: 18px;
+    }
+
+`;

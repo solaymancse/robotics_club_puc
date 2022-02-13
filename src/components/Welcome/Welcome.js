@@ -14,7 +14,7 @@ export const Welcome = () => {
       <Div>
         <img src={logo} height={100} width={100} alt="logo" />
         <P data-aos="fade-in">
-          Welcome to
+          Welcome To
           <br />
           <Span> PUC ROBOTICS CLUB</Span>
         </P>

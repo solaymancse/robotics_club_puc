@@ -1,11 +1,8 @@
 import styled from 'styled-components'
 
 export const Section = styled.div`
-    border-top: 1px solid #333;
-    padding-left: 150px;
-    padding-right: 150px;
-    padding-top: 20px;
-    padding-bottom: 30px;
+    border-top: 1px solid lightgray;
+    padding: 20px 150px 30px 150px;
     
 
 

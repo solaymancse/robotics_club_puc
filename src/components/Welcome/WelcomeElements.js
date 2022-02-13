@@ -44,7 +44,7 @@ export const Intro = styled.div`
   @media screen and (max-width: 768px) {
     font-size: 12px;
     text-align: justify;
-    margin-top: -20px;
+    margin-top: -50px;
     height: 400px;
   }
 `;

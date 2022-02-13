@@ -4,7 +4,6 @@ export const Section = styled.section`
   height: 450px;
   padding: 30px 150px 30px 150px;
   display: flex;
-  background: #F2FBF9;
   text-align: center;
   justify-content: space-around;
  

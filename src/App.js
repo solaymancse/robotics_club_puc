@@ -1,12 +1,13 @@
 import './App.css';
-import MainComponents from './MainComponents';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router } from 'react-router-dom'
+import { PreLoader } from './components/PreLoader/PreLoader';
 
 function App() {
   return (
     <Router>
-       <MainComponents/>
+      <PreLoader/>
+      
     </Router>
   );
 }
