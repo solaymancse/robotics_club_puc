@@ -4,32 +4,21 @@ export const Section = styled.div`
   height: 700px;
   padding: 30px 150px 30px 150px;
   display: flex;
- 
+
   text-align: center;
   justify-content: center;
- 
-  
-  @media screen and (max-width: 575px){
-    margin-top: -100px;
-    margin-bottom: 40px;
 
-  };
-
-
-  @media screen and (max-width: 768px) {
-    height: 400px;
+  @media screen and (max-width: 575px) {
+    margin-bottom: 10px;
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background: none;
-    
-  };
+    height: 530px;
+    padding: 10px;
+    display: block;
+  } ;
 `;
- 
+
 export const Div = styled.div`
- box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   height: 650px;
   width: 100%;
   padding: 40px;
@@ -38,75 +27,55 @@ export const Div = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width: 768px){
-    height: 400px;
+  @media screen and (max-width: 575px) {
+    height: 500px;
     width: 100%;
     padding: 20px;
     flex-direction: column;
   }
-
 `;
-export const LeftSection = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  @media screen and (max-width: 768px){
-    width: 100%;
-    height: 200px;
-    padding-bottom: 30px;
-  }
-
-`;
-
 
 export const Img = styled.img`
   height: 590px;
   width: 613px;
-  
+
   margin-right: 60px;
-  
 
-
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 575px) {
     height: 150px;
     width: 150px;
-    border-radius: 50%;
-    margin-right: 20px;
-  }
-  
 
+    margin: auto;
+  }
 `;
 
 export const P = styled.p`
   text-align: justify;
   color: grey;
   font-size: 24px;
-  
-  
-  @media screen and (max-width: 768px){
+
+  @media screen and (max-width: 575px) {
     font-size: 12px;
-
+    margin-top: 20px;
   }
-  
-  
-
 `;
 
-export const Intro = styled.div`
-  font-size:22px;
-  color:#333;
-  text-align:center;
-  margin-top: -300px;
+export const H1 = styled.div`
+  font-size: 22px;
+  color: #333;
 
-  @media screen and (max-width: 575px){
+  @media screen and (max-width: 575px) {
     font-size: 16px;
-  };
+    margin-top: 10px;
+    margin-left: auto;
+  }
+`;
+export const Title = styled.div`
+  font-size: 16px;
+  font-weight: 600;
 
-  @media screen and (max-width: 768px){
-    font-size: 12px;
-    margin-top: -100px;
-    margin-left: 150px;
-   
-  };
-
+  @media screen and (max-width: 575px) {
+    font-size: 16px;
+    padding-bottom: 30px;
+  }
 `;

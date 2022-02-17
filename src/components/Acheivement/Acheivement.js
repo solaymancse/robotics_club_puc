@@ -1,6 +1,7 @@
 import React from 'react';
-import { Section ,Img , Div, H1} from './AcheivementElements';
+import { Section ,Img , Div} from './AcheivementElements';
 import img17 from '../../images/image17.jpg'
+import { H1 } from '../UpComingEvents/UpComingEventsElements';
 
 export const Acheivement = () => {
   return <Section>

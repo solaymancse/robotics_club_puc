@@ -24,6 +24,10 @@ export const Img = styled.img`
     margin-right: 15px;
     margin-bottom: 10px;
 
+    @media screen and (max-width: 575px){
+        width: 100%;
+    }
+
 
 `;
 

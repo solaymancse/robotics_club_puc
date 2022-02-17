@@ -1,8 +1,9 @@
 import React from "react";
-import { H1, Section } from "../Acheivement/AcheivementElements";
+import { Section } from "../Acheivement/AcheivementElements";
 import { FlexBox } from "./SeminerWorkshopElements";
 import Data from "../../SeminerWorkshopData";
 import { SeminerWorkshopCard } from "./SeminerWorkshopCard";
+import { H1 } from "../UpComingEvents/UpComingEventsElements";
 
 export const SeminerWorkshop = () => {
   return (

@@ -7,19 +7,12 @@ export const Div = styled.div`
     padding: 30px ;
     display: flex;
 
-    @media screen and (max-width: 768px){
-        display: flex;
+    @media screen and (max-width: 575px){
         flex-direction: column;
         width: 100%;
-        padding: 15px;
-        margin: 20px 0;
+        margin: 30px 0px;
+        padding: 0px 0px 0px 10px;
+    
     }
-
-`;
-
-export const LeftDiv = styled.div`
-    width: 60%;
-    border-right: 1px solid lightgray;
-    margin-right: 20px;
 
 `;

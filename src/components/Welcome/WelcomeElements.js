@@ -8,14 +8,11 @@ export const Div = styled.div`
   text-align: center;
 
   @media screen and (max-width: 575px) {
-    height: 200px;
-    width: 100%;
-
-  };
-  @media screen and (max-width: 768px) {
     height: 700px;
-    padding: 10px;
-  }
+    width: 100%;
+    padding: 0;
+    display: block;
+  } ;
 `;
 
 export const Span = styled.span`
@@ -46,14 +43,11 @@ export const Intro = styled.div`
   text-align: justify;
   width: 100%;
 
-  @media screen and (max-width: 575px){
-    padding:0px 10px 0px 20px;
+  @media screen and (max-width: 575px) {
+    padding: 0px 10px;
+    font-size: 12px;
+    margin-top: -40px;
   }
 
-  @media screen and (max-width: 768px) {
-    font-size: 12px;
-    text-align: justify;
-    margin-top: -50px;
-    height: 400px;
-  }
+  
 `;
