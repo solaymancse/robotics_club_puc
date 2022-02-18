@@ -19,7 +19,7 @@ export const Span = styled.span`
   font-size: 48px;
   letter-spacing: 3px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 575px) {
     font-size: 20px;
   }
 `;
@@ -31,7 +31,7 @@ export const P = styled.p`
 
   color: #333;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 575px) {
     font-size: 16px;
     height: 100px;
   }

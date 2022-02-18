@@ -4,16 +4,16 @@ export const Section = styled.div`
   height: 700px;
   padding: 30px 150px 30px 150px;
   display: flex;
-
+  background: red;
   text-align: center;
   justify-content: center;
 
   @media screen and (max-width: 575px) {
     margin-bottom: 10px;
     width: 100%;
-    height: 530px;
+    height: 520px;
     padding: 10px;
-    display: block;
+    
   } ;
 `;
 
@@ -32,6 +32,7 @@ export const Div = styled.div`
     width: 100%;
     padding: 20px;
     flex-direction: column;
+    display: block;
   }
 `;
 

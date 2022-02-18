@@ -19,10 +19,12 @@ export const Nav = styled.nav`
 
   @media screen and (max-width: 575px) {
     width: 100%;
-    padding: 0;
+    padding: 0 20px;
     margin: 0;
-    height: 90px;
-  } ;
+    height: 70px;
+    
+
+  };
 `;
 
 export const NavLink = styled(Link)`
@@ -50,8 +52,8 @@ export const Image = styled.img`
   height: 100px;
 
   @media screen and (max-width: 575px) {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
   } ;
 `;
 
@@ -61,19 +63,17 @@ export const H1 = styled.h1`
   color: #27363b;
 
   @media screen and (max-width: 575px) {
-    font-size: 20px;
+    font-size: 16px;
   } ;
 `;
 export const SPAN = styled.span`
   letter-spacing: 5.2px;
 
-  @media screen and (max-width: 768px) {
-    letter-spacing: 2px;
+  @media screen and (max-width: 575px) {
+    letter-spacing: 2.5px;
   }
 
-  @media screen and (max-width: 1024px) {
-    letter-spacing: 3.5px;
-  } ;
+  
 `;
 
 export const Bars = styled(FaBars)`
@@ -81,19 +81,13 @@ export const Bars = styled(FaBars)`
   color: #333;
 
   @media screen and (max-width: 575px) {
-    margin-top: 13px;
-  }
-
-  @media screen and (max-width: 768px) {
+   margin: auto 20px;
+    font-size: 18px;
     display: block;
-    position: absolute;
+    
+  };
 
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 75%);
-    font-size: 1.8rem;
-    cursor: pointer;
-  }
+ 
 `;
 
 export const NavMenu = styled.div`
@@ -101,7 +95,7 @@ export const NavMenu = styled.div`
   align-items: center;
   margin-right: -24px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 575px) {
     display: none;
   }
 `;
@@ -111,7 +105,7 @@ export const NavBtn = styled.nav`
   align-items: center;
   margin-right: 24px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 575px) {
     display: none;
   }
 `;
@@ -136,7 +130,7 @@ export const Div = styled.div`
   display: flex;
   align-items: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 575px) {
     margin-top: 10px;
   }
 `;
