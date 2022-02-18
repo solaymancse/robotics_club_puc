@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/robotics_club_puc/static/css/main.55f6c40b.css",
-    "main.js": "/robotics_club_puc/static/js/main.c1e002d5.js",
+    "main.css": "/robotics_club_puc/static/css/main.5be61378.css",
+    "main.js": "/robotics_club_puc/static/js/main.f5193a49.js",
     "static/js/787.938475ba.chunk.js": "/robotics_club_puc/static/js/787.938475ba.chunk.js",
     "static/media/image23.jpg": "/robotics_club_puc/static/media/image23.a4ea08487daa2a26f1f1.jpg",
     "static/media/image5.jpg": "/robotics_club_puc/static/media/image5.280fbc18a63aeb33ee6a.jpg",
@@ -29,12 +29,12 @@
     "static/media/image25.jpg": "/robotics_club_puc/static/media/image25.ddbc480e2cd4f6cc0e02.jpg",
     "static/media/image27.jpg": "/robotics_club_puc/static/media/image27.cf460b0ecbf658894539.jpg",
     "index.html": "/robotics_club_puc/index.html",
-    "main.55f6c40b.css.map": "/robotics_club_puc/static/css/main.55f6c40b.css.map",
-    "main.c1e002d5.js.map": "/robotics_club_puc/static/js/main.c1e002d5.js.map",
+    "main.5be61378.css.map": "/robotics_club_puc/static/css/main.5be61378.css.map",
+    "main.f5193a49.js.map": "/robotics_club_puc/static/js/main.f5193a49.js.map",
     "787.938475ba.chunk.js.map": "/robotics_club_puc/static/js/787.938475ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.55f6c40b.css",
-    "static/js/main.c1e002d5.js"
+    "static/css/main.5be61378.css",
+    "static/js/main.f5193a49.js"
   ]
 }
