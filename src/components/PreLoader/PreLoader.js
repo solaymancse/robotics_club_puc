@@ -1,6 +1,7 @@
 import React,{ useState, useEffect } from 'react'
+import { HomePage } from '../../pages/HomePage';
 import './PreLoader.css'
-import MainComponents from './../../MainComponents';
+
 
 
 
@@ -21,7 +22,7 @@ export const PreLoader = () => {
             !done ? ( <Spinner className="loading" name="ball-scale-multiple" color="red"/>
 
             ) : (
-                <MainComponents/>
+                <HomePage/>
             )}
         
     </div>

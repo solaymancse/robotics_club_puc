@@ -10,3 +10,17 @@
     
 }
 
+body{
+ 
+    color: #707070;
+    font-size: .875rem;
+    font-family: "Inter",sans-serif;
+    font-weight: 400;
+    letter-spacing: .25px;
+    line-height: 1.7142857143;
+    margin: 0;
+    overflow-x: hidden;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+
+}
