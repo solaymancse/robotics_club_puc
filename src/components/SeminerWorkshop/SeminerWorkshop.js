@@ -3,7 +3,8 @@ import { Section } from "../Acheivement/AcheivementElements";
 import { FlexBox } from "./SeminerWorkshopElements";
 import Data from "../../SeminerWorkshopData";
 import { SeminerWorkshopCard } from "./SeminerWorkshopCard";
-import { H1 } from "../UpComingEvents/UpComingEventsElements";
+import { H1 } from "../ExeCommittee/ExeCommitteeElements";
+
 
 export const SeminerWorkshop = () => {
   return (

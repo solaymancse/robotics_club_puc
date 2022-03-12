@@ -1,18 +1,11 @@
 import styled from "styled-components";
 
 export const Div = styled.div`
-  padding-left: 150px;
-  padding-right: 150px;
   width: 100%;
-  height: 700px;
+  height: 100%;
   text-align: center;
 
-  @media screen and (max-width: 575px) {
-    height: 700px;
-    width: 100%;
-    padding: 0;
-    display: block;
-  } ;
+
 `;
 
 export const Span = styled.span`
@@ -48,6 +41,4 @@ export const Intro = styled.div`
     font-size: 12px;
     margin-top: -40px;
   }
-
-  
 `;

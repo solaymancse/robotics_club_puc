@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
-import { Div, Img, P, Section } from "./Message2Elements";
+import { Div, Img, P, Section,H1 } from "./Message2Elements";
 import img7 from "../../images/image7.jpg";
 import img9 from "../../images/image9.jpg";
-import { H1, Title } from "../Message/MessageElements";
+import { Title } from "../Message/MessageElements";
 
 export const Message2 = () => {
   useEffect(() => {
@@ -15,7 +15,7 @@ export const Message2 = () => {
     <>
       <Section>
         <Div data-aos="fade-right">
-          <Title>Message From Honorable Dean of Engineering Faculty</Title>
+          <Title size="16px">Message From Honorable Dean of Engineering Faculty</Title>
           <div className="row">
             <div className="col-12">
               <Img src={img7} alt="" />

@@ -6,9 +6,7 @@ import { Div } from "./EventsElements";
 export const Events = () => {
   return (
     <Div>
-   
-        <UpComingEvents />
-   
+      <UpComingEvents />
       <LatestEvent />
     </Div>
   );

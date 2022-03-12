@@ -1,5 +1,5 @@
 import React from "react";
-import { Div, Img, P, H1,Container } from "./ExeCommitteeElements";
+import { Div, Img, P, H1,Content } from "./ExeCommitteeElements";
 import img8 from "../../images/image8.jpg";
 import img9 from "../../images/image9.jpg";
 import img10 from "../../images/image10.jpg";
@@ -14,15 +14,17 @@ import img25 from "../../images/image25.jpg";
 import img26 from "../../images/image26.jpg";
 import img27 from "../../images/image27.jpg";
 import img28 from "../../images/image28.jpg";
+import { Container } from "react-bootstrap";
 
 export const ExeCommittee = () => {
   return (
     <Div>
+      <Container>
       <H1>Executive Board</H1>
 
-      <Container>
+      <Content>
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-md-6 mb-5">
             <div className="row">
               <div className="col-12">
                 <Img src={img9} />
@@ -38,7 +40,7 @@ export const ExeCommittee = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6 mb-5">
             <div className="row">
               <div className="col-12">
                 <Img src={img10} />
@@ -58,7 +60,7 @@ export const ExeCommittee = () => {
 
         
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-md-6 mb-5">
             <div className="row">
               <div className="col-12">
                 <Img src={img9} />
@@ -74,7 +76,7 @@ export const ExeCommittee = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6 mb-5">
             <div className="row">
               <div className="col-12">
                 <Img src={img10} />
@@ -94,7 +96,7 @@ export const ExeCommittee = () => {
 
 
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-md-6 mb-5">
             <div className="row">
               <div className="col-12">
                 <Img src={img9} />
@@ -110,7 +112,7 @@ export const ExeCommittee = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6 mb-5">
             <div className="row">
               <div className="col-12">
                 <Img src={img10} />
@@ -129,7 +131,7 @@ export const ExeCommittee = () => {
         </div>
 
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-4 mb-5">
             <div className="row">
               <div className="col-12">
                 <Img src={img9} />
@@ -145,7 +147,7 @@ export const ExeCommittee = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 mb-5">
             <div className="row">
               <div className="col-12">
                 <Img src={img10} />
@@ -161,7 +163,7 @@ export const ExeCommittee = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 mb-5">
             <div className="row">
               <div className="col-12">
                 <Img src={img10} />
@@ -180,7 +182,7 @@ export const ExeCommittee = () => {
         </div>
 
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-4 mb-5">
             <div className="row">
               <div className="col-12">
                 <Img src={img9} />
@@ -196,7 +198,7 @@ export const ExeCommittee = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 mb-5">
             <div className="row">
               <div className="col-12">
                 <Img src={img10} />
@@ -212,7 +214,7 @@ export const ExeCommittee = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 mb-5">
             <div className="row">
               <div className="col-12">
                 <Img src={img10} />
@@ -231,7 +233,7 @@ export const ExeCommittee = () => {
         </div>
 
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-4 mb-5">
             <div className="row">
               <div className="col-12">
                 <Img src={img9} />
@@ -247,7 +249,7 @@ export const ExeCommittee = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 mb-5">
             <div className="row">
               <div className="col-12">
                 <Img src={img10} />
@@ -263,7 +265,7 @@ export const ExeCommittee = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 mb-5">
             <div className="row">
               <div className="col-12">
                 <Img src={img10} />
@@ -280,6 +282,7 @@ export const ExeCommittee = () => {
             </div>
           </div>
         </div>
+      </Content>
       </Container>
     </Div>
   );

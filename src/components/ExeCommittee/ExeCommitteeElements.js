@@ -1,10 +1,7 @@
 import styled from "styled-components";
 
 export const Div = styled.div`
-  padding-left: 150px;
-  padding-right: 150px;
   margin-top: 30px;
-
   @media screen and (max-width: 575px){
     margin-top: 50px;
     padding: 0;
@@ -43,16 +40,16 @@ export const H1 = styled.h1`
   font-family: "Dosis", sans-serif;
   width: 100%;
   background: #242c42;
+  color: #fff;
+  padding: 10px;
 
   @media screen and (max-width: 575px) {
     margin-bottom: 50px;
-    
-    color: #fff;
     font-weight: 600;
     padding: 10px;
   }
 `;
-export const Container = styled.div`
+export const Content = styled.div`
   margin: 30px 300px;
   text-align: center;
 

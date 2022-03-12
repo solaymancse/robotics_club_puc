@@ -6,6 +6,9 @@ import {
   H1,
   P,
   Title,
+  Top,
+  Mid,
+  Foot
 } from "../Message/MessageElements";
 import img6 from "../../images/image6.jpg";
 import Aos from "aos";
@@ -20,23 +23,17 @@ export const Message = () => {
     <>
       <Section>
         <Div data-aos="fade-up">
-          <Title>Message From Honorable Vice Chancellor</Title>
-          <div className="row">
-            <div className="col-12">
+          <Top>
+          <Title ize="24px">Message From Honorable Vice Chancellor</Title>
+          </Top>
+          <Mid >
+            <div>
               <Img src={img6} alt="vc_sir" />
             </div>
-            <div className="col-12">
-              <H1>
-                Prof. Dr. Anupam Sen
-                <br />
-                Honorable Vice Chancellor
-                <br />
-                Premier University of Chittagong
-              </H1>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col">
+          
+          </Mid>
+          <div >
+            <div>
               <P>
                 <FaQuoteLeft />
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -48,6 +45,15 @@ export const Message = () => {
                 printing and typesetting industry... <FaQuoteRight />
               </P>
             </div>
+            <Foot>
+              <H1>
+                Prof. Dr. Anupam Sen
+                <br />
+                Honorable Vice Chancellor
+                <br />
+                Premier University of Chittagong
+              </H1>
+            </Foot>
           </div>
         </Div>
       </Section>

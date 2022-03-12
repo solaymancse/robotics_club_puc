@@ -2,23 +2,21 @@ import styled from "styled-components";
 
 export const Section = styled.section`
   height: 450px;
-  padding: 30px 150px 30px 150px;
   display: flex;
   text-align: center;
   justify-content: space-around;
+  width: 100%;
 
-  @media screen and (max-width: 575px) {
+  @media (min-width: 320px) and (max-width: 480px) {
     height: 1000px;
-    width: 100%;
     margin: 0;
-    padding: 0px 10px;
-    justify-content: space-around;
+  
     flex-direction: column;
   }
 `;
 export const Div = styled.div`
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  height: 350px;
+  height: 400px;
   width: 450px;
   padding: 20px;
   border-radius: 5px;
@@ -41,6 +39,10 @@ export const Img = styled.img`
   } ;
 `;
 
+export const H1 = styled.h1`
+font-size: 16px;
+
+`;
 export const P = styled.p`
   color: grey;
   text-align: justify;
@@ -50,4 +52,3 @@ export const P = styled.p`
     margin-top: 20px;
   }
 `;
-
