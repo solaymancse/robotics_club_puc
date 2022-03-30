@@ -11,13 +11,13 @@ export const Section = styled.div`
   @media (min-width: 320px) and (max-width: 480px) {
     margin: 50px 0px 10px 0px;
    
-    height: 570px;
+    height: 730px;
    
   } ;
 `;
 
 export const Div = styled.div`
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   height: 800px;
   width: 100%;
   padding: 40px;
@@ -29,9 +29,10 @@ export const Div = styled.div`
   justify-content: space-between;
 
   @media (min-width: 320px) and (max-width: 480px) {
-    height: 540px;
+    height: 700px;
     width: 100%;
     padding: 20px;
+    display: flex;
     flex-direction: column;
     
   }
@@ -65,7 +66,7 @@ export const Img = styled.img`
 export const P = styled.p`
   text-align: justify;
   color: grey;
-  font-size: 24px;
+  font-size: 22px;
 
   @media screen and (max-width: 575px) {
     font-size: 12px;
@@ -91,4 +92,10 @@ export const Title = styled.div`
     font-size: 16px;
     padding-bottom: 30px;
   }
+`;
+export const Right = styled.div`
+
+  display: flex;
+  flex-direction: column;
+  
 `;

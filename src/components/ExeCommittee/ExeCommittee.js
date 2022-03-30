@@ -1,12 +1,12 @@
 import React from "react";
 import { Div, Img, P, H1,Content } from "./ExeCommitteeElements";
-import img8 from "../../images/image8.jpg";
+// import img8 from "../../images/image8.jpg";
 import img9 from "../../images/image9.jpg";
 import img10 from "../../images/image10.jpg";
 import img20 from "../../images/image20.jpg";
 import img18 from "../../images/image18.jpg";
-import img19 from "../../images/image19.png";
-import img21 from "../../images/image21.jpg";
+// import img19 from "../../images/image19.png";
+// import img21 from "../../images/image21.jpg";
 import img22 from "../../images/image22.jpg";
 import img23 from "../../images/image23.jpg";
 import img24 from "../../images/image24.jpg";
@@ -67,11 +67,11 @@ export const ExeCommittee = () => {
               </div>
               <div className="col-12">
                 <P>
-                  Tuton Chandra Mallick
+                  Rahul Chowdhury
                   <br />
-                  Chief Advisor
+                  Chief Mentor
                   <br />
-                  Associate Professor, Department of EEE
+                  Lecturer, Department of EEE
                 </P>
               </div>
             </div>
@@ -83,11 +83,11 @@ export const ExeCommittee = () => {
               </div>
               <div className="col-12">
                 <P>
-                  Mohammed Saifuddin Munna
+                  Sumen Dutta
                   <br />
-                  Advisor
+                  Mentor
                   <br />
-                  Assistant Professor, Department of EEE
+                  Lecturer, Department of EEE
                 </P>
               </div>
             </div>
@@ -99,15 +99,14 @@ export const ExeCommittee = () => {
           <div className="col-md-6 mb-5">
             <div className="row">
               <div className="col-12">
-                <Img src={img9} />
+                <Img src={img28} />
               </div>
               <div className="col-12">
                 <P>
-                  Tuton Chandra Mallick
+                  Utchash Dev Nath
                   <br />
-                  Chief Advisor
-                  <br />
-                  Associate Professor, Department of EEE
+                  President
+                
                 </P>
               </div>
             </div>
@@ -115,15 +114,14 @@ export const ExeCommittee = () => {
           <div className="col-md-6 mb-5">
             <div className="row">
               <div className="col-12">
-                <Img src={img10} />
+                <Img src={img20} />
               </div>
               <div className="col-12">
                 <P>
-                  Mohammed Saifuddin Munna
+                 Rakibul Hasan
                   <br />
-                  Advisor
-                  <br />
-                  Assistant Professor, Department of EEE
+                  General Secretary
+                  
                 </P>
               </div>
             </div>
@@ -134,15 +132,29 @@ export const ExeCommittee = () => {
           <div className="col-md-4 mb-5">
             <div className="row">
               <div className="col-12">
-                <Img src={img9} />
+                <Img src={img22} />
               </div>
               <div className="col-12">
                 <P>
-                  Tuton Chandra Mallick
+                  Joydip Biswas
                   <br />
-                  Chief Advisor
+                  Vice President
+                  
+                </P>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4 mb-5">
+            <div className="row">
+              <div className="col-12">
+                <Img src={img23} />
+              </div>
+              <div className="col-12">
+                <P>
+                  Abdullah Fahim
                   <br />
-                  Associate Professor, Department of EEE
+                  Joint Secretary
+                 
                 </P>
               </div>
             </div>
@@ -154,27 +166,10 @@ export const ExeCommittee = () => {
               </div>
               <div className="col-12">
                 <P>
-                  Mohammed Saifuddin Munna
+                  Monjur Alam
                   <br />
-                  Advisor
-                  <br />
-                  Assistant Professor, Department of EEE
-                </P>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4 mb-5">
-            <div className="row">
-              <div className="col-12">
-                <Img src={img10} />
-              </div>
-              <div className="col-12">
-                <P>
-                  Mohammed Saifuddin Munna
-                  <br />
-                  Advisor
-                  <br />
-                  Assistant Professor, Department of EEE
+                  Organizing Secretary
+                 
                 </P>
               </div>
             </div>
@@ -185,15 +180,14 @@ export const ExeCommittee = () => {
           <div className="col-md-4 mb-5">
             <div className="row">
               <div className="col-12">
-                <Img src={img9} />
+                <Img src={img24} />
               </div>
               <div className="col-12">
                 <P>
-                  Tuton Chandra Mallick
+                  Bijoy Kumar Shushil
                   <br />
-                  Chief Advisor
-                  <br />
-                  Associate Professor, Department of EEE
+                  Finance Secretary
+                  
                 </P>
               </div>
             </div>
@@ -201,15 +195,14 @@ export const ExeCommittee = () => {
           <div className="col-md-4 mb-5">
             <div className="row">
               <div className="col-12">
-                <Img src={img10} />
+                <Img src={img25} />
               </div>
               <div className="col-12">
                 <P>
-                  Mohammed Saifuddin Munna
+                  Mohammad Ripon
                   <br />
-                  Advisor
-                  <br />
-                  Assistant Professor, Department of EEE
+                  Technical Secretary
+                  
                 </P>
               </div>
             </div>
@@ -217,15 +210,14 @@ export const ExeCommittee = () => {
           <div className="col-md-4 mb-5">
             <div className="row">
               <div className="col-12">
-                <Img src={img10} />
+                <Img src={img18} />
               </div>
               <div className="col-12">
                 <P>
-                  Mohammed Saifuddin Munna
+                  Sajjad Hossain Talukdar
                   <br />
-                  Advisor
-                  <br />
-                  Assistant Professor, Department of EEE
+                  Program Secretary
+                  
                 </P>
               </div>
             </div>
@@ -236,15 +228,14 @@ export const ExeCommittee = () => {
           <div className="col-md-4 mb-5">
             <div className="row">
               <div className="col-12">
-                <Img src={img9} />
+                <Img src={img26} />
               </div>
               <div className="col-12">
                 <P>
-                  Tuton Chandra Mallick
+                  Rumel Boidya
                   <br />
-                  Chief Advisor
-                  <br />
-                  Associate Professor, Department of EEE
+                  Training Secretary
+                 
                 </P>
               </div>
             </div>
@@ -252,15 +243,13 @@ export const ExeCommittee = () => {
           <div className="col-md-4 mb-5">
             <div className="row">
               <div className="col-12">
-                <Img src={img10} />
+                <Img src={img27} />
               </div>
               <div className="col-12">
                 <P>
-                  Mohammed Saifuddin Munna
+                  Swarup Paul
                   <br />
-                  Advisor
-                  <br />
-                  Assistant Professor, Department of EEE
+                  Social & Membership Development Co-Ordinator
                 </P>
               </div>
             </div>
@@ -268,15 +257,13 @@ export const ExeCommittee = () => {
           <div className="col-md-4 mb-5">
             <div className="row">
               <div className="col-12">
-                <Img src={img10} />
+                <Img src={img20} />
               </div>
               <div className="col-12">
                 <P>
-                  Mohammed Saifuddin Munna
+                  Fowzia Tasneen
                   <br />
-                  Advisor
-                  <br />
-                  Assistant Professor, Department of EEE
+                 Excutive Member
                 </P>
               </div>
             </div>

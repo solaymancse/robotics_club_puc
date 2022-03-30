@@ -8,7 +8,8 @@ import {
   Title,
   Top,
   Mid,
-  Foot
+  Foot,
+  Right
 } from "../Message/MessageElements";
 import img6 from "../../images/image6.jpg";
 import Aos from "aos";
@@ -24,7 +25,7 @@ export const Message = () => {
       <Section>
         <Div data-aos="fade-up">
           <Top>
-          <Title ize="24px">Message From Honorable Vice Chancellor</Title>
+          <Title size="24px">Message From Honorable Vice Chancellor</Title>
           </Top>
           <Mid >
             <div>
@@ -32,10 +33,10 @@ export const Message = () => {
             </div>
           
           </Mid>
-          <div >
+          <Right >
             <div>
               <P>
-                <FaQuoteLeft />
+                <FaQuoteLeft /> 
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
@@ -54,7 +55,7 @@ export const Message = () => {
                 Premier University of Chittagong
               </H1>
             </Foot>
-          </div>
+          </Right>
         </Div>
       </Section>
     </>

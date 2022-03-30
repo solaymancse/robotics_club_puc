@@ -15,8 +15,8 @@ export const Section = styled.section`
   }
 `;
 export const Div = styled.div`
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  height: 400px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  height: 430px;
   width: 450px;
   padding: 20px;
   border-radius: 5px;
@@ -27,11 +27,17 @@ export const Div = styled.div`
     height: 500px;
     margin-bottom: 10px;
   }
+  @media (min-width: 320px) and (max-width: 480px) {
+    width: 100%;
+    height: 520px;
+    margin-bottom: 10px;
+  }
 `;
 
 export const Img = styled.img`
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
+  margin: 20px 0;
 
   @media screen and (max-width: 575px) {
     height: 150px;

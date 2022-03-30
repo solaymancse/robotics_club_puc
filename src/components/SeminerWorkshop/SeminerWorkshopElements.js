@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 export const FlexBox = styled.div`
 
-  display: flex;
-  flex-wrap: wrap;
-  width:100%;
+  display: grid;
+  grid-template: repeat(2, 450px)/ repeat(3,533px);
   gap: 10px;
   
 `;

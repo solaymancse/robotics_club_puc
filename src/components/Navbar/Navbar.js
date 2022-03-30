@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import logo from "../../images/logo.jpg";
-import { Container, NavDropdown, Offcanvas } from "react-bootstrap";
+import { Offcanvas } from "react-bootstrap";
 import {
   Nav,
   NavLink,
@@ -14,6 +14,11 @@ import {
   SPAN,
   Div,
   Wrapper,
+  Item,
+  Items,
+  Dropdown,
+
+
 } from "./NavbarElements";
 import { Registration } from "../Registration/Registration";
 import { MobileViewNav } from "./../MobileWiewNav/MobileViewNav";
@@ -28,62 +33,65 @@ export const Navbar = () => {
 
   return (
     <Wrapper>
-      <Container>
-        <Nav>
-          <Div>
-            <Image src={logo} alt="" />
-            <H1>
-              Premier University <br /> <SPAN>Robotics Club</SPAN>
-            </H1>
-          </Div>
-          <Bars onClick={handleShow} />
-          <Offcanvas show={show} onHide={handleClose}>
-            <Offcanvas.Header closeButton>
-              <Offcanvas.Title></Offcanvas.Title>
-            </Offcanvas.Header>
-            <Offcanvas.Body>{<MobileViewNav />}</Offcanvas.Body>
-          </Offcanvas>
-          <NavMenu>
+      <Nav>
+        <Div>
+          <Image src={logo} alt="" />
+          <H1>
+            Premier University <br /> <SPAN>Robotics Club</SPAN>
+          </H1>
+        </Div>
+        <Bars onClick={handleShow} />
+        <Offcanvas show={show} onHide={handleClose}>
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title></Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>{<MobileViewNav />}</Offcanvas.Body>
+        </Offcanvas>
+        <NavMenu>
+          <Item>
             <NavLink to="/home" activeStyle>
               Home
             </NavLink>
-            <NavLink to="/about" activeStyle>
+          </Item>
+          <Items>
+            <NavLink to="" activeStyle>
               About
-              <NavDropdown id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">
-                  About PUC
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  About Robotics Club
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Member of Advisor Committee
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Member of Ex Committee
-                </NavDropdown.Item>
-              </NavDropdown>
             </NavLink>
+              <Dropdown>
+                <a href="/about"> About PUC</a>
+
+                <a href="/"> About Robotics Club</a>
+
+                <a href="/">
+                  Member of Advisor Committee
+                </a>
+
+                <a href="/">Member of Ex Committee</a>
+              </Dropdown>
+          </Items>
+          <Item>
             <NavLink to="/events" activeStyle>
               Events
             </NavLink>
+          </Item>
+          <Item>
             <NavLink to="/gallery" activeStyle>
               Gallery
             </NavLink>
+          </Item>
+          <Item>
             <NavLink to="/contact" activeStyle>
               Contact
             </NavLink>
-            <NavBtn>
-              <NavBtnLink to="/registration" onClick={setModalShow}>
-                Registration
-              </NavBtnLink>
-            </NavBtn>
-          </NavMenu>
-          <Registration show={modalShow} onHide={() => setModalShow(false)} />
-        </Nav>
-
-        
-      </Container>
+          </Item>
+        </NavMenu>
+        <NavBtn>
+          <NavBtnLink to="/registration" onClick={setModalShow}>
+            Registration
+          </NavBtnLink>
+        </NavBtn>
+        <Registration show={modalShow} onHide={() => setModalShow(false)} />
+      </Nav>
     </Wrapper>
   );
 };

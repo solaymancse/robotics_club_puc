@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+
+export const Wrapper = styled.div`
+  @media (min-width: 320px) and (max-width: 480px) {
+    margin-top: 50px;
+  }
+`;
 export const Div = styled.div`
   display: flex;
 
@@ -33,11 +39,7 @@ export const H1 = styled.h1`
     font-size: 18px;
   }
 `;
-export const Wrapper = styled.div`
-  @media screen and (max-width: 575px) {
-    margin-top: 50px;
-  }
-`;
+
 export const Button = styled.button`
   display: flex;
   justify-content: center;

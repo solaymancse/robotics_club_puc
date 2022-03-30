@@ -8,7 +8,9 @@ export const Section = styled.section`
 
   @media (min-width: 320px) and (max-width: 480px) {
     padding: 0px;
-  } ;
+    height: 1500px;
+    
+  };
 `;
 
 export const Wrapper = styled.div`
@@ -16,6 +18,12 @@ export const Wrapper = styled.div`
   grid-gap: 15px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    
+  };
 `;
 export const ContentDiv = styled.div`
   display: flex;

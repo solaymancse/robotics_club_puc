@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Section } from "../Acheivement/AcheivementElements";
 import { FlexBox } from "./SeminerWorkshopElements";
 import Data from "../../SeminerWorkshopData";
