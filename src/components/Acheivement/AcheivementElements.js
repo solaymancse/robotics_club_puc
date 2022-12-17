@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Section = styled.div`
   border-top: 1px solid lightgray;
-  padding: 10px 150px;
+  padding: 10px 0px;
 
   @media screen and (max-width: 575px) {
     width: 100%;

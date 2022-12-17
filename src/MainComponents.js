@@ -14,10 +14,12 @@ import { PhotoGallary } from "./components/PhotoGallary/PhotoGallary";
 import { SeminerWorkshop } from "./components/SeminerWorkshop/SeminerWorkshop";
 import { Footer } from "./components/Footer/Footer";
 import { Copyrights } from "./components/Copyrights/Copyrights";
+import { TopBar } from "./components/TopBar/TopBar";
 
 export default function MainComponents() {
   return (
     <>
+    <TopBar/>
       <Navbar />
       <TopCarousel />
       <Container>

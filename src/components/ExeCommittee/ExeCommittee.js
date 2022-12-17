@@ -19,7 +19,7 @@ import { Container } from "react-bootstrap";
 export const ExeCommittee = () => {
   return (
     <Div>
-      <Container>
+     
       <H1>Executive Board</H1>
 
       <Content>
@@ -270,7 +270,7 @@ export const ExeCommittee = () => {
           </div>
         </div>
       </Content>
-      </Container>
+
     </Div>
   );
 };

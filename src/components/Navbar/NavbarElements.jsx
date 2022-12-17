@@ -10,22 +10,22 @@ export const Wrapper = styled.div`
   top: 0;
   position: sticky;
   z-index: 10;
-  padding: 0 150px;
+  padding: 50px 150px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 
-  @media screen and (max-width: 991px){
+  @media screen and (max-width: 991px) {
     padding: 30px;
-  };
+  }
 
   @media (min-width: 320px) and (max-width: 480px) {
     padding: 0px;
     height: 50px;
-  };
+  } ;
 `;
 export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem calc((100vw-1000px) / 2);
+  padding: 2rem calc((100vw-1000px) / 2);
   transition: all 0.2s ease-in-out;
   width: 100%;
   text-align: center;
@@ -54,7 +54,6 @@ export const NavMenu = styled.div`
 `;
 export const Item = styled.div`
   margin-right: 15px;
-  
 `;
 
 export const Dropdown = styled.div`
@@ -79,15 +78,12 @@ export const Dropdown = styled.div`
     :nth-child(4) {
       border: none;
     }
-
-
   }
-  a:hover{
+  a:hover {
     background-color: #333;
     color: #fff;
   }
 `;
-
 
 export const NavLink = styled(Link)`
   color: #333;
@@ -99,7 +95,6 @@ export const NavLink = styled(Link)`
   padding: 10px 0;
   cursor: pointer;
 
-
   &:after {
     content: "";
     background-color: #333;
@@ -110,7 +105,7 @@ export const NavLink = styled(Link)`
     position: absolute;
     transition: 0.3s;
   }
-  
+
   &:hover:after {
     width: 100%;
   }
@@ -120,13 +115,12 @@ export const NavLink = styled(Link)`
 
     transition: all 0.2s ease-in-out;
   }
- 
 `;
 
 export const Items = styled.div`
-display: flex;
-flex-direction: column;
-  &:hover ${Dropdown}{
+  display: flex;
+  flex-direction: column;
+  &:hover ${Dropdown} {
     display: block;
   }
 `;
@@ -138,13 +132,11 @@ export const Image = styled.img`
   @media screen and (max-width: 991px) {
     width: 50px;
     height: 50px;
-  };
+  }
   @media (min-width: 320px) and (max-width: 480px) {
     width: 40px;
     height: 40px;
-  };
-
-
+  } ;
 `;
 
 export const H1 = styled.h1`
@@ -152,7 +144,6 @@ export const H1 = styled.h1`
   font-weight: bold;
   color: #27363b;
 
- 
   @media (min-width: 320px) and (max-width: 480px) {
     font-size: 12px;
   }
@@ -173,41 +164,54 @@ export const Bars = styled(FaBars)`
     margin: auto 20px;
     font-size: 18px;
     display: block;
-  } ;
+  }
   @media (min-width: 320px) and (max-width: 480px) {
     margin-right: 10px;
-  };
+  } ;
 `;
 
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
+  gap: 20px;
   margin-right: 24px;
+  border: 0.5px solid lightgray;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: #ff2162;
+  color: #fff;
 
+  cursor: pointer;
+
+  &:hover{
+    background-color: #fff;
+    color: #333;
+  }
   @media screen and (max-width: 575px) {
     display: none;
   }
 `;
 
+export const Icon = styled.div`
+
+
+ 
+`;
 export const NavBtnLink = styled(Link)`
-  border-radius: 4px;
-  padding: 10px 22px;
-  color: #fff;
-  background: #27363b;
-  cursor: pointer;
+  padding: 8px 0px 8px 20px;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
+  color: #fff;
+  
 
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #c70039;
-    color: #fff;
-  }
+&:hover{
+  color:#333;
+}
 `;
 
 export const Div = styled.div`
   display: flex;
-  
+
   align-items: center;
   text-align: center;
 

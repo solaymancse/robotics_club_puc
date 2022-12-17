@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import {BsFillArrowRightCircleFill} from "react-icons/bs";
 import logo from "../../images/logo.jpg";
 import { Offcanvas } from "react-bootstrap";
 import {
@@ -21,7 +22,7 @@ import {
 
 } from "./NavbarElements";
 import { Registration } from "../Registration/Registration";
-import { MobileViewNav } from "./../MobileWiewNav/MobileViewNav";
+import { MobileViewNav } from "../MobileWiewNav/MobileViewNav";
 
 export const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -89,6 +90,7 @@ export const Navbar = () => {
           <NavBtnLink to="/registration" onClick={setModalShow}>
             Registration
           </NavBtnLink>
+         <BsFillArrowRightCircleFill size="30px" onClick={setModalShow}/>
         </NavBtn>
         <Registration show={modalShow} onHide={() => setModalShow(false)} />
       </Nav>
