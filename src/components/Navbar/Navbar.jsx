@@ -23,6 +23,7 @@ import {
 } from "./NavbarElements";
 import { Registration } from "../Registration/Registration";
 import { MobileViewNav } from "../MobileWiewNav/MobileViewNav";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -50,38 +51,38 @@ export const Navbar = () => {
         </Offcanvas>
         <NavMenu>
           <Item>
-            <NavLink to="/home" activeStyle>
+            <NavLink to="/">
               Home
             </NavLink>
           </Item>
           <Items>
-            <NavLink to="" activeStyle>
+            <NavLink to="/about">
               About
             </NavLink>
               <Dropdown>
-                <a href="/about"> About PUC</a>
+                <Link to="/about"> About PUC</Link>
 
-                <a href="/"> About Robotics Club</a>
+                <Link to="/about"> About Robotics Club</Link>
 
-                <a href="/">
+                <Link to="/committee">
                   Member of Advisor Committee
-                </a>
+                </Link>
 
-                <a href="/">Member of Ex Committee</a>
+                <Link to="/ex-committee">Member of Ex Committee</Link>
               </Dropdown>
           </Items>
           <Item>
-            <NavLink to="/events" activeStyle>
+            <NavLink to="/events" >
               Events
             </NavLink>
           </Item>
           <Item>
-            <NavLink to="/gallery" activeStyle>
+            <NavLink to="/gallery" >
               Gallery
             </NavLink>
           </Item>
           <Item>
-            <NavLink to="/contact" activeStyle>
+            <NavLink to="/contact" >
               Contact
             </NavLink>
           </Item>

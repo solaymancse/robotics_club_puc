@@ -12,23 +12,18 @@ export const UpComingEvents = (props) => {
   }, []);
 
   return (
-    <>
-      <Section>
+    <Section>
+    
         <H1 data-aos="fade-up">Up Coming Event</H1>
         <hr />
         <Wrapper>
-          <Div>
-            {Data.map((data) => (
-              <EventCard title={data.title} content={data.content} />
+        
+            {Data.map((data,index) => (
+              <EventCard key={index} title={data.title} content={data.content} />
             ))}
-          </Div>
-          <Div>
-            {Data.map((data) => (
-              <EventCard title={data.title} content={data.content} />
-            ))}
-          </Div>
+
         </Wrapper>
-      </Section>
-    </>
+
+    </Section>
   );
 };

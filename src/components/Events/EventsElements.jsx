@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Div = styled.div`
   width: 100%;
-  height: 100vh;
+ height: 100%;
   border: 1px solid lightgray;
   padding: 30px 150px;
   display: grid;

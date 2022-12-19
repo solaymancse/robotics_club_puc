@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export const Section = styled.section`
- 
+export const Section = styled.div`
   width: 100%;
+  height: auto;
   padding-right: 20px;
-  height: 700px;
+  
 
   @media (min-width: 320px) and (max-width: 480px) {
     padding: 0px;
@@ -14,10 +14,9 @@ export const Section = styled.section`
 `;
 
 export const Wrapper = styled.div`
-  display: grid;
-  grid-gap: 15px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 
   @media (min-width: 320px) and (max-width: 480px) {
     display: flex;
@@ -32,7 +31,7 @@ export const ContentDiv = styled.div`
 `;
 export const Div = styled.div`
   display: flex;
-  flex-direction: column;
+ flex-wrap: wrap;
 `;
 export const Left = styled.div`
   border-bottom: 2px solid #333;
@@ -43,28 +42,12 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
-  width: 100%;
+  width: 500px;
 
   @media (min-width: 320px) and (max-width: 480px) {
     flex-direction: column;
   } ;
 `;
-
-// export const Div = styled.div`
-//     display: flex;
-//     margin-bottom: 10px;
-
-//     @media screen and (max-width: 575px){
-//         width: 400px;
-
-//     };
-//     @media screen and (max-width: 768px){
-//         width: 100%;
-//         height: 80px;
-
-//     };
-
-// `;
 
 export const Img = styled.img`
   margin-right: 15px;
@@ -91,7 +74,12 @@ export const H1 = styled.h1`
 
 export const H2 = styled.h2`
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
+cursor: pointer;
+  &:hover{
+    text-decoration: underline;
+  }
+
 
   @media screen and (max-width: 768px) {
     font-size: 16px;

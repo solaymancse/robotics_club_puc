@@ -2,14 +2,16 @@ import styled from "styled-components";
 
 export const Section = styled.div`
   border-top: 1px solid lightgray;
-  padding: 10px 0px;
-
+  padding: 20px 150px;
   @media screen and (max-width: 575px) {
     width: 100%;
     padding: 10px;
   }
 `;
 
+export const Title = styled.div`
+  position: relative;
+`;
 export const Div = styled.div`
   margin-top: 30px;
   display: grid;

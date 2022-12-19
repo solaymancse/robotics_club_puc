@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { P, Div, Span, Intro } from "./WelcomeElements";
+import { P, Div, Span, Intro,Left,Right } from "./WelcomeElements";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -10,15 +10,13 @@ export const Welcome = () => {
     Aos.init({ duration: 2000 });
   }, []);
   return (
-    <>
-      <Div>
-        <img src={logo} height={100} width={100} alt="logo" />
-        <P data-aos="fade-in">
-          Welcome To
-          <br />
-          <Span> PUC ROBOTICS CLUB</Span>
-        </P>
-        <Intro data-aos="fade-in">
+    <Div>
+      <Left>
+      <img src={logo} height={100} width={100} alt="logo" />
+      </Left>
+      <Right>
+      <Span> PUC ROBOTICS CLUB</Span>
+      <Intro data-aos="fade-in">
           The Premier University Chittagong Robotics Club (PUC Robotics Club) is
           a student run group of highly motivated undergraduate students from
           the Premier University, Chittagong. The group, with majors in Computer
@@ -46,7 +44,8 @@ export const Welcome = () => {
           also became 2 times runner-up (2015, 2017) and 3 times champion (2014,
           2016, and 2018) in Digital Innovation Fair, Chittagong. 
         </Intro>
-      </Div>
-    </>
+      </Right>
+
+    </Div>
   );
 };

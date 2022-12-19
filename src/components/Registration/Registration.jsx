@@ -1,5 +1,4 @@
-import React from 'react';
-import { Button, Modal } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import { RegForm } from '../RegForm/RegForm';
 
 export const Registration = (props) => {
@@ -17,12 +16,7 @@ export const Registration = (props) => {
       </Modal.Header>
       <Modal.Body>
         <RegForm/>
-      </Modal.Body>
-      <Modal.Footer>
-        
-        <Button variant="danger" onClick={props.onHide}>Close</Button>
-      </Modal.Footer>
-     
+      </Modal.Body>   
     </Modal>
   
   </>

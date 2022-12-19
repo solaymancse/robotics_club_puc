@@ -1,9 +1,5 @@
 import React from "react";
 import { Section, Img , Links, H2, H1, MDiv,P, RDiv, Youtube, Facebook, Square, Instagram, ArrowRight } from "./FooterElements";
-
-
-
-
 import logo from "../../images/logo.jpg";
 import { Registration } from "../Registration/Registration";
 import { Col, Row } from "react-bootstrap";
@@ -41,7 +37,7 @@ export const Footer = () => {
           <hr style={{color:"#fff", width:"70px"}}/>
             <hr style={{color:"#fff", width:"140px",marginTop:"-10px"}}/>
           <Row  xs={1} md={2}>
-            <Col><Links to={Registration}><ArrowRight />Apply For Membership</Links></Col>
+            <Col><Links to="/registration"><ArrowRight />Apply For Membership</Links></Col>
             <Col><Links to="/"> <ArrowRight />How to apply</Links></Col>
             <Col><Links to="/"> <ArrowRight />Rules and Regulations</Links></Col>
             <Col><Links to="/"> <ArrowRight />Events Details</Links></Col>

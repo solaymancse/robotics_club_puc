@@ -110,7 +110,7 @@ export const NavLink = styled(Link)`
     width: 100%;
   }
   &.active {
-    color: #27363b;
+    color: gray;
     border-bottom: 2px solid #27363b;
 
     transition: all 0.2s ease-in-out;
@@ -180,12 +180,13 @@ export const NavBtn = styled.nav`
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background-color: #ff2162;
   color: #fff;
-
+transition: 0.7s ease-in-out;
   cursor: pointer;
 
   &:hover{
     background-color: #fff;
     color: #333;
+    transition: 0.7s ease-in-out;
   }
   @media screen and (max-width: 575px) {
     display: none;
