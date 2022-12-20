@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import {BsFillArrowRightCircleFill} from "react-icons/bs";
 import logo from "../../images/logo.jpg";
-import { Offcanvas } from "react-bootstrap";
 import {
   Nav,
   NavLink,
@@ -18,19 +17,15 @@ import {
   Item,
   Items,
   Dropdown,
-
+  ToggleDiv
 
 } from "./NavbarElements";
 import { Registration } from "../Registration/Registration";
-import { MobileViewNav } from "../MobileWiewNav/MobileViewNav";
 import { Link } from "react-router-dom";
+import { Togglebar } from "../Togglebar/Togglebar";
 
 export const Navbar = () => {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [modalShow, setModalShow] = useState(false);
 
   return (
@@ -42,13 +37,10 @@ export const Navbar = () => {
             Premier University <br /> <SPAN>Robotics Club</SPAN>
           </H1>
         </Div>
-        <Bars onClick={handleShow} />
-        <Offcanvas show={show} onHide={handleClose}>
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title></Offcanvas.Title>
-          </Offcanvas.Header>
-          <Offcanvas.Body>{<MobileViewNav />}</Offcanvas.Body>
-        </Offcanvas>
+       <ToggleDiv>
+       <Bars onClick={()=> setIsDrawerOpen(true)} />
+        <Togglebar open={isDrawerOpen} onClose={()=> setIsDrawerOpen(false)}/>
+       </ToggleDiv>
         <NavMenu>
           <Item>
             <NavLink to="/">
@@ -77,7 +69,7 @@ export const Navbar = () => {
             </NavLink>
           </Item>
           <Item>
-            <NavLink to="/gallery" >
+            <NavLink to="/gallary" >
               Gallery
             </NavLink>
           </Item>

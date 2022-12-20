@@ -30,7 +30,7 @@ input{
     border: none;
     width: 300px;
     padding: 5px;
-    
+    outline: none;
 }
 
 button{
@@ -50,4 +50,5 @@ img{
    height: 400px;
    float: right;
 }
+
 `

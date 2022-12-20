@@ -9,6 +9,12 @@ export const Div = styled.div`
     height: 100vh;
     width: 100%;
   }
+
+  @media (min-width: 320px) and (max-width: 480px){
+    img{
+      height: 600px;
+    }
+  }
 `;
 export const Content = styled.div`
   position: absolute;
@@ -41,5 +47,11 @@ export const Button = styled.div`
     color: #fff;
     font-family: 'Merriweather', serif;
     margin: 15px;
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    h1{
+      text-align: center;
+    }
   }
 `;

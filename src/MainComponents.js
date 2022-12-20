@@ -9,6 +9,7 @@ import { EventPage } from "./pages/EventPage";
 import { GallaryPage } from "./pages/GallaryPage";
 import { ContactPage } from "./pages/ContactPage";
 
+
 export default function MainComponents() {
   return (
     <>
@@ -20,6 +21,7 @@ export default function MainComponents() {
         <Route path="/events" element={<EventPage/>}/>
         <Route path="/gallary" element={<GallaryPage/>}/>
         <Route path="/contact" element={<ContactPage/>}/>
+       
       </Routes>
 
         <Footer />

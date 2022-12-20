@@ -1,7 +1,7 @@
-import React from 'react'
+import { PhotoGallary } from '../components/PhotoGallary/PhotoGallary'
 
 export const GallaryPage = () => {
   return (
-    <div>GallaryPage</div>
+    <PhotoGallary/>
   )
 }

@@ -1,28 +1,32 @@
-import React from 'react';
-import { Section,Div, Img, Title } from '../Acheivement/AcheivementElements';
-
-import img17 from '../../images/image5.jpg'
-import { H1 } from '../ExeCommittee/ExeCommitteeElements';
-
-
+import {H2} from "./ProjectRCElements";
+import {
+  Section,
+  Div,
+  Title,
+  TitleOverlay,
+  Content,
+} from "../Acheivement/AcheivementElements";
+import { achivementData } from "../../Data";
 
 export const ProjectRC = () => {
-  return <Section>
+  return (
+    <Section>
+      <Title>
+        <H2>Projects , Research & Collaborations</H2>
+        <a href="/all">View All</a>
+      </Title>
 
-    <Title>
-    <H1>Projects , Research & Collaborations</H1>
-    </Title>
-     <Div>
-     <Img src={img17} alt="" />
-          <Img src={img17} alt="" />
-          <Img src={img17} alt="" />
-          <Img src={img17} alt="" />
-          <Img src={img17} alt="" />
-          <Img src={img17} alt="" />
-          <Img src={img17} alt="" />
-          <Img src={img17} alt="" />
-          <Img src={img17} alt="" />
+      <Div >
+      {achivementData.map((data, index) => (
+        <Content key={index}>
 
-     </Div>
-  </Section>;
+          <img src={data.img} alt="" />
+          <TitleOverlay>
+            <p>{data.title}</p>
+          </TitleOverlay>
+        </Content>
+      ))}
+      </Div>
+    </Section>
+  );
 };

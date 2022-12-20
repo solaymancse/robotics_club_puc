@@ -9,17 +9,19 @@ export const Wrapper = styled.div`
   height: 90px;
   top: 0;
   position: sticky;
+  width: 100%;
   z-index: 10;
   padding: 50px 150px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 
   @media screen and (max-width: 991px) {
     padding: 30px;
+
   }
 
   @media (min-width: 320px) and (max-width: 480px) {
     padding: 0px;
-    height: 50px;
+    height: 80px;
   } ;
 `;
 export const Nav = styled.nav`
@@ -54,6 +56,16 @@ export const NavMenu = styled.div`
 `;
 export const Item = styled.div`
   margin-right: 15px;
+`;
+export const ToggleDiv = styled.div`
+   display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 992px) {
+    display: none;
+  }
 `;
 
 export const Dropdown = styled.div`
@@ -157,7 +169,7 @@ export const SPAN = styled.span`
 `;
 
 export const Bars = styled(FaBars)`
-  display: none;
+ 
   color: #333;
 
   @media screen and (max-width: 575px) {

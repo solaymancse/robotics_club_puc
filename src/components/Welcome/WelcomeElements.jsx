@@ -6,47 +6,74 @@ export const Div = styled.div`
   display: flex;
   margin: 50px 0;
 
-
+  @media (min-width: 320px) and (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
 export const Left = styled.div`
-flex: 1;
-text-align: center;
+  flex: 1;
+  text-align: center;
 
-img{
-  width: 200px;
-  height: 200px;
-}
+  img {
+    width: 200px;
+    height: 200px;
+  }
 
+  @media (min-width: 320px) and (max-width: 480px) {
+    margin-bottom: 20px;
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
 `;
 export const Right = styled.div`
-flex: 3;
-position: relative;
+  flex: 3;
+  position: relative;
 `;
 
 export const Span = styled.span`
   font-size: 48px;
   letter-spacing: 3px;
-  &:before{
-    content: '';
+  &:before {
+    content: "";
     width: 480px;
     height: 3px;
     background-color: gray;
     position: absolute;
     top: 35px;
     right: 0;
-    
   }
-  &:after{
-    content: '';
+  &:after {
+    content: "";
     width: 170px;
     height: 6px;
     background-color: #000000;
     position: absolute;
     top: 33.5px;
     left: 50%;
-    
   }
- 
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    &:before {
+    content: "";
+    width: 300px;
+    height: 3px;
+    background-color: gray;
+    position: absolute;
+    top: 35px;
+    left: 0;
+  }
+    &:after {
+      content: "";
+      width: 170px;
+      height: 6px;
+      background-color: #000000;
+      position: absolute;
+      top: 33.5px;
+      left: 0%;
+    }
+  }
   @media screen and (max-width: 575px) {
     font-size: 20px;
   }
@@ -70,10 +97,9 @@ export const Intro = styled.div`
   color: grey;
   text-align: justify;
   width: 100%;
-margin-top: 30px;
-  @media screen and (max-width: 575px) {
-    padding: 0px 10px;
+  margin-top: 30px;
+  @media (min-width: 320px) and (max-width: 480px) {
+    padding: 0px;
     font-size: 12px;
-    margin-top: -40px;
   }
 `;

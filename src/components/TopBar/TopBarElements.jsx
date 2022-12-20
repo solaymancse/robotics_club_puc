@@ -7,6 +7,9 @@ export const Wrapper = styled.div`
     align-items:center;
     padding: 5px 0;
 
+    @media (min-width: 320px) and (max-width: 480px){
+      height: 50px;
+    }
 
 `
 export const Div = styled.div`

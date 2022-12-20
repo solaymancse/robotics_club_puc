@@ -33,4 +33,30 @@ export const H3 = styled.h3`
 `;
 export const H2 = styled.h2`
   font-size: 16px;
+cursor: pointer;
+  &:hover{
+    text-decoration: underline;
+  }
+`;
+export const H1 = styled.h1`
+    font-size: 24px;
+  letter-spacing: 3px;
+  &:before {
+    content: "";
+    width: 900px;
+    height: 3px;
+    background-color: gray;
+    position: absolute;
+    top: 15px;
+    left: 30%;
+  }
+  &:after {
+    content: "";
+    width: 250px;
+    height: 6px;
+    background-color: #000000;
+    position: absolute;
+    top: 13px;
+    left: 25%;
+  }
 `;

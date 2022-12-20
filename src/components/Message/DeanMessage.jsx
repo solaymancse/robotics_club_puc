@@ -11,7 +11,7 @@ import {
   ImgDiv,
   H2,
   Wrapper,
-  P
+  P,
 } from "../Message/MessageElements";
 
 export const DeanMessage = () => {
@@ -22,26 +22,23 @@ export const DeanMessage = () => {
     <Wrapper>
       <Title size="10px">Honorable Dean of Engineering Faculty</Title>
       <Div data-aos="fade-right">
-      <RightSide>
-       
-       <P>
-         <FaQuoteLeft />
-         Lorem Ipsum is simply dummy text of the printing and typesetting
-         industry. Lorem Ipsum has been the industry's standard dummy
-         text ever since the 1500s, when an unknown printer took a galley
-         of type and scrambled it to make a type specimen book.
-         Lorem Ipsum is simply dummy text of the printing and typesetting
-         industry. Lorem Ipsum has been the industry's standard dummy
-         text ever since the 1500s, when an unknown printer took a galley
-         of type and scrambled it to make a type specimen book
-         Lorem Ipsum is simply dummy text of the printing and typesetting
-         industry. Lorem Ipsum has been the industry's standard dummy
-         text ever since the 1500s, when an unknown printer took a galley
-         of type and scrambled it to make a type specimen book{" "}
-         <FaQuoteRight />
-       </P>
-
- </RightSide>
+        <RightSide>
+          <P>
+            <FaQuoteLeft />
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. Lorem Ipsum is simply
+            dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the industry's standard dummy text ever since the 1500s, when
+            an unknown printer took a galley of type and scrambled it to make a
+            type specimen book Lorem Ipsum is simply dummy text of the printing
+            and typesetting industry. Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s, when an unknown printer
+            took a galley of type and scrambled it to make a type specimen book{" "}
+            <FaQuoteRight />
+          </P>
+        </RightSide>
         <LeftSide>
           <ImgDiv>
             <img src={img7} alt="" />
@@ -54,7 +51,6 @@ export const DeanMessage = () => {
             <br /> Department of CSE
           </H2>
         </LeftSide>
-
       </Div>
     </Wrapper>
   );

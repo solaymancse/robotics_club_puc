@@ -11,12 +11,63 @@ export const Section = styled.div`
 
 export const Title = styled.div`
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    background-color: #ff2162;
+    text-decoration: none;
+    padding: 5px 10px;
+    color: #fff;
+
+    &:hover {
+      background-color: #fff;
+      color: #333;
+      border: 0.5px solid lightgray;
+    }
+  }
+`;
+export const H2 = styled.h1`
+  font-size: 24px;
+  letter-spacing: 3px;
+  &:before {
+    content: "";
+    width: 900px;
+    height: 3px;
+    background-color: gray;
+    position: absolute;
+    top: 15px;
+    left: 20%;
+  }
+  &:after {
+    content: "";
+    width: 250px;
+    height: 6px;
+    background-color: #000000;
+    position: absolute;
+    top: 13px;
+    left: 15%;
+  }
+`;
+export const TitleOverlay = styled.div`
+    background: rgba(229, 182, 177, 0.9);
+  height: 100%;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  padding-top: 10px;
+  transform: translateY(80%);
+  transition: all 0.3s ease-in-out;
 `;
 export const Div = styled.div`
   margin-top: 30px;
-  display: grid;
-  grid-template: repeat(2, 300px) / repeat(3, 525px);
-  grid-gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: relative;
 `;
 
 export const Img = styled.img`
@@ -31,4 +82,20 @@ export const Img = styled.img`
 export const H1 = styled.h1`
   font-size: 24px;
   font-family: "EB Garamond", serif;
+`;
+
+export const Content = styled.div`
+  position: relative;
+  background: #f2dad7;
+  overflow: hidden;
+  width: 525px;
+  height: 300px;
+
+  img{
+    position: absolute;
+  }
+  &:hover ${TitleOverlay}{
+    transform: translateY(0%);
+    
+  }
 `;

@@ -7,7 +7,7 @@
     padding: 0;
     font-family: 'Source Sans Pro', sans-serif;
     box-sizing: border-box;
-    
+
 }
 
 body{
@@ -19,8 +19,7 @@ body{
     letter-spacing: .25px;
     line-height: 1.7142857143;
     margin: 0;
-    overflow-x: hidden;
     -ms-word-wrap: break-word;
     word-wrap: break-word;
-
+    overflow-x: hidden;
 }
