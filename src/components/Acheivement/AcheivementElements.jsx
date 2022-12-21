@@ -49,6 +49,27 @@ export const H2 = styled.h1`
     top: 13px;
     left: 15%;
   }
+  @media (max-width: 575px) {
+    font-size: 12px;
+    &:before {
+    content: "";
+    width: 180px;
+    height: 3px;
+    background-color: gray;
+    position: absolute;
+    top: 27px;
+    left: 0;
+  }
+  &:after {
+    content: "";
+    width: 100px;
+    height: 6px;
+    background-color: #000000;
+    position: absolute;
+    top: 26px;
+    left: 0;
+  }
+  }
 `;
 export const TitleOverlay = styled.div`
     background: rgba(229, 182, 177, 0.9);

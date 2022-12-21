@@ -1,4 +1,4 @@
-import { CardDiv, Name, Role, Desig, ImgDiv } from "./ExeCommitteeElements";
+import { CardDiv, P, ImgDiv } from "./ExeCommitteeElements";
 
 export const Card = ({ data, width, gap }) => {
   return (
@@ -6,9 +6,9 @@ export const Card = ({ data, width, gap }) => {
       <ImgDiv>
         <img src={data.img} alt="" />
       </ImgDiv>
-      <Name>{data.name}</Name>
-      <Role>{data.role}</Role>
-      <Desig>{data.desig}</Desig>
+      <P>{data.name}</P>
+      <P>{data.role}</P>
+      <P>{data.desig}</P>
     </CardDiv>
   );
 };

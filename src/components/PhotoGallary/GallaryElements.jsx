@@ -4,8 +4,12 @@ export const Wrapper = styled.div`
   width: 100%;
   min-height: 100vh;
   position: relative;
-
   padding: 50px 150px;
+
+
+  @media (max-width: 575px) {
+    padding: 10px;
+  }
 `
 export const Portfolio = styled.div`
   width: 100%;
@@ -16,6 +20,13 @@ export const Portfolio = styled.div`
   grid-template-columns: repeat(4, minmax(200px, 1fr));
   grid-template-rows: 1fr 1fr;
   grid-gap: 2px;
+
+  @media (max-width: 575px){
+    margin-top: 20px;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-template-rows: repeat(8, minmax(200px, 1fr));
+    height: 200px;
+  }
 `
 export const Button = styled.button`
  background: none;
@@ -54,6 +65,29 @@ export const H2 = styled.h1`
     position: absolute;
     top: 13px;
     left: 15%;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 12px;
+ 
+  &:before {
+    content: "";
+    width: 180px;
+    height: 3px;
+    background-color: gray;
+    position: absolute;
+    top: 25px;
+    left: 0;
+  }
+  &:after {
+    content: "";
+    width: 100px;
+    height: 6px;
+    background-color: #000000;
+    position: absolute;
+    top: 25px;
+    left: 0;
+  }
   }
 `;
 

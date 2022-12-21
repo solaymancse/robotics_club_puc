@@ -8,7 +8,7 @@ export const Section = styled.div`
 
   @media (min-width: 320px) and (max-width: 480px) {
     padding: 0px;
-    height: 1500px;
+    
     
   };
 `;
@@ -27,6 +27,14 @@ export const Wrapper = styled.div`
 export const ContentDiv = styled.div`
   display: flex;
   margin-top: 20px;
+  a{
+    
+    &:hover{
+      background-color: #ff2162;
+      border-color: #ff2162;
+    }
+    
+  }
   
 `;
 export const Div = styled.div`
@@ -45,6 +53,7 @@ export const Card = styled.div`
   width: 500px;
 
   @media (min-width: 320px) and (max-width: 480px) {
+    width: 100%;
     flex-direction: column;
   } ;
 `;
@@ -54,8 +63,10 @@ export const Img = styled.img`
   height: 300px;
   width: 100%;
 
-  @media screen and (max-width: 575px) {
+  @media screen and (max-width: 767px) {
     width: 100%;
+    height: 150px;
+    object-fit:cover;
   }
 `;
 
@@ -82,17 +93,22 @@ cursor: pointer;
 
 
   @media screen and (max-width: 768px) {
-    font-size: 16px;
+    font-size: 12px;
   }
 `;
 export const H3 = styled.h3`
   font-size: 20px;
 
  
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 export const P = styled.p`
   color: grey;
+  display: flex;
+  align-items: center;
 
   @media screen and (max-width: 768px) {
     font-size: 12px;

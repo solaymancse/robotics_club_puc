@@ -28,7 +28,6 @@ export const Div = styled.div`
   margin-top: 30px;
 
   @media (min-width: 320px) and (max-width: 480px) {
-    height: 700px;
     width: 100%;
     padding: 0px;
     display: flex;
@@ -64,8 +63,7 @@ export const LeftDiv = styled.div`
   height: 400px;
 
   @media (min-width: 320px) and (max-width: 480px) {
-  height: 100%;
-  background-color: yellow;
+  
   }
 `;
 export const RightDiv = styled.div`
@@ -113,8 +111,6 @@ export const Qoute = styled.p`
   @media screen and (max-width: 575px) {
     font-size: 12px;
     margin-top: 20px;
-    height: 250px;
-    background-color: cyan;
   }
 `;
 export const Content = styled.div`

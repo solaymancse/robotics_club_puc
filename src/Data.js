@@ -214,3 +214,24 @@ export const achivementData = [
         title:"Award Receiving For best Performing from The honarable Teacher"
     }
 ]
+export const latestEventData = [
+
+    {
+        img:"https://images.unsplash.com/photo-1519211975560-4ca611f5a72a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ae34625b8db390fb2b784800d76d225&auto=format&fit=crop&w=700&q=80",
+        title:"Award Receiving For best Performing from The honarable Teacher"
+    },
+
+    {
+        img:"https://images.unsplash.com/photo-1521104955835-ba91c70d6443?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=38cdeda7d073c4b6d47a5776f184cba9&auto=format&fit=crop&w=700&q=80",
+        title:"Award Receiving For best Performing from The honarable Teacher"
+    },
+    {
+        img:"https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5a31d03ddee66863a599421f792e07b&auto=format&fit=crop&w=700&q=80",
+        title:"Award Receiving For best Performing from The honarable Teacher"
+    },
+
+    {
+        img:"https://images.unsplash.com/photo-1472437774355-71ab6752b434?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dd4d735954f33290fbf984e4eb7abe32&auto=format&fit=crop&w=700&q=80",
+        title:"Award Receiving For best Performing from The honarable Teacher"
+    }
+]

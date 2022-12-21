@@ -43,6 +43,25 @@ export const H1 = styled.h1`
     margin-bottom: 50px;
     font-weight: 600;
     padding: 10px;
+
+    &:before {
+    content: "";
+    width: 900px;
+    height: 3px;
+    background-color: gray;
+    position: absolute;
+    top: 36px;
+    left: 10px;
+  }
+  &:after {
+    content: "";
+    width: 150px;
+    height: 6px;
+    background-color: #000000;
+    position: absolute;
+    top: 35px;
+    left: 10px;
+  }
   }
 `;
 
@@ -64,6 +83,10 @@ export const CardDiv = styled.div`
     height: 100%;
     object-fit: cover;
   }
+
+  @media screen and (max-width: 575px) {
+    height: 200px;
+  }
 `;
 export const ImgDiv = styled.div`
   width: 120px;
@@ -71,12 +94,23 @@ export const ImgDiv = styled.div`
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 20px;
+  
+  @media screen and (max-width: 575px) {
+    width: 100px;
+  height: 100px;
+  }
 `;
 export const Top = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+
+  @media screen and (max-width: 575px) {
+    p{
+      font-size: 12px;
+    }
+  }
 `;
 
 export const Bottom = styled.div`
@@ -94,15 +128,22 @@ export const BottCom = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
-export const Name = styled.div``;
-export const Role = styled.div``;
-export const Desig = styled.div``;
+export const P = styled.div`
+  @media screen and (max-width: 575px) {
+ 
+      font-size: 12px;
+  
+  }
+`;
+
 export const Button = styled.div`
   background-color: #ff2162;
   border: 0.5px solid #ff2162;
   transition: 0.5s ease-in-out;
   padding: 5px 10px;
   color: #fff;
+  display: flex;
+  align-items: center;
   a {
     text-decoration: none;
     color: #fff;
@@ -114,5 +155,11 @@ export const Button = styled.div`
   &:hover {
     background-color: #fff;
    
+  }
+  @media screen and (max-width: 575px) {
+    padding: 2px 5px;
+    a{
+      font-size: 12px;
+    }
   }
 `;

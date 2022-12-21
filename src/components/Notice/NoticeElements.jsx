@@ -51,6 +51,26 @@ export const Title = styled.h1`
  
   @media screen and (max-width: 575px) {
     font-size: 20px;
+    &:before{
+    content: '';
+    width: 180px;
+    height: 3px;
+    background-color: gray;
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    
+  }
+  &:after{
+    content: '';
+    width: 100px;
+    height: 6px;
+    background-color: #000000;
+    position: absolute;
+    top: 24px;
+    left: 0px;
+    
+  }
   }
 `;
 export const Bottom = styled.div`
