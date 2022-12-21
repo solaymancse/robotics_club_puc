@@ -49,7 +49,7 @@ export const Button = styled.div`
     margin: 15px;
   }
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (max-width: 991px) {
     h1{
       text-align: center;
     }

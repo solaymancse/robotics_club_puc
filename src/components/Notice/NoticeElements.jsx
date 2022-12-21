@@ -82,6 +82,16 @@ h2{
 
 }
 
+
+@media (max-width: 575px){
+  h2{
+    font-size: 14px;
+  }
+  p{
+    font-size: 12px;
+  }
+}
+
 `
 export const More = styled.div`
 color: #607EB7;
@@ -97,4 +107,9 @@ a{
     text-decoration: none;
 }
 
+@media (max-width: 575px) {
+  a{
+    font-size: 12px;
+  }
+}
 `

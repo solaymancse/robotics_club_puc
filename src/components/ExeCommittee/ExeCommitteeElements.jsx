@@ -42,7 +42,6 @@ export const H1 = styled.h1`
   @media screen and (max-width: 575px) {
     margin-bottom: 50px;
     font-weight: 600;
-    padding: 10px;
 
     &:before {
     content: "";
@@ -65,12 +64,26 @@ export const H1 = styled.h1`
   }
 `;
 
-export const CardDiv = styled.div`
-  width: ${(props) => props.width};
-  height: 250px;
-  text-align: center;
+export const TopCardDiv = styled.div`
+margin-bottom: 50px;
   display: flex;
-  margin-right: ${(props) => props.gap};
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+ 
+`;
+export const BottomCardDiv = styled.div`
+
+  display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
@@ -84,9 +97,7 @@ export const CardDiv = styled.div`
     object-fit: cover;
   }
 
-  @media screen and (max-width: 575px) {
-    height: 200px;
-  }
+
 `;
 export const ImgDiv = styled.div`
   width: 120px;
@@ -121,12 +132,27 @@ export const Bottom = styled.div`
   flex-wrap: wrap;
 `;
 export const TopCom = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 20px;
+  
+  
 `;
 export const BottCom = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 20px;
+  
+ 
+  @media (min-width: 320px) and (max-width: 575px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding: 0 10px;
+  }
+  
 `;
 export const P = styled.div`
   @media screen and (max-width: 575px) {

@@ -7,6 +7,16 @@ export const Section = styled.div`
   width: 100%;
   margin: 100px 0px;
 
+  @media (min-width: 576px) and (max-width: 767px) {
+   
+    flex-direction: column-reverse;
+   
+  } ;
+  @media (min-width: 481px) and (max-width: 575px) {
+    margin-top: 20px;
+    flex-direction: column-reverse;
+   
+  } ;
   @media (min-width: 320px) and (max-width: 480px) {
     margin: 0;
     height: 730px;
@@ -27,7 +37,7 @@ export const Div = styled.div`
   display: flex;
   margin-top: 30px;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     width: 100%;
     padding: 0px;
     display: flex;
@@ -38,7 +48,7 @@ export const Div = styled.div`
 `;
 
 export const Left = styled.div`
- @media (min-width: 320px) and (max-width: 480px) {
+ @media (min-width: 320px) and (max-width: 767px) {
     text-align: center;
     img{
       margin-top: 20px;
@@ -51,7 +61,8 @@ display: flex;
 margin: 50px 0 80px 0;
 gap: 80px;
 
-@media (min-width: 320px) and (max-width: 480px) {
+
+@media (min-width: 320px) and (max-width: 991px) {
    margin: 40px 0;
    gap: 0;
    flex-direction: column;
@@ -126,7 +137,7 @@ export const Container = styled.div`
 padding:0px 150px;
 border-top: 1px solid lightgray;
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 767px) {
     padding: 0 10px;
    
   } ;
@@ -164,9 +175,13 @@ export const Img = styled.img`
   width: 613px;
   border: 1px solid gray;
   margin-right: 60px;
-
   
-  @media screen and (max-width: 575px) {
+  @media (min-width: 575px) and (max-width: 767px) {
+    height: 400px;
+    width: 80%;
+    margin: auto;
+  }
+  @media (min-width: 320px) and (max-width: 575px) {
     height: 150px;
     width: 150px;
 
@@ -180,7 +195,7 @@ export const Desc = styled.p`
   font-size: 18px;
   margin-top: 30px;
 
-  @media screen and (max-width: 575px) {
+  @media screen and (max-width: 767px) {
     font-size: 12px;
     margin-top: 20px;
   }
@@ -191,8 +206,9 @@ export const H1 = styled.div`
   text-align: center;
   color: gray;
 
-  @media (min-width: 320px) and (max-width: 480px) {
-    font-size: 14px;
+  
+  @media (min-width: 320px) and (max-width: 767px) {
+    font-size: 12px;
     margin-top: 10px;
     margin-left: auto;
   }
@@ -231,10 +247,12 @@ export const Title = styled.div`
     left: 58%;
     
   }
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
+    font-size: 16px;
+    padding-bottom: 30px;
     &:before{
     content: '';
-    width: 380px;
+    width: 100%;
     height: 3px;
     background-color: gray;
     position: absolute;
@@ -255,10 +273,7 @@ export const Title = styled.div`
    
   } ;
 
-  @media screen and (max-width: 575px) {
-    font-size: 16px;
-    padding-bottom: 30px;
-  }
+
 `;
 export const Right = styled.div`
 position: relative;

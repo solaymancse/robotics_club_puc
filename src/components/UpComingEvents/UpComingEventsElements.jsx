@@ -6,10 +6,8 @@ export const Section = styled.div`
   padding-right: 20px;
   
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     padding: 0px;
-    
-    
   };
 `;
 
@@ -37,10 +35,6 @@ export const ContentDiv = styled.div`
   }
   
 `;
-export const Div = styled.div`
-  display: flex;
- flex-wrap: wrap;
-`;
 export const Left = styled.div`
   border-bottom: 2px solid #333;
   height: 50px;
@@ -52,7 +46,7 @@ export const Card = styled.div`
   margin-bottom: 10px;
   width: 500px;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     width: 100%;
     flex-direction: column;
   } ;

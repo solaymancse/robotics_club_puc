@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 import { EventCard } from "./EventCard";
-import { Section, H1, Div, Wrapper } from "./UpComingEventsElements";
+import { Section, H1, Wrapper } from "./UpComingEventsElements";
 import Data from "../../UpComingEventData";
 import Aos from "aos";
 import "aos/dist/aos.css";

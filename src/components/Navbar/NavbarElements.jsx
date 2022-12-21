@@ -14,11 +14,16 @@ export const Wrapper = styled.div`
   padding: 50px 150px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 
-  @media screen and (max-width: 991px) {
-    padding: 30px;
-
-  }
-
+ 
+  @media (min-width: 992px) and (max-width: 1440px) {
+    padding:  0 10px;
+   
+  } ;
+ 
+  @media (min-width: 481px) and (max-width: 767px) {
+    padding: 0px;
+    height: 80px;
+  } ;
   @media (min-width: 320px) and (max-width: 480px) {
     padding: 0px;
     height: 80px;
@@ -34,7 +39,8 @@ export const Nav = styled.nav`
   align-items: center;
 
   @media (min-width: 481px) and (max-width: 767px) {
-    padding: 0 50px;
+    padding: 0px 10px;
+    margin: 0;
     height: 70px;
   }
   @media (min-width: 320px) and (max-width: 480px) {
@@ -58,7 +64,7 @@ export const Item = styled.div`
   margin-right: 15px;
 `;
 export const ToggleDiv = styled.div`
-   display: block;
+  display: block;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,20 +162,27 @@ export const H1 = styled.h1`
   font-weight: bold;
   color: #27363b;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 992px) and (max-width: 1440px) {
+    font-size: 16px;
+   
+  } ;
+  @media (min-width: 320px) and (max-width: 991px) {
     font-size: 12px;
   }
 `;
 export const SPAN = styled.span`
   letter-spacing: 4.2px;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 992px) and (max-width: 1440px) {
+    letter-spacing: 2.4px;
+   
+  } ;
+  @media (min-width: 320px) and (max-width: 991px) {
     letter-spacing: 2.2px;
   }
 `;
 
 export const Bars = styled(FaBars)`
- 
   color: #333;
 
   @media screen and (max-width: 575px) {
@@ -192,10 +205,10 @@ export const NavBtn = styled.nav`
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background-color: #ff2162;
   color: #fff;
-transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     background-color: #fff;
     color: #333;
     transition: 0.7s ease-in-out;
@@ -205,21 +218,16 @@ transition: 0.7s ease-in-out;
   }
 `;
 
-export const Icon = styled.div`
-
-
- 
-`;
+export const Icon = styled.div``;
 export const NavBtnLink = styled(Link)`
   padding: 8px 0px 8px 20px;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   color: #fff;
-  
 
-&:hover{
-  color:#333;
-}
+  &:hover {
+    color: #333;
+  }
 `;
 
 export const Div = styled.div`

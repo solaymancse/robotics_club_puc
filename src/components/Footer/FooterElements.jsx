@@ -12,7 +12,7 @@ padding: 50px 300px 50px 300px;
   @media screen and (max-width: 575px){
     padding:30px 10px;
     width: 100%;
-    height: 80vh;
+   height: 100%;
   }
 `;
 
@@ -82,6 +82,11 @@ export const Line = styled.div`
 
 export const P = styled.p`
   color: grey;
+  text-align: justify;
+
+  @media (max-width: 575px){
+    font-size: 14px;
+  }
 `;
 
 export const RDiv = styled.div`

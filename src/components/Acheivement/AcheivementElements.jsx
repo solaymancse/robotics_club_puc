@@ -27,6 +27,14 @@ export const Title = styled.div`
       border: 0.5px solid lightgray;
     }
   }
+
+  @media (max-width: 575px){
+    a{
+      padding: 5px;
+      font-size: 12px;
+    }
+
+  }
 `;
 export const H2 = styled.h1`
   font-size: 24px;

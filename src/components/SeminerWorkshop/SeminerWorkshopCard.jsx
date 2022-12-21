@@ -1,6 +1,7 @@
 import React from 'react'
 import img14 from "../../images/image14.jpg";
-import { Div,Img,H3,H2 } from './SeminerWorkshopElements'
+import { H2 } from '../UpComingEvents/UpComingEventsElements';
+import { Div,Img,H3 } from './SeminerWorkshopElements'
 
 export const SeminerWorkshopCard = (props) => {
     const {date, title } = props;

@@ -1,4 +1,4 @@
-import { Card } from "./Card";
+import { BottomCard } from "./BottomCard";
 import {
   Div,
   H1,
@@ -12,6 +12,7 @@ import {
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { committeeBottData, committeeTopData } from "../../Data";
+import { TopCard } from "./TopCard";
 
 export const ExeCommittee = () => {
   return (
@@ -31,12 +32,12 @@ export const ExeCommittee = () => {
           <Bottom>
             <TopCom>
               {committeeTopData.map((data, index) => (
-                <Card data={data} key={index} width="600px" />
+                <TopCard data={data} key={index}/>
               ))}
             </TopCom>
             <BottCom>
               {committeeBottData.map((data, index) => (
-                <Card data={data} key={index} width="400px" gap="25px" />
+                <BottomCard data={data} key={index}/>
               ))}
             </BottCom>
             

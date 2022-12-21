@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { P, Div, Span, Intro,Left,Right } from "./WelcomeElements";
+import { Div, Span, Intro,Left,Right } from "./WelcomeElements";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
