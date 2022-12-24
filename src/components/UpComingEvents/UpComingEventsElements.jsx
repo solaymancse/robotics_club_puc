@@ -6,16 +6,24 @@ export const Section = styled.div`
   padding-right: 20px;
   
 
+  @media (min-width: 768px) and (max-width: 1024px) {
+    padding: 10px;
+  };
   @media (min-width: 320px) and (max-width: 767px) {
     padding: 0px;
   };
 `;
 
 export const Wrapper = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
-  flex-wrap: wrap;
+ 
 
+  @media (min-width: 1025px) and (max-width: 1200px) {
+    grid-template-columns: repeat(1, 1fr);
+    
+  };
   @media (min-width: 320px) and (max-width: 480px) {
     display: flex;
     flex-direction: column;
@@ -46,7 +54,7 @@ export const Card = styled.div`
   margin-bottom: 10px;
   width: 500px;
 
-  @media (min-width: 320px) and (max-width: 767px) {
+  @media (min-width: 320px) and (max-width: 1024px) {
     width: 100%;
     flex-direction: column;
   } ;
@@ -57,6 +65,11 @@ export const Img = styled.img`
   height: 300px;
   width: 100%;
 
+  @media (min-width: 1025px) and (max-width: 1200px) {
+    width: 100%;
+    height: 150px;
+    object-fit:cover;
+  }
   @media screen and (max-width: 767px) {
     width: 100%;
     height: 150px;

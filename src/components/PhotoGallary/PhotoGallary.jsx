@@ -31,7 +31,7 @@ export const PhotoGallary = () => {
       <Portfolio>
         {gallary.map((data, index) => (
       
-            <div className="project" key={index}>
+            <div className="project" key={index} data-aos="zoom-in-down" >
               <img className="project__image" src={data.img} alt="" />
               <p>{data.title}</p>
               <h3 className="grid__title"> front-end</h3>

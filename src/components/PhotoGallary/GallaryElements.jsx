@@ -7,7 +7,10 @@ export const Wrapper = styled.div`
   padding: 50px 150px;
 
 
-  @media (max-width: 575px) {
+  @media (min-width: 1024px) and (max-width: 1200px) {
+    padding: 20px;
+  }
+  @media (max-width: 1023px) {
     padding: 10px;
   }
 `
@@ -21,6 +24,19 @@ export const Portfolio = styled.div`
   grid-template-rows: 1fr 1fr;
   grid-gap: 2px;
 
+  @media (min-width: 1024px) and (max-width: 1200px){
+    margin-top: 20px;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-rows: repeat(4, minmax(270px, 1fr));
+    height: 200px;
+  }
+  @media (min-width: 576px) and (max-width: 1023px){
+    margin-top: 20px;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-template-rows: repeat(8, minmax(200px, 1fr));
+    height: 200px;
+  }
   @media (max-width: 575px){
     margin-top: 20px;
     grid-template-columns: repeat(2, minmax(100px, 1fr));

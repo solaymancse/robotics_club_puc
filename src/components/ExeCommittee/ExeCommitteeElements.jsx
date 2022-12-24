@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Div = styled.div`
   margin: 100px 0;
   position: relative;
-  @media screen and (max-width: 575px) {
+  @media screen and (max-width: 767px) {
     margin-top: 50px;
     padding: 0;
   }
@@ -39,13 +39,36 @@ export const H1 = styled.h1`
     top: 18px;
     left: 35%;
   }
+  @media (min-width: 576px) and (max-width: 767px) {
+    margin-bottom: 50px;
+    font-weight: 600;
+
+    &:before {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: gray;
+    position: absolute;
+    top: 36px;
+    left: 8%;
+  }
+  &:after {
+    content: "";
+    width: 150px;
+    height: 6px;
+    background-color: #000000;
+    position: absolute;
+    top: 35px;
+    left: 8%;
+  }
+  }
   @media screen and (max-width: 575px) {
     margin-bottom: 50px;
     font-weight: 600;
 
     &:before {
     content: "";
-    width: 900px;
+    width: 100%;
     height: 3px;
     background-color: gray;
     position: absolute;
@@ -117,6 +140,11 @@ export const Top = styled.div`
   justify-content: space-around;
   align-items: center;
 
+  @media (min-width: 576px) and (max-width: 767px) {
+    p{
+      font-size: 14px;
+    }
+  }
   @media screen and (max-width: 575px) {
     p{
       font-size: 12px;

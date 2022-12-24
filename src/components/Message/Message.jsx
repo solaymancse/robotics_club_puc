@@ -17,6 +17,14 @@ export const Message = () => {
           <AdviserMessage />
         </RightDiv>
       </Middle>
+      <Middle>
+        <LeftDiv>
+          <ChairmanMessage />
+        </LeftDiv>
+        <RightDiv>
+          <AdviserMessage />
+        </RightDiv>
+      </Middle>
     </Container>
   );
 };

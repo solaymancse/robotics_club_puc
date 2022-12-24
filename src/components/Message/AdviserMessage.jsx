@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import img7 from "../../images/image7.jpg";
 import {
-  Div,
+  MainDiv,
   Title,
   LeftSide,
   RightSide,
@@ -21,7 +21,7 @@ export const AdviserMessage = () => {
   return (
     <Wrapper>
       <Title size="10px">Adviser Of Robotics Club</Title>
-      <Div data-aos="fade-right">
+      <MainDiv data-aos="fade-right">
         <LeftSide>
           <ImgDiv>
             <img src={img7} alt="" />
@@ -31,7 +31,6 @@ export const AdviserMessage = () => {
             Prof. Dr. Taufique Sayeed <br />
             Dean, Faculty of Engineering <br />
             Professor and Chairman
-            <br /> Department of CSE
           </H2>
         </LeftSide>
         <RightSide>
@@ -50,7 +49,7 @@ export const AdviserMessage = () => {
               </Qoute>
 
         </RightSide>
-      </Div>
+      </MainDiv>
     </Wrapper>
   );
 };

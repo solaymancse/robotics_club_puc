@@ -1,7 +1,5 @@
-import React from "react";
 import {
   Section,
-  Img,
   Div,
   Title,
   H2,

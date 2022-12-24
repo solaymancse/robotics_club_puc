@@ -10,7 +10,7 @@ import {
   Button
 } from "./ExeCommitteeElements";
 import { Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { committeeBottData, committeeTopData } from "../../Data";
 import { TopCard } from "./TopCard";
 
@@ -26,7 +26,7 @@ export const ExeCommittee = () => {
             <p>Session: 2021 - 2022</p>
             <p>Check All Ex - Committee</p>
            <Button>
-           <Link to="/all-committee">Check Here</Link>
+           <NavLink to="/all-committee">Check Here</NavLink>
            </Button>
           </Top>
           <Bottom>

@@ -1,22 +1,16 @@
-import React from 'react'
 import img14 from "../../images/image14.jpg";
-import { H2 } from '../UpComingEvents/UpComingEventsElements';
-import { Div,Img,H3 } from './SeminerWorkshopElements'
+import { H2 } from "../UpComingEvents/UpComingEventsElements";
+import { Div, Img, H3 } from "./SeminerWorkshopElements";
 
 export const SeminerWorkshopCard = (props) => {
-    const {date, title } = props;
+  const { date, title } = props;
 
   return (
-    <>
-
-        <Div>
-         <Img src={img14} />
-         <H3>{date}</H3>
-         <H2>{title}</H2>
-         <a href="/">Read More</a>
-         </Div>
-       
- 
-    </>
-  )
-}
+    <Div>
+      <Img src={img14} />
+      <H3>{date}</H3>
+      <H2>{title}</H2>
+      <a href="/">Read More</a>
+    </Div>
+  );
+};

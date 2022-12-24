@@ -1,7 +1,7 @@
-import React from 'react'
+import { Events } from '../components/Events/Events'
 
 export const EventPage = () => {
   return (
-    <div>EventPage</div>
+    <Events/>
   )
 }

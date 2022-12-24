@@ -10,7 +10,13 @@ export const Div = styled.div`
   grid-gap: 30px;
 
  
-  @media (min-width: 320px) and (max-width: 767px) {
+  @media (min-width: 1025px) and (max-width: 1200px) {
+    padding: 20px;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+  
+  }
+  @media (min-width: 320px) and (max-width: 1024px) {
     display: flex;
     flex-direction: column;
     padding: 10px;

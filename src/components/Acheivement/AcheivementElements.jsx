@@ -3,7 +3,11 @@ import styled from "styled-components";
 export const Section = styled.div`
   border-top: 1px solid lightgray;
   padding: 20px 150px;
-  @media screen and (max-width: 575px) {
+  @media (min-width: 991px) and (max-width: 1440px) {
+    width: 100%;
+    padding: 20px;
+  }
+  @media screen and (max-width: 991px) {
     width: 100%;
     padding: 10px;
   }
@@ -80,7 +84,7 @@ export const H2 = styled.h1`
   }
 `;
 export const TitleOverlay = styled.div`
-    background: rgba(229, 182, 177, 0.9);
+  background: rgba(229, 182, 177, 0.9);
   height: 100%;
   grid-column: 1/-1;
   grid-row: 1/-1;
@@ -90,23 +94,26 @@ export const TitleOverlay = styled.div`
   padding-top: 10px;
   transform: translateY(80%);
   transition: all 0.3s ease-in-out;
+  text-align: center;
 `;
 export const Div = styled.div`
   margin-top: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
   position: relative;
-`;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
 
-export const Img = styled.img`
-  height: 100%;
-  width: 100%;
-
-  @media screen and (max-width: 575px) {
-    width: 100%;
+  
+  @media (min-width: 768px) and (max-width: 1024px){
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+  @media (min-width: 320px) and (max-width: 767px){
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
   }
 `;
+
 
 export const H1 = styled.h1`
   font-size: 24px;
@@ -117,11 +124,12 @@ export const Content = styled.div`
   position: relative;
   background: #f2dad7;
   overflow: hidden;
-  width: 525px;
   height: 300px;
-
   img{
     position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
   }
   &:hover ${TitleOverlay}{
     transform: translateY(0%);

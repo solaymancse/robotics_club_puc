@@ -3,7 +3,7 @@ import { BottomCardDiv, P, ImgDiv } from "./ExeCommitteeElements";
 export const BottomCard = ({ data, width, gap }) => {
   return (
     <BottomCardDiv width={width} gap={gap}>
-      <ImgDiv>
+      <ImgDiv data-aos="fade-right">
         <img src={data.img} alt="" />
       </ImgDiv>
       <P>{data.name}</P>
