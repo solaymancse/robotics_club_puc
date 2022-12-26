@@ -1,5 +1,7 @@
 import './Dashboard.css';
-
+import logo from '../../images/logo.jpg'
+import { AiFillHome } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 export const Sidebar = () => {
   return (
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
@@ -7,7 +9,7 @@ export const Sidebar = () => {
     <li class="nav-item nav-profile">
       <a href="#" class="nav-link">
         <div class="nav-profile-image">
-          <img src="assets/images/faces/face1.jpg" alt="profile"/>
+          <img src={logo} alt="profile"/>
           <span class="login-status online"></span>
           {/* <!--change to offline or busy as needed--> */}
         </div>
@@ -19,10 +21,10 @@ export const Sidebar = () => {
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="index.html">
+      <Link class="nav-link" to="/dashboard">
         <span class="menu-title">Dashboard</span>
-        <i class="mdi mdi-home menu-icon"></i>
-      </a>
+        <AiFillHome/>
+      </Link>
     </li>
     <li class="nav-item">
       <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
@@ -38,16 +40,28 @@ export const Sidebar = () => {
       </div>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="pages/icons/mdi.html">
-        <span class="menu-title">Icons</span>
+      <Link class="nav-link" to="/dashboard/event">
+        <span class="menu-title">Events</span>
         <i class="mdi mdi-contacts menu-icon"></i>
-      </a>
+      </Link>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="pages/forms/basic_elements.html">
-        <span class="menu-title">Forms</span>
+      <Link class="nav-link" to="/dashboard/committee">
+        <span class="menu-title">Execute Committee</span>
         <i class="mdi mdi-format-list-bulleted menu-icon"></i>
-      </a>
+      </Link>
+    </li>
+    <li class="nav-item">
+      <Link class="nav-link" to="/dashboard/gallary">
+        <span class="menu-title">Gallary</span>
+        <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+      </Link>
+    </li>
+    <li class="nav-item">
+      <Link class="nav-link" to="/dashboard/members">
+        <span class="menu-title">Members</span>
+        <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+      </Link>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="pages/charts/chartjs.html">

@@ -8,6 +8,12 @@ import { GallaryPage } from "./pages/GallaryPage";
 import { ContactPage } from "./pages/ContactPage";
 import { GlobalStyle } from "./components/GlobalStyle/GlobalStyle";
 import { Dashboard } from "./components/Dashboard/Dashboard";
+import { Login } from "./components/Dashboard/Login/Login";
+import { MainPanel } from "./components/Dashboard/MainPanel";
+import { Event } from "./components/Dashboard/Event/Event";
+import { ExCommittee } from "./components/Dashboard/ExCommittee/ExCommittee";
+import { Gallary } from "./components/Dashboard/Gallary/Gallary";
+import { Members } from "./components/Dashboard/Members/Members";
 
 
 export default function MainComponents() {
@@ -20,7 +26,16 @@ export default function MainComponents() {
         <Route path="/events" element={<EventPage />} />
         <Route path="/gallary" element={<GallaryPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route  />
+        <Route path="/login" element={<Login />} />
+
+        <Route path="/dashboard/" element={<Dashboard />}>
+          <Route index element={<MainPanel />}/>
+          <Route path="event" element={<Event />} />
+          <Route path="committee" element={<ExCommittee />} />
+          <Route path="gallary" element={<Gallary />} />
+          <Route path="members" element={<Members/>} />
+        </Route>
       </Routes>
       <Copyrights />
     </>
