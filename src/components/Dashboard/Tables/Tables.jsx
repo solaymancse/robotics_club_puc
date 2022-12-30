@@ -1,16 +1,38 @@
 import "../Dashboard";
-import avatar from '../../../images/face1.jpg'
+import avatar from "../../../images/face1.jpg";
+import { useState } from "react";
+import axios from "axios";
+import { useEffect } from "react";
+axios.defaults.withCredentials = true;
+
 export const Tables = () => {
+  const [members, setMembers] = useState([]);
+  console.log(members);
+  const getMembers = async () => {
+    const res = await axios
+      .get("http://localhost:5000/api/all-member", {
+        withCredentials: true,
+      })
+      .catch((err) => console.log(err));
+
+    const data = await res.data;
+    console.log(data);
+    return data;
+  };
+
+  useEffect(() => {
+    getMembers().then((data) => setMembers(data));
+  }, []);
   return (
     <div className="main-panel">
       <div className="content-wrapper">
-        <div class="row">
-          <div class="col-12 grid-margin">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">All Members</h4>
-                <div class="table-responsive">
-                  <table class="table table-striped">
+        <div className="row">
+          <div className="col-12 grid-margin">
+            <div className="card">
+              <div className="card-body">
+                <h4 className="card-title">All Members</h4>
+                <div className="table-responsive">
+                  <table className="table table-striped">
                     <thead>
                       <tr>
                         <th> Avatar </th>
@@ -22,82 +44,23 @@ export const Tables = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          <img
-                            src={avatar}
-                            class="me-2"
-                            alt="image"
-                          />{" "}
-                          David Grey
-                        </td>
-                        <td> Fund is not recieved </td>
-                      
-                        <td> Dec 5, 2017 </td>
-                        <td> WD-12345 </td>
-                        <td>
-                          <label class="badge badge-gradient-success">
-                            DONE
-                          </label>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <img
-                             src={avatar}
-                            class="me-2"
-                            alt="image"
-                          />{" "}
-                          Stella Johnson
-                        </td>
-                        <td> High loading time </td>
-                   
-                        <td> Dec 12, 2017 </td>
-                        <td> WD-12346 </td>
-                        <td>
-                          <label class="badge badge-gradient-warning">
-                            PROGRESS
-                          </label>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <img
-                             src={avatar}
-                            class="me-2"
-                            alt="image"
-                          />{" "}
-                          Marina Michel
-                        </td>
-                        <td> Website down for one week </td>
-                  
-                        <td> Dec 16, 2017 </td>
-                        <td> WD-12347 </td>
-                        <td>
-                          <label class="badge badge-gradient-info">
-                            ON HOLD
-                          </label>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <img
-                             src={avatar}
-                            class="me-2"
-                            alt="image"
-                          />{" "}
-                          John Doe
-                        </td>
-                        <td> Loosing control on server </td>
-                     
-                        <td> Dec 3, 2017 </td>
-                        <td> WD-12348 </td>
-                        <td>
-                          <label class="badge badge-gradient-danger">
-                            REJECTED
-                          </label>
-                        </td>
-                      </tr>
+                      {members.map((data, index) => (
+                        <tr key={index}>
+                          <td>
+                            <img src={avatar} className="me-2" alt="image" />
+                            {data.name}
+                          </td>
+                          <td> {data.department} </td>
+
+                          <td> {data.phone} </td>
+                          <td>{data.gender} </td>
+                          <td>
+                            <label className="badge badge-gradient-success">
+                              DONE
+                            </label>
+                          </td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
