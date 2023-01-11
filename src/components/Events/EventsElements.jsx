@@ -23,3 +23,20 @@ export const Div = styled.div`
     grid-gap: 0px;
   }
 `;
+export const EventContent = styled.div`
+  width: 100%;
+  height: 100%;
+  margin: 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: justify;
+  img{
+    width: 100%;
+    height: 500px;
+    
+  }
+  p{
+    text-align: justify;
+  }
+`;

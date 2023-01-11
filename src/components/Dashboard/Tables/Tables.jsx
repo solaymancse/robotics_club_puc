@@ -10,7 +10,7 @@ export const Tables = () => {
   console.log(members);
   const getMembers = async () => {
     const res = await axios
-      .get("http://localhost:5000/api/all-member", {
+      .get("/all-member", {
         withCredentials: true,
       })
       .catch((err) => console.log(err));

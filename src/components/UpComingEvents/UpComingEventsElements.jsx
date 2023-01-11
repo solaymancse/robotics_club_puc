@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link, NavLink } from "react-router-dom";
 
 export const Section = styled.div`
   width: 100%;
@@ -33,14 +34,7 @@ export const Wrapper = styled.div`
 export const ContentDiv = styled.div`
   display: flex;
   margin-top: 20px;
-  a{
-    
-    &:hover{
-      background-color: #ff2162;
-      border-color: #ff2162;
-    }
-    
-  }
+  
   
 `;
 export const Left = styled.div`
@@ -90,6 +84,23 @@ export const H1 = styled.h1`
   }
 `;
 
+export const Title = styled.div`
+a{
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+cursor: pointer;
+  &:hover{
+   
+    text-decoration: underline;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+`;
 export const H2 = styled.h2`
   font-size: 18px;
   font-weight: 500;

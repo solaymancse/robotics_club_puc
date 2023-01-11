@@ -1,31 +1,43 @@
 import img11 from "../../images/image11.jpg";
-import { Card, Img, H2, P, ContentDiv,Left,H3 } from "./UpComingEventsElements";
+import {
+  Card,
+  Img,
+  P,
+  ContentDiv,
+  Left,
+  H3,
+  Title
+} from "./UpComingEventsElements";
 
-import { MdLocationOn } from 'react-icons/md'
+import { MdLocationOn } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-export const EventCard = (props) => {
-  const { title, content } = props;
+
+export const EventCard = ({data}) => {
+  const url_title = data.title.replace(/\s/g, '-');
+
   return (
-    <>
-      <Card>
-        <Img src={img11} alt="" />
-        <ContentDiv>
-          <Left>
-            <H3>27 March</H3>
-          </Left>
+    <Card>
+      <Img src={data.image} alt="" />
+      <ContentDiv>
+        <Left>
+          <H3>27 March</H3>
+        </Left>
+        <div>
+          <Title>
+          <Link to={`/event/${data._id}/${url_title}`}>{data.title}</Link>
+          </Title>
+          <P>
+            <MdLocationOn />
+           Premier University Chittagong
+          </P>
           <div>
-            <H2>{title}</H2>
-            <P><MdLocationOn/>{content}</P>
-            <div>
             <Link className="btn btn-outline-dark" to="/event-info">
-              Register 
+              Register
             </Link>
           </div>
-          </div>
-          
-        </ContentDiv>
-      </Card>
-    </>
+        </div>
+      </ContentDiv>
+    </Card>
   );
 };

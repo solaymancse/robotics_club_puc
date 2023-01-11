@@ -21,7 +21,7 @@ export const Navbar = () => {
           <div className="input-group-prepend bg-transparent d-flex align-items-center">
            <AiOutlineSearch/>
           </div>
-          <input type="text" classNameName="form-control bg-transparent border-0" placeholder="Search projects"/>
+          <input type="text" className="form-control bg-transparent border-0" placeholder="Search projects"/>
         </div>
       </form>
     </div>

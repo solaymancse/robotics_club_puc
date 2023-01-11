@@ -1,13 +1,21 @@
-import React, { useEffect } from "react";
+import { useState,useEffect } from "react";
 
 import { EventCard } from "./EventCard";
 import { Section, H1, Wrapper } from "./UpComingEventsElements";
-import Data from "../../UpComingEventData";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import axios from "axios";
 
 export const UpComingEvents = (props) => {
+  const [events, setEvents] = useState([]);
+
   useEffect(() => {
+    const fetchPosts = async ()=> {
+      const res = await axios.get("/all-events");
+      setEvents(res.data);
+    }
+
+    fetchPosts();
     Aos.init({ duration: 1000 });
   }, []);
 
@@ -16,8 +24,8 @@ export const UpComingEvents = (props) => {
       <H1 data-aos="fade-up">Up Coming Event</H1>
       <hr />
       <Wrapper>
-        {Data.map((data, index) => (
-          <EventCard key={index} title={data.title} content={data.content} />
+        {events.map((data, index) => (
+          <EventCard key={index} data={data}/>
         ))}
       </Wrapper>
     </Section>

@@ -12,6 +12,7 @@ import { Newsletter } from "../components/Newsletter/Newsletter";
 import { Notice } from "../components/Notice/Notice";
 import { PhotoGallary } from "../components/PhotoGallary/PhotoGallary";
 import { TopBar } from "../components/TopBar/TopBar";
+import { Footer } from "../components/Footer/Footer";
 
 export const Home = () => {
   return (
@@ -31,6 +32,7 @@ export const Home = () => {
       <ProjectRC />
       <PhotoGallary />
       <SeminerWorkshop />
+      <Footer/>
     </>
   );
 };
