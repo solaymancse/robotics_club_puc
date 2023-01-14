@@ -16,6 +16,8 @@ import { Members } from "./components/Dashboard/Members/Members";
 import { Single } from "./pages/Single";
 import { ErrorPage } from "./pages/ErrorPage";
 import { CreateEvent } from "./components/Dashboard/Event/CreateEvent";
+import { NewCommittee } from "./components/Dashboard/ExCommittee/NewCommittee";
+
 
 
 export default function MainComponents() {
@@ -40,6 +42,7 @@ export default function MainComponents() {
           <Route path="gallary" element={<Gallary />} />
           <Route path="members" element={<Members/>} />
           <Route path="create-event" element={<CreateEvent/>} />
+          <Route path="new-committee" element={<NewCommittee/>} />
         </Route>
       </Routes>
       <Copyrights />

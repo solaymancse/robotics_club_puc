@@ -6,15 +6,15 @@ justify-content: space-between;
 
 a{
     text-decoration: none;
-    background-color: #10CEB1;
-    border: 0.5px solid #10CEB1;
-    color: #fff;
+    color: #10CEB1;
+    font-weight: 800;
     padding: 2px 5px;
 
     &:hover{
-        background-color: #fff;
+      
         color: #333;
         transition: all 0.5s ease-in;
+        border:none;
     }
 }
 
@@ -33,4 +33,27 @@ img{
 input{
     padding: 5px;
 }
+`
+export const Button = styled.button`
+background-color: ${props=> props.background};
+color: #fff;
+border: 1px solid #10CEB1;
+padding: 5px;
+
+
+
+`
+export const Container = styled.div`
+display: flex;
+
+
+`
+export const Left = styled.div`
+width: 10%;
+height: 100%;
+display: flex;
+flex-direction: column;
+gap: 20px;
+
+
 `

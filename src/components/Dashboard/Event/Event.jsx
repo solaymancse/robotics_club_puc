@@ -1,4 +1,5 @@
 import "../Dashboard";
+import {IoIosAddCircleOutline} from 'react-icons/io'
 import {Top } from './EventElements'
 import { useState } from "react";
 import axios from "axios";
@@ -57,7 +58,7 @@ export const Event = () => {
               <div className="card-body">
                 <Top>
                 <h4>All Events</h4>
-                <Link to="/dashboard/create-event">Create Event</Link>
+                <Link to="/dashboard/create-event"><IoIosAddCircleOutline size="35px"/></Link>
                 </Top>
                 <div className="table-responsive">
                   <table className="table table-striped">

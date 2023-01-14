@@ -8,6 +8,7 @@ import { ExCommittee } from "./ExCommittee/ExCommittee";
 import { Gallary } from "./Gallary/Gallary";
 import { Members } from "./Members/Members";
 import { CreateEvent } from "./Event/CreateEvent";
+import { NewCommittee } from "./ExCommittee/NewCommittee";
 export const Dashboard = () => {
   return (
     <div className="container-scroller">
@@ -21,6 +22,7 @@ export const Dashboard = () => {
           <Route path="gallary" element={<Gallary />} />
           <Route path="members" element={<Members/>} />
           <Route path="create-event" element={<CreateEvent/>} />
+          <Route path="new-committee" element={<NewCommittee/>} />
         </Routes>
       </div>
     </div>

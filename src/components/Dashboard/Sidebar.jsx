@@ -1,6 +1,9 @@
 import './Dashboard.css';
 import logo from '../../images/logo.jpg'
 import { AiFillHome } from 'react-icons/ai';
+import { MdEventAvailable } from 'react-icons/md';
+import { FaUsers,FaUser } from 'react-icons/fa';
+import { BiPhotoAlbum } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 export const Sidebar = () => {
   return (
@@ -42,25 +45,25 @@ export const Sidebar = () => {
     <li className="nav-item">
       <Link className="nav-link" to="/dashboard/event">
         <span className="menu-title">Events</span>
-        <i className="mdi mdi-contacts menu-icon"></i>
+        <i className="mdi mdi-contacts menu-icon"><MdEventAvailable/></i>
       </Link>
     </li>
     <li className="nav-item">
       <Link className="nav-link" to="/dashboard/committee">
         <span className="menu-title">Execute Committee</span>
-        <i className="mdi mdi-format-list-bulleted menu-icon"></i>
+        <i className="mdi mdi-format-list-bulleted menu-icon"><FaUsers/></i>
       </Link>
     </li>
     <li className="nav-item">
       <Link className="nav-link" to="/dashboard/gallary">
         <span className="menu-title">Gallary</span>
-        <i className="mdi mdi-format-list-bulleted menu-icon"></i>
+        <i className="mdi mdi-format-list-bulleted menu-icon"><BiPhotoAlbum/></i>
       </Link>
     </li>
     <li className="nav-item">
       <Link className="nav-link" to="/dashboard/members">
         <span className="menu-title">Members</span>
-        <i className="mdi mdi-format-list-bulleted menu-icon"></i>
+        <i className="mdi mdi-format-list-bulleted menu-icon"><FaUser/></i>
       </Link>
     </li>
     <li className="nav-item">
