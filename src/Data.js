@@ -265,3 +265,149 @@ export const employeeData = [
   rise: true,
   tasksCompleted: 1,
   imgId: 3 }];
+export const committeeData = [
+{
+
+  designation: 'Cheif adviser',
+  position: "Sale's manager USA",
+  transactions: 3490,
+  rise: true,
+  tasksCompleted: 3,
+  imgId: 0 },
+
+
+{
+  designation: 'adviser',
+  position: "Sale's manager Europe",
+  transactions: 590,
+  rise: false,
+  tasksCompleted: 5,
+  imgId: 2 },
+
+
+{
+  designation: 'adviser',
+  position: "Sale's manager Asia",
+  transactions: 2600,
+  rise: true,
+  tasksCompleted: 1,
+  imgId: 3 },
+{
+
+  designation: 'Cheif mentor',
+  position: "Sale's manager USA",
+  transactions: 3490,
+  rise: true,
+  tasksCompleted: 3,
+  imgId: 0 },
+
+
+{
+  designation: 'mentor',
+  position: "Sale's manager Europe",
+  transactions: 590,
+  rise: false,
+  tasksCompleted: 5,
+  imgId: 2 },
+
+
+{
+  designation: 'president',
+  position: "Sale's manager Asia",
+  transactions: 2600,
+  rise: true,
+  tasksCompleted: 1,
+  imgId: 3 },
+{
+
+  designation: 'general secretary',
+  position: "Sale's manager USA",
+  transactions: 3490,
+  rise: true,
+  tasksCompleted: 3,
+  imgId: 0 },
+
+
+{
+  designation: 'vice president',
+  position: "Sale's manager Europe",
+  transactions: 590,
+  rise: false,
+  tasksCompleted: 5,
+  imgId: 2 },
+
+
+{
+  designation: 'joint secretary',
+  position: "Sale's manager Asia",
+  transactions: 2600,
+  rise: true,
+  tasksCompleted: 1,
+  imgId: 3 },
+{
+
+  designation: 'organizing secretary',
+  position: "Sale's manager USA",
+  transactions: 3490,
+  rise: true,
+  tasksCompleted: 3,
+  imgId: 0 },
+
+
+{
+  designation: 'finnace secretary',
+  position: "Sale's manager Europe",
+  transactions: 590,
+  rise: false,
+  tasksCompleted: 5,
+  imgId: 2 },
+
+
+{
+  designation: 'technical secretary',
+  position: "Sale's manager Asia",
+  transactions: 2600,
+  rise: true,
+  tasksCompleted: 1,
+  imgId: 3 },
+{
+  designation: 'program secretary',
+  position: "Sale's manager Europe",
+  transactions: 590,
+  rise: false,
+  tasksCompleted: 5,
+  imgId: 2 },
+
+
+{
+  designation: 'training secretary',
+  position: "Sale's manager Asia",
+  transactions: 2600,
+  rise: true,
+  tasksCompleted: 1,
+  imgId: 3 },
+{
+  designation: 'social & membership',
+  position: "Sale's manager Asia",
+  transactions: 2600,
+  rise: true,
+  tasksCompleted: 1,
+  imgId: 3 },
+{
+  designation: 'executive',
+  position: "Sale's manager Europe",
+  transactions: 590,
+  rise: false,
+  tasksCompleted: 5,
+  imgId: 2 },
+
+
+{
+  designation: 'executive',
+  position: "Sale's manager Asia",
+  transactions: 2600,
+  rise: true,
+  tasksCompleted: 1,
+  imgId: 3 }
+
+];

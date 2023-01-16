@@ -1,19 +1,39 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import JoditEditor from "jodit-react";
 import { Wrapper,Button } from "./EventElements";
 import { MdOutlineAddAPhoto } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
 
 
-export const CreateEvent = () => {
+export const EditEvent = () => {
   const editor = useRef(null);
+  const [event, setEvent] = useState({});
   const [loading, setLoading] = useState(false);
   const [content, setContent] = useState("");
   const [title, setTitle] = useState("");
   const [eventDate, setEventDate] = useState("");
   const [file, setFile] = useState(null);
+
+  const {id} = useParams();
+
+  useEffect(() => {
+   if(id){
+    getSingleEvent(id);
+   }
+  }, [id])
+  
+const getSingleEvent = async(id)=> {
+await axios.get(`/events/${id}`).then((res)=>{
+  setTitle(res.data.title);
+  setContent(res.data.description);
+  setFile(res.data.image);
+}).catch((err)=>{
+  console.log(err);
+});
+
+}
 
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
@@ -26,7 +46,7 @@ export const CreateEvent = () => {
     formData.append("eventDate", eventDate);
 
     await axios
-      .post("/events", formData)
+      .put(`/update/${id}`, formData)
       .then((res) => console.log("sucess"))
       .catch((err) => console.log(err));
 
@@ -57,18 +77,21 @@ export const CreateEvent = () => {
                       placeholder="Title Here"
                       name="title"
                       onChange={(e) => setTitle(e.target.value)}
+                      value={title}
                     />
                     <input
                       type="date"
                       placeholder="Event Date"
                       name="eventDate"
                       onChange={(e) => setEventDate(e.target.value)}
+                    value={new Date(event.eventDate).getDate()}
                     />
                     <JoditEditor
                       ref={editor}
                       onChange={(content) => setContent(content)}
+                     
                     />
-                 <Button type="submit" mos={loading ? "progress":"pointer"} background={loading ? "#F2EDF3":"#10CEB1"} onClick={()=> setLoading(true)}>{ loading ?"Creating Please wait.....":"Create"}</Button>
+                 <Button type="submit" mos={loading ? "progress":"pointer"} background={loading ? "#F2EDF3":"#10CEB1"} onClick={()=> setLoading(true)}>{ loading ?"Updating Please wait.....":"Update"}</Button>
                   </Wrapper>
                 </form>
               </div>

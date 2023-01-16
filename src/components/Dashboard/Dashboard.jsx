@@ -9,6 +9,7 @@ import { Gallary } from "./Gallary/Gallary";
 import { Members } from "./Members/Members";
 import { CreateEvent } from "./Event/CreateEvent";
 import { NewCommittee } from "./ExCommittee/NewCommittee";
+import { EditEvent } from "./Event/EditEvent";
 export const Dashboard = () => {
   return (
     <div className="container-scroller">
@@ -23,6 +24,7 @@ export const Dashboard = () => {
           <Route path="members" element={<Members/>} />
           <Route path="create-event" element={<CreateEvent/>} />
           <Route path="new-committee" element={<NewCommittee/>} />
+          <Route path="edit/:id" element={<EditEvent/>} />
         </Routes>
       </div>
     </div>

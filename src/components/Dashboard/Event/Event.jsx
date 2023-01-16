@@ -5,14 +5,14 @@ import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import {toast}  from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 axios.defaults.withCredentials = true;
 
 
 export const Event = () => {
   const [allevents, setAllEvents] = useState([]);
-
+ 
   const getMembers = async () => {
     const res = await axios
       .get("/all-events", {
@@ -81,9 +81,9 @@ export const Event = () => {
 
                           <td>{new Date(data.createdAt).toDateString()}</td>
                           <td>
-                            <label className="badge badge-gradient-success">
+                            <Link className="badge badge-gradient-success" to={`/dashboard/edit/${data._id}`}>
                               Update
-                            </label>
+                            </Link>
                           </td>
                           <td>
                             <label className="badge badge-gradient-danger" onClick={()=>handleDelete(data._id)}>
@@ -94,6 +94,7 @@ export const Event = () => {
                       ))}
                     </tbody>
                   </table>
+                 <ToastContainer />
                 </div>
               </div>
             </div>

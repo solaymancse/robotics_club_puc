@@ -17283,6 +17283,7 @@ code {
   line-height: 1;
   padding: .375rem .5625rem;
   font-family: "ubuntu-medium", sans-serif;
+  cursor: pointer;
 }
 
 .badge.badge-pill {

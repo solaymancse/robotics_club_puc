@@ -1,4 +1,3 @@
-import img11 from "../../images/image11.jpg";
 import {
   Card,
   Img,
