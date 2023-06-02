@@ -7,6 +7,7 @@ export const Section = styled.div`
   padding-right: 20px;
   
 
+
   @media (min-width: 768px) and (max-width: 1024px) {
     padding: 10px;
   };

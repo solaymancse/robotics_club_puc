@@ -61,7 +61,7 @@ export const H2 = styled.h1`
     top: 13px;
     left: 15%;
   }
-  @media (max-width: 575px) {
+  @media (max-width: 991px) {
     font-size: 12px;
     &:before {
     content: "";
@@ -84,7 +84,8 @@ export const H2 = styled.h1`
   }
 `;
 export const TitleOverlay = styled.div`
-  background: rgba(229, 182, 177, 0.9);
+  background: #04152d;
+  opacity: 0.5;
   height: 100%;
   grid-column: 1/-1;
   grid-row: 1/-1;
@@ -95,6 +96,11 @@ export const TitleOverlay = styled.div`
   transform: translateY(80%);
   transition: all 0.3s ease-in-out;
   text-align: center;
+
+  p{
+    color: #fff;
+  }
+ 
 `;
 export const Div = styled.div`
   margin-top: 30px;

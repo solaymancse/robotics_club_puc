@@ -5,7 +5,7 @@ export const Registration = (props) => {
   return <>
     <Modal
       {...props}
-      size="lg"
+      
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
@@ -15,7 +15,7 @@ export const Registration = (props) => {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <RegForm/>
+        <RegForm close={props.close}/>
       </Modal.Body>   
     </Modal>
   

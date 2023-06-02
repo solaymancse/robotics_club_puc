@@ -9,21 +9,22 @@ import { GlobalStyle } from "./components/GlobalStyle/GlobalStyle";
 import { Dashboard } from "./components/Dashboard/Dashboard";
 import { Login } from "./components/Dashboard/Login/Login";
 import { MainPanel } from "./components/Dashboard/MainPanel";
-import { Event } from "./components/Dashboard/Event/Event";
-import { ExCommittee } from "./components/Dashboard/ExCommittee/ExCommittee";
-import { Gallary } from "./components/Dashboard/Gallary/Gallary";
-import { Members } from "./components/Dashboard/Members/Members";
 import { Single } from "./pages/Single";
 import { ErrorPage } from "./pages/ErrorPage";
-import { CreateEvent } from "./components/Dashboard/Event/CreateEvent";
-import { NewCommittee } from "./components/Dashboard/ExCommittee/NewCommittee";
-import { EditEvent } from "./components/Dashboard/Event/EditEvent";
+import { PrivateRoute } from "./components/PrivateRoute/PrivateRoute";
+import { ProjectPage } from "./pages/ProjectPage";
+import { SeminerPage } from "./pages/SeminerPage";
+import { AchivementPage } from "./pages/AchivementPage";
+import { SingleSeminer } from "./components/SeminerWorkshop/SingleSeminer";
+import { NoticePage } from "./pages/NoticePage";
+import { SingleNotice } from "./components/Notice/SingleNotice";
 
-
+import { MobileRegister } from "./components/Togglebar/MobileRegister";
 
 export default function MainComponents() {
   return (
     <>
+    
       <GlobalStyle />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -31,20 +32,27 @@ export default function MainComponents() {
         <Route path="/events" element={<EventPage />} />
         <Route path="/gallary" element={<GallaryPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/event/:id/:post_title" element={<Single/>} />
-        <Route  />
+        <Route path="/register" element={<MobileRegister />} />
+        <Route path="/all-project" element={<ProjectPage />} />
+        <Route path="/all-seminer" element={<SeminerPage />} />
+        <Route path="/all-notice" element={<NoticePage />} />
+        <Route path="/all-achivement" element={<AchivementPage />} />
+        <Route path="/event/:id/:post_title" element={<Single />} />
+        <Route path="/seminer/:id/:post_title" element={<SingleSeminer />} />
+        <Route path="/notice/:id/:post_title" element={<SingleNotice />} />
+     
+        <Route />
         <Route path="/login" element={<Login />} />
-        <Route path="*" element={<ErrorPage/>} />
-
-        <Route path="/dashboard//*" element={<Dashboard />}>
-          <Route index element={<MainPanel />}/>
-          <Route path="event" element={<Event />} />
-          <Route path="committee" element={<ExCommittee />} />
-          <Route path="gallary" element={<Gallary />} />
-          <Route path="members" element={<Members/>} />
-          <Route path="create-event" element={<CreateEvent/>} />
-          <Route path="new-committee" element={<NewCommittee/>} />
-          <Route path="edit/:id" element={<EditEvent/>} />
+        <Route path="*" element={<ErrorPage />} />
+        <Route
+          path="/dashboard//*"
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        >
+          <Route index element={<MainPanel />} />
         </Route>
       </Routes>
       <Copyrights />

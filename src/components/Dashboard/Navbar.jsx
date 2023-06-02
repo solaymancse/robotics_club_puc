@@ -1,9 +1,46 @@
 import { AiOutlineBell, AiOutlineMail, AiOutlineMenu, AiOutlinePoweroff, AiOutlineSearch } from 'react-icons/ai';
 import { MdFormatLineSpacing } from 'react-icons/md';
+import Swal from 'sweetalert2'
+import { Link } from 'react-router-dom';
+
 import './Dashboard.css';
-import face from '../../images/face1.jpg'
 import logo from '../../images/logo.jpg'
+
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
+import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { authActions } from '../../store';
+axios.defaults.withCredentials = true
+
+
 export const Navbar = () => {
+  const dispatch = useDispatch();
+
+  const sendLogoutReq = async ()=> {
+    const res = await axios.get('/logout',null,{
+      withCredentials: true,
+    });
+    if( res.status == 200){
+      return res;
+    }
+   
+    return new Error("Unable to Logout.Please try again.")
+  }
+
+  const handleout = ()=>{
+    sendLogoutReq().then(()=> dispatch(authActions.logout())).then(()=> {
+        Swal.fire(
+          "Successfully Logout",
+          '',
+          'success'
+        )
+
+      
+    })
+  }
+
+
   return (
     <nav className="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
   <div className="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
@@ -30,11 +67,11 @@ export const Navbar = () => {
       <li className="nav-item nav-profile dropdown">
         <a className="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
           <div className="nav-profile-img">
-            <img src={face} alt="image"/>
+            <img src={logo} alt="image"/>
             <span className="availability-status online"></span>
           </div>
           <div className="nav-profile-text">
-            <p className="mb-1 text-black">David Greymaax</p>
+            <p className="mb-1 text-black">Admin Panel</p>
           </div>
         </a>
         <div className="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
@@ -140,7 +177,13 @@ export const Navbar = () => {
       </li>
       <li className="nav-item nav-logout d-none d-lg-block">
         <a className="nav-link" href="#">
-         <AiOutlinePoweroff/>
+        <Tooltip title="logout" onClick={handleout}>
+        <Link to="/login">
+      <IconButton>
+        <AiOutlinePoweroff size="16px"/>
+      </IconButton>
+        </Link>
+    </Tooltip>
         </a>
       </li>
       <li className="nav-item nav-settings d-none d-lg-block">

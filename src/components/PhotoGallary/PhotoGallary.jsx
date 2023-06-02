@@ -1,26 +1,30 @@
 import "./gallary.css";
-import { Portfolio, Wrapper, H2 } from "./GallaryElements";
+import { Portfolio, Wrapper, Div } from "./GallaryElements";
 import { Title } from "../Acheivement/AcheivementElements";
-import { gallary } from "../../Data";
+import axios from "axios";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { H2 } from "../SeminerWorkshop/SeminerWorkshopElements";
+axios.defaults.withCredentials = true;
 
 export const PhotoGallary = () => {
-  // const buttons = document.querySelectorAll('.project');
-  // const overlay = document.querySelector('.overlay');
-  // const overlayImage = document.querySelector('.overlay__inner img');
+  const [gallary, setGallary] = useState();
 
-  // function open(e) {
-  //   overlay.classList.add('open');
-  //   const src= e.currentTarget.querySelector('img').src;
-  //   overlayImage.src = src;
-  // }
+  const getAllPhoto = async () => {
+    const res = await axios
+      .get("/limit-photos", {
+        withCredentials: true,
+      })
+      .catch((err) => console.log(err));
 
-  // function close() {
-  //   overlay.classList.remove('open');
-  // }
+    const data = await res.data;
 
-  // buttons.forEach(button => button.addEventListener('click', open));
-  // overlay.addEventListener('click', close);
+    return data;
+  };
+
+  useEffect(() => {
+    getAllPhoto().then((data) => setGallary(data));
+  }, []);
 
   return (
     <Wrapper>
@@ -29,24 +33,13 @@ export const PhotoGallary = () => {
         <Link to="/gallary">View All</Link>
       </Title>
       <Portfolio>
-        {gallary.map((data, index) => (
-      
-            <div className="project" key={index} data-aos="zoom-in-down" >
-              <img className="project__image" src={data.img} alt="" />
-              <p>{data.title}</p>
-              <h3 className="grid__title"> front-end</h3>
-              <div className="grid__overlay">
-                <button className="viewbutton">view more</button>
-              </div>
-            </div>
-    
-        ))}
-             <div className="overlay">
-              <div className="overlay__inner">
-                <button className="close">close X</button>
-               
-              </div>
-            </div>
+        {gallary &&
+          gallary.map((item, index) => (
+            <Div key={index}>
+              <img src={item.image} alt="" />
+              <p>{item.title}</p>
+            </Div>
+          ))}
       </Portfolio>
     </Wrapper>
   );

@@ -1,16 +1,16 @@
-import img14 from "../../images/image14.jpg";
+import { Link } from "react-router-dom";
 import { H2 } from "../UpComingEvents/UpComingEventsElements";
 import { Div, Img, H3 } from "./SeminerWorkshopElements";
 
-export const SeminerWorkshopCard = (props) => {
-  const { date, title } = props;
+export const SeminerWorkshopCard = ({data}) => {
+ 
 
   return (
     <Div>
-      <Img src={img14} />
-      <H3>{date}</H3>
-      <H2>{title}</H2>
-      <a href="/">Read More</a>
+      <Img src={data.image} />
+      <H3>{new Date(data.createdAt).toDateString()}</H3>
+      <H2>{data.title}</H2>
+      <Link to={`/seminer/${data._id}/`}>Read More</Link>
     </Div>
   );
 };

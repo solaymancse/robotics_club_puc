@@ -20,7 +20,7 @@ export const EventCard = ({data}) => {
       <Img src={data.image} alt="" />
       <ContentDiv>
         <Left>
-          <H3>27 March</H3>
+          <H3>{new Date(data.eventDate).toLocaleString('default', { month: 'short',day:'2-digit' })}</H3>
         </Left>
         <div>
           <Title>
@@ -30,11 +30,6 @@ export const EventCard = ({data}) => {
             <MdLocationOn />
            Premier University Chittagong
           </P>
-          <div>
-            <Link className="btn btn-outline-dark" to="/event-info">
-              Register
-            </Link>
-          </div>
         </div>
       </ContentDiv>
     </Card>

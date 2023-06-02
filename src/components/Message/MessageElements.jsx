@@ -6,17 +6,21 @@ export const Section = styled.div`
   justify-content: center;
   width: 100%;
   margin: 100px 0px;
+  padding:20px;
 
-  @media (min-width: 1025px) and (max-width: 1200px) {
-   margin: 10px 0 30px 0;
+  @media (max-width: 1444px) {
+    padding:20px;
+
    gap: 20px;
     height: 100%;
+    
    
   } ;
-  @media (min-width: 576px) and (max-width: 1024px) {
+  @media (min-width: 576px) and (max-width: 1300px) {
    margin: 10px 0 30px 0;
     flex-direction: column-reverse;
     height: 100%;
+    padding:0px;
    
   } ;
   @media (min-width: 481px) and (max-width: 575px) {
@@ -26,6 +30,7 @@ export const Section = styled.div`
   } ;
   @media (min-width: 320px) and (max-width: 480px) {
     margin: 0;
+     padding:0px;
     height: 730px;
     flex-direction: column-reverse;
    
@@ -72,7 +77,7 @@ export const MainDiv = styled.div`
 
 export const Left = styled.div`
 
- @media (min-width: 320px) and (max-width: 1024px) {
+ @media (min-width: 320px) and (max-width: 1300px) {
     text-align: center;
     img{
       margin-top: 20px;
@@ -366,12 +371,12 @@ export const Title2 = styled.div`
 
 
 `;
-export const Title = styled.div`
+export const Title1 = styled.div`
    font-size: 24px;
   letter-spacing: 3px;
   &:before{
     content: '';
-    width: 380px;
+    width: 280px;
     height: 3px;
     background-color: gray;
     position: absolute;
@@ -381,12 +386,12 @@ export const Title = styled.div`
   }
   &:after{
     content: '';
-    width: 120px;
+    width: 90px;
     height: 6px;
     background-color: #000000;
     position: absolute;
     top: 18px;
-    left: 58%;
+    left: 62%;
     
   }
   @media (min-width: 992px) and (max-width: 1440px) {
@@ -440,6 +445,108 @@ export const Title = styled.div`
   } 
   @media (min-width: 320px) and (max-width: 767px) {
     font-size: 16px;
+    margin-top: 80px;
+    padding-bottom: 30px;
+    &:before{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: gray;
+    position: absolute;
+    top: 150px;
+    right: 0;
+    
+  }
+  &:after{
+    content: '';
+    width: 120px;
+    height: 6px;
+    background-color: #000000;
+    position: absolute;
+    top: 148px;
+    left: 0%;
+    
+  }
+   
+  } 
+
+
+`;
+export const Title = styled.div`
+   font-size: 24px;
+  letter-spacing: 3px;
+  &:before{
+    content: '';
+    width: 280px;
+    height: 3px;
+    background-color: gray;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    
+  }
+  &:after{
+    content: '';
+    width: 90px;
+    height: 6px;
+    background-color: #000000;
+    position: absolute;
+    top: 18px;
+    left: 62%;
+    
+  }
+  @media (min-width: 992px) and (max-width: 1440px) {
+      font-size: 16px;
+      padding-bottom: 30px;
+      &:before{
+      content: '';
+      width: 100%;
+      height: 3px;
+      background-color: gray;
+      position: absolute;
+      top: 52px;
+      right: 0;
+      
+    }
+    &:after{
+      content: '';
+      width: 120px;
+      height: 6px;
+      background-color: #000000;
+      position: absolute;
+      top: 50px;
+      left: 0%;
+      
+    }
+  }
+  @media (min-width: 768px) and (max-width: 990px) {
+    font-size: 16px;
+    padding-bottom: 30px;
+    &:before{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: gray;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    
+  }
+  &:after{
+    content: '';
+    width: 120px;
+    height: 6px;
+    background-color: #000000;
+    position: absolute;
+    top: 48px;
+    left: 0%;
+    
+  }
+   
+  } 
+  @media (min-width: 320px) and (max-width: 767px) {
+    font-size: 16px;
+    margin-top: 80px;
     padding-bottom: 30px;
     &:before{
     content: '';

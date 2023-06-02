@@ -38,9 +38,9 @@ export default function TopCarousel() {
       </Slider>
       <Button>
         <img src={logo} alt="Premier University Logo" />
-        <h1 data-aos="fade-right">Premier University Robotics Club </h1>
+        <h1 data-aos="fade-right">PREMIER UNIVERSITY ROBOTICS CLUB </h1>
         <NavBtn data-aos="fade-left"  onClick={setModalShow}>
-          <NavBtnLink to="/registration">Registration</NavBtnLink>
+          <NavBtnLink to="#">Registration</NavBtnLink>
           <BsFillArrowRightCircleFill size="30px"  onClick={setModalShow}/>
         </NavBtn>
         

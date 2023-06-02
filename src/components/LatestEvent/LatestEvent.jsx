@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState,useEffect } from "react";
 import {
   Div,
   Img,
@@ -18,20 +18,30 @@ import {
   P,
 } from "../UpComingEvents/UpComingEventsElements";
 import { MdLocationOn } from "react-icons/md";
-import { latestEventData } from "../../Data";
 import { Link } from "react-router-dom";
+import axios from 'axios'
+
 
 export const LatestEvent = () => {
+  const [events, setEvents] = useState([]);
+
   useEffect(() => {
+    const fetchPosts = async ()=> {
+      const res = await axios.get("/latest-events");
+      setEvents(res.data);
+    }
+
+    fetchPosts();
     Aos.init({ duration: 1000 });
   }, []);
+
   return (
     <Wrapper>
       <H1 data-aos="fade-up">Latest Events</H1>
       <hr />
-      {latestEventData.map((data, index) => (
+      {events.map((data, index) => (
         <Div key={index}>
-          <Img src={data.img} height={100} width={100} alt="" />
+          <Img src={data.image} height={100} width={100} alt="" />
           <Rdiv>
             <ContentDiv>
               <Left>
@@ -39,8 +49,7 @@ export const LatestEvent = () => {
               </Left>
               <RightDiv>
                 <H2>
-                  প্রিমিয়ার ইউনিভার্সিটিতে ‘ইলেক্ট্রিক্যাল মেশিন এন্ড ইটস
-                  এপ্লিকেশন’ শীর্ষক পোস্টার প্রদর্শনী অনুষ্ঠিত
+                  {data.title}
                 </H2>
                 <P>
                   <MdLocationOn />

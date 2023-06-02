@@ -17199,9 +17199,9 @@ code {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: end;
+  /* -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end; */
 }
 
 .sales-mini-tabs {
@@ -20439,8 +20439,10 @@ dl li {
 
 .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-profile .nav-link .nav-profile-img {
   position: relative;
-  width: 32px;
-  height: 32px;
+  width: 35px;
+  height: 35px;
+  border: 0.5px solid gray;
+  border-radius:50%;
 }
 
 .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-profile .nav-link .nav-profile-img img {

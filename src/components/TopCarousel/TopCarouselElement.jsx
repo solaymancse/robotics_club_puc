@@ -8,6 +8,8 @@ export const Div = styled.div`
   img {
     height: 100vh;
     width: 100%;
+   object-position: center;
+   
   }
 
   @media (min-width: 320px) and (max-width: 480px){
@@ -21,8 +23,8 @@ export const Content = styled.div`
   width: 100%;
   height: 100%;
   top: 0;
-  background-color: black;
-  opacity: 0.6;
+  background-color: #04152d;
+  opacity: 0.5;
  
 `;
 export const Button = styled.div`
@@ -43,15 +45,28 @@ export const Button = styled.div`
     position: relative;
     font-weight: 800;
     font-size: 45px;
-    line-height: 60px;
+    line-height: 80px;
     color: #fff;
     font-family: 'Merriweather', serif;
     margin: 15px;
+    letter-spacing: 10px;
+    text-align: center;
+     
   }
 
-  @media (max-width: 991px) {
+ 
+  @media (min-width: 426px) and (max-width:480px ){
     h1{
-      text-align: center;
+      line-height: 60px;
+      font-size: 40px;
+      letter-spacing: 4px;
+    }
+  }
+  @media (max-width: 425px) {
+    h1{
+      line-height: 40px;
+      font-size: 35px;
+      letter-spacing: 4px;
     }
   }
 `;

@@ -4,6 +4,7 @@ import { AiFillHome } from 'react-icons/ai';
 import { MdEventAvailable } from 'react-icons/md';
 import { FaUsers,FaUser } from 'react-icons/fa';
 import { BiPhotoAlbum } from 'react-icons/bi';
+import { CgWorkAlt } from 'react-icons/cg';
 import { Link } from 'react-router-dom';
 export const Sidebar = () => {
   return (
@@ -26,21 +27,14 @@ export const Sidebar = () => {
     <li className="nav-item">
       <Link className="nav-link" to="/dashboard">
         <span className="menu-title">Dashboard</span>
-        <AiFillHome/>
+        <i className="mdi mdi-contacts menu-icon"><AiFillHome/></i>
       </Link>
     </li>
     <li className="nav-item">
-      <a className="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-        <span className="menu-title">Basic UI Elements</span>
-        <i className="menu-arrow"></i>
-        <i className="mdi mdi-crosshairs-gps menu-icon"></i>
-      </a>
-      <div className="collapse" id="ui-basic">
-        <ul className="nav flex-column sub-menu">
-          <li className="nav-item"> <a className="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-          <li className="nav-item"> <a className="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
-        </ul>
-      </div>
+      <Link className="nav-link" to="/dashboard/notice">
+        <span className="menu-title">Notice</span>
+        <i className="mdi mdi-contacts menu-icon"><MdEventAvailable/></i>
+      </Link>
     </li>
     <li className="nav-item">
       <Link className="nav-link" to="/dashboard/event">
@@ -67,41 +61,25 @@ export const Sidebar = () => {
       </Link>
     </li>
     <li className="nav-item">
-      <a className="nav-link" href="pages/charts/chartjs.html">
-        <span className="menu-title">Charts</span>
-        <i className="mdi mdi-chart-bar menu-icon"></i>
-      </a>
+      <Link className="nav-link" to="/dashboard/achivement">
+        <span className="menu-title">Achivement</span>
+        <i className="mdi mdi-format-list-bulleted menu-icon"><CgWorkAlt/></i>
+      </Link>
     </li>
     <li className="nav-item">
-      <a className="nav-link" href="pages/tables/basic-table.html">
-        <span className="menu-title">Tables</span>
-        <i className="mdi mdi-table-large menu-icon"></i>
-      </a>
+      <Link className="nav-link" to="/dashboard/prc">
+        <span className="menu-title">Project & Research</span>
+        <i className="mdi mdi-format-list-bulleted menu-icon"><CgWorkAlt/></i>
+      </Link>
     </li>
     <li className="nav-item">
-      <a className="nav-link" data-bs-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
-        <span className="menu-title">Sample Pages</span>
-        <i className="menu-arrow"></i>
-        <i className="mdi mdi-medical-bag menu-icon"></i>
-      </a>
-      <div className="collapse" id="general-pages">
-        <ul className="nav flex-column sub-menu">
-          <li className="nav-item"> <a className="nav-link" href="pages/samples/blank-page.html"> Blank Page </a></li>
-          <li className="nav-item"> <a className="nav-link" href="pages/samples/login.html"> Login </a></li>
-          <li className="nav-item"> <a className="nav-link" href="pages/samples/register.html"> Register </a></li>
-          <li className="nav-item"> <a className="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
-          <li className="nav-item"> <a className="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
-        </ul>
-      </div>
+      <Link className="nav-link" to="/dashboard/seminer">
+        <span className="menu-title">Seminer & Workshop</span>
+        <i className="mdi mdi-format-list-bulleted menu-icon"><CgWorkAlt/></i>
+      </Link>
     </li>
-    <li className="nav-item sidebar-actions">
-      <span className="nav-link">
-        <div className="border-bottom">
-          <h6 className="font-weight-normal mb-3">Projects</h6>
-        </div>
-        <button className="btn btn-block btn-lg btn-gradient-primary mt-4">+ Add a project</button>
-      </span>
-    </li>
+
+
   </ul>
 </nav>
   )

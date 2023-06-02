@@ -1,23 +1,39 @@
 import { Container } from "react-bootstrap";
 import { GiRead } from "react-icons/gi";
 import { Link } from "react-router-dom";
-import { noticeData } from "../../Data";
 import { Wrapper, Top, Bottom, Title, More } from "./NoticeElements";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 export const Notice = () => {
+  const [notice, setNotice] = useState();
+
+  const getALlNotices = async () => {
+    const res = await axios
+      .get("/all-notices", {
+        withCredentials: true,
+      })
+      .catch((err) => console.log(err));
+     
+      return res.data;
+  };
+  useEffect(() => {
+    getALlNotices().then((data) => setNotice(data));
+  }, []);
+
   return (
     <Wrapper>
       <Container>
         <Top>
           <Title>Notice</Title>
-          <a href="/all-notice">View All</a>
+          <Link to="/all-notice">View All</Link>
         </Top>
-        {noticeData.map((data, index) => (
+        {notice && notice.map((item, index) => (
           <Bottom key={index}>
-            <h2>{data.title}</h2>
-            <p>{data.p}</p>
+            <h3>{item.title}</h3>
+            <p>Last Updated : {new Date(item.updatedAt).toDateString()}</p>
             <More>
-              <GiRead /> <Link to={data.link}>Read More</Link>
+              <GiRead /> <Link to={`/notice/${item._id}/${item.title.replace(/\s/g,'-')}`}>Read More</Link>
             </More>
           </Bottom>
         ))}

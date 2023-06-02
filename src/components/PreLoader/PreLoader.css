@@ -1,273 +1,74 @@
-.spinner {
-  display: inline-block;
-  width: 52.2px;
-  height: 52.2px;
-  position: relative;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  top: 400px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  line-height: 100%;
-}
-
-.spinner .text {
+.loaderContainer {
   position: absolute;
-  top: 100%;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  margin-top: 1.6em;
-  text-align: center;
-  font-size: 80%;
-  color: hsla(0, 0%, 0%, 0.4);
+  margin: auto;
 }
 
-.spinner .spinner-circle {
+.item {
+  width: 60px;
+  height: 60px;
   position: absolute;
-  background-color: transparent;
-  border-radius: 50%;
-  border-style: solid;
-  border-color: #181818 transparent #181818 transparent;
 }
 
-.spinner .spinner-circle.spinner-circle-outer {
-  width: 51.2px;
-  height: 51.2px;
-  border-width: 12.8px;
-  top: -6.400000000000002px;
-  left: -6.400000000000002px;
-  opacity: 0.2;
-  -ms-filter: alpha(opacity=50);
-  filter: alpha(opacity=50);
-  -webkit-animation: spinner-rotate-outer 2s 0s ease-in-out infinite;
-  animation: spinner-rotate-outer 2s 0s ease-in-out infinite;
+.item-1 {
+  background-color: #FA5667;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  animation: item-1_move 1.8s cubic-bezier(.4,.01,.2,1) infinite;
 }
 
-.spinner .spinner-circle.spinner-circle-inner {
-  width: 25.6px;
-  height: 25.6px;
-  border-width: 6.4px;
-  top: 12.799999999999999px;
-  left: 12.799999999999999px;
-  opacity: 0.0;
-  -ms-filter: alpha(opacity=70);
-  filter: alpha(opacity=70);
-  -webkit-animation: spinner-rotate-inner 3s 0s linear infinite;
-  animation: spinner-rotate-inner 3s 0s linear infinite;
+.item-2 {
+  background-color: #7A45E5;
+  top: 0;
+  right: 0;
+  animation: item-2_move 1.8s cubic-bezier(.4,.01,.4,1) infinite;
 }
 
-.spinner .spinner-circle.spinner-circle-single-1 {
-  width: 38.4px;
-  height: 38.4px;
-  border-width: 9.6px;
-  top: 3.200000000000001px;
-  left: 3.200000000000001px;
-  opacity: 0.9;
-  -ms-filter: alpha(opacity=30);
-  filter: alpha(opacity=30);
-  -webkit-animation: spinner-rotate-single-1 5s 0s ease-in-out infinite;
-  animation: spinner-rotate-single-1 5s 0s ease-in-out infinite;
-  border-color: transparent transparent transparent #4dc3ff;
-  box-shadow: 2px 0 2px #4dc3ff;
+.item-3 {
+  background-color: #1B91F7;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  animation: item-3_move 1.8s cubic-bezier(.4,.01,.4,1) infinite;
 }
 
-.spinner .spinner-circle.spinner-circle-single-2 {
-  width: 0;
-  height: 0;
-  border-width: 25.6px;
-  top: 6.399999999999999px;
-  left: 6.399999999999999px;
-  opacity: 0.0;
-  -ms-filter: alpha(opacity=30);
-  filter: alpha(opacity=30);
-  -webkit-animation: spinner-rotate-single-2 7s 0s ease-in-out infinite;
-  animation: spinner-rotate-single-2 7s 0s ease-in-out infinite;
-  border-color: #4dc3ff transparent transparent transparent;
-  box-shadow: 0 -12px 4px #4dc3ff;
+.item-4 {
+  background-color: #FAC24C;
+  bottom: 0;
+  left: 0;
+  animation: item-4_move 1.8s cubic-bezier(.4,.01,.2,1) infinite;
 }
 
-@-webkit-keyframes spinner-rotate-outer {
-  0% {
-    transform: rotateZ(0deg);
-  }
-
-  100% {
-    transform: rotateZ(360deg);
-  }
+@keyframes item-1_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(0, 60px)} 
+  50% {transform: translate(60px, 60px)} 
+  75% {transform: translate(60px, 0)} 
 }
 
-@keyframes spinner-rotate-outer {
-  0% {
-    transform: rotateZ(0deg);
-  }
-
-  100% {
-    transform: rotateZ(360deg);
-  }
+@keyframes item-2_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(-60px, 0)} 
+  50% {transform: translate(-60px, 60px)} 
+  75% {transform: translate(0, 60px)} 
 }
 
-@-webkit-keyframes spinner-rotate-inner {
-  0% {
-    transform: rotateZ(30deg);
-  }
-
-  100% {
-    transform: rotateZ(390deg);
-  }
+@keyframes item-3_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(0, -60px)} 
+  50% {transform: translate(-60px, -60px)} 
+  75% {transform: translate(-60px, 0)} 
 }
 
-@keyframes spinner-rotate-inner {
-  0% {
-    transform: rotateZ(30deg);
-  }
-
-  100% {
-    transform: rotateZ(390deg);
-  }
-}
-
-@-webkit-keyframes spinner-rotate-single-1 {
-  0% {
-    transform: rotateZ(56deg);
-  }
-
-  20% {
-    transform: rotateZ(-132deg);
-  }
-
-  40% {
-    transform: rotateZ(-250deg);
-  }
-
-  60% {
-    transform: rotateZ(40deg);
-  }
-
-  70% {
-    transform: rotateZ(-80deg);
-  }
-
-  100% {
-    transform: rotateZ(56deg);
-  }
-}
-
-@keyframes spinner-rotate-single-1 {
-  0% {
-    transform: rotateZ(56deg);
-  }
-
-  20% {
-    transform: rotateZ(-132deg);
-  }
-
-  40% {
-    transform: rotateZ(-250deg);
-  }
-
-  60% {
-    transform: rotateZ(40deg);
-  }
-
-  70% {
-    transform: rotateZ(-80deg);
-  }
-
-  100% {
-    transform: rotateZ(56deg);
-  }
-}
-
-@-webkit-keyframes spinner-rotate-single-2 {
-  0% {
-    transform: rotateZ(-24deg);
-  }
-
-  10% {
-    transform: rotateZ(142deg);
-  }
-
-  20% {
-    transform: rotateZ(-87deg);
-  }
-
-  30% {
-    transform: rotateZ(-345deg);
-  }
-
-  40% {
-    transform: rotateZ(86deg);
-  }
-
-  50% {
-    transform: rotateZ(175deg);
-  }
-
-  60% {
-    transform: rotateZ(-245deg);
-  }
-
-  70% {
-    transform: rotateZ(4deg);
-  }
-
-  80% {
-    transform: rotateZ(-132deg);
-  }
-
-  90% {
-    transform: rotateZ(345deg);
-  }
-
-  100% {
-    transform: rotateZ(-24deg);
-  }
-}
-
-@keyframes spinner-rotate-single-2 {
-  0% {
-    transform: rotateZ(-24deg);
-  }
-
-  10% {
-    transform: rotateZ(142deg);
-  }
-
-  20% {
-    transform: rotateZ(-87deg);
-  }
-
-  30% {
-    transform: rotateZ(-345deg);
-  }
-
-  40% {
-    transform: rotateZ(86deg);
-  }
-
-  50% {
-    transform: rotateZ(175deg);
-  }
-
-  60% {
-    transform: rotateZ(-245deg);
-  }
-
-  70% {
-    transform: rotateZ(4deg);
-  }
-
-  80% {
-    transform: rotateZ(-132deg);
-  }
-
-  90% {
-    transform: rotateZ(345deg);
-  }
-
-  100% {
-    transform: rotateZ(-24deg);
-  }
+@keyframes item-4_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(60px, 0)} 
+  50% {transform: translate(60px, -60px)} 
+  75% {transform: translate(0, -60px)} 
 }

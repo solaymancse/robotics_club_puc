@@ -10,7 +10,7 @@ export const Div = styled.div`
   grid-gap: 30px;
 
  
-  @media (min-width: 1025px) and (max-width: 1200px) {
+  @media (min-width: 1025px) and (max-width: 1440px) {
     padding: 20px;
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr;

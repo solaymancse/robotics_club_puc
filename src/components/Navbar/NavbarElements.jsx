@@ -7,12 +7,13 @@ export const Wrapper = styled.div`
   align-items: center;
   background: #fff;
   height: 90px;
-  top: 0;
-  position: sticky;
+  top: ${props=> props.top};
+  position: fixed;
   width: 100%;
   z-index: 10;
   padding: 50px 150px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+transition: ease-in-out 0.4s;
 
  
   @media (min-width: 992px) and (max-width: 1440px) {
@@ -20,14 +21,12 @@ export const Wrapper = styled.div`
    
   } ;
  
-  @media (min-width: 481px) and (max-width: 767px) {
+  @media (max-width: 767px) {
     padding: 0px;
     height: 80px;
+    top:-1px;
   } ;
-  @media (min-width: 320px) and (max-width: 480px) {
-    padding: 0px;
-    height: 80px;
-  } ;
+
 `;
 export const Nav = styled.nav`
   display: flex;
@@ -128,8 +127,8 @@ export const NavLink = styled(Link)`
     width: 100%;
   }
   &.active {
-    color: gray;
-    border-bottom: 2px solid #27363b;
+    color: #ff2162;
+    border-bottom: 2px solid gray;
 
     transition: all 0.2s ease-in-out;
   }

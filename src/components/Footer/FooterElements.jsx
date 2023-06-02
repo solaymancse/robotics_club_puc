@@ -1,19 +1,19 @@
 import styled from "styled-components";
-import { FaFacebook, FaTwitterSquare, FaInstagram } from "react-icons/fa";
-import { AiOutlineYoutube } from "react-icons/ai";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 
 
+export const Wrapper = styled.div`
+background: #252525;
+padding:30px 0px;
+ 
+`;
 export const Section = styled.section`
-padding: 50px 300px 50px 300px;
-  background: #252525;
-  height: 500px;
 
-  @media screen and (max-width: 575px){
-    padding:30px 10px;
-    width: 100%;
-   height: 100%;
-  }
+  background: #252525;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 `;
 
 export const Div = styled.div`
@@ -40,13 +40,14 @@ export const Img = styled.img`
 `;
 
 export const Links = styled.a`
-  color: #fff;
+  color: #777777;
   text-decoration: none;
+  font-size: 12px;
   
 
   &:hover {
-    color: #900C3E;
-    transition: transformX(0.5);
+    color: #fff;
+    text-decoration: underline;
     cursor: pointer;
   }
 `;
@@ -93,61 +94,19 @@ export const RDiv = styled.div`
   display: flex;
   gap: 20px;
   padding: 20px 0px;
-`;
 
-export const Youtube = styled(AiOutlineYoutube)`
-    color: #cd201f;
-    font-size: 40px;
-    background: #fff;
+  a{
+    color: #fff;
+    background: #333;
     padding: 10px;
     border-radius: 50%;
-
-    &:hover {
-        background: #cd201f;
-        transition: all 0.2s ease-in;
-        color: #fff;
-    }
+    border:2px solid #fff;
+    align-items: center;
+    display: flex;
+  }
 `;
 
-export const Facebook = styled(FaFacebook)`
-  color: #1877f2;
-  font-size: 40px;
-  background: #fff;
-  padding: 10px;
-  border-radius: 50%;
 
-  &:hover {
-        background: #1877f2;
-        transition: all 0.2s ease-in;
-        color: #fff;
-    }
-`;
-export const Square = styled(FaTwitterSquare)`
-  color: #1da1f2;
-  font-size: 40px;
-  background: #fff;
-  padding: 10px;
-  border-radius: 50%;
-
-  &:hover {
-        background: #1da1f2;
-        transition: all 0.2s ease-in;
-        color: #fff;
-    }
-`;
-export const Instagram = styled(FaInstagram)`
-  color: #e4405f;
-  font-size: 40px;
-  background: #fff;
-  padding: 10px;
-  border-radius: 50%;
-
-  &:hover {
-        background: #e4405f;
-        transition: all 0.2s ease-in;
-        color: #fff;
-    }
-`;
 
 export const ArrowRight = styled(BsFillArrowRightCircleFill)`
     margin-right: 10px;

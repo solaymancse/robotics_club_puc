@@ -1,31 +1,26 @@
-import React, { useEffect } from "react";
 import {
   Section,
   Left,
   Img,
   H1,
   Desc,
-  Title,
+  Title1,
   Foot,
   Right,
   Content,
 } from "../Message/MessageElements";
 import img6 from "../../images/image6.jpg";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 export const VcMessage = () => {
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
+ 
   return (
     <Section>
-      <Left>
+      <Left data-aos="fade-right">
         <Img src={img6} alt="vc_sir" />
       </Left>
-      <Right>
-        <Title size="24px">Message From Honorable Vice Chancellor</Title>
+      <Right data-aos="fade-left">
+        <Title1 size="24px">Message From Honorable Vice Chancellor</Title1>
         <Content>
           <Desc>
             <FaQuoteLeft />

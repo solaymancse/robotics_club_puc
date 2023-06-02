@@ -19,7 +19,7 @@ export const Message = () => {
       </Middle>
       <Middle>
         <LeftDiv>
-          <ChairmanMessage />
+        <AdviserMessage />
         </LeftDiv>
         <RightDiv>
           <AdviserMessage />

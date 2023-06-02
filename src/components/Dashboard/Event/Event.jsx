@@ -30,7 +30,7 @@ export const Event = () => {
 
   const handleDelete = async (id)=> {
     if(window.confirm("Are you sure want to Delete?")){
-      await axios.delete(`/${id}`).then((res)=>{
+      await axios.delete(`/delete/${id}`).then((res)=>{
         toast.success("Deleted Successfully.", {
           position: "top-center",
           autoClose: 5000,
@@ -42,7 +42,7 @@ export const Event = () => {
           theme: "dark",
           });
         getMembers().then((data) => setAllEvents(data));
-      });
+      }).catch((err)=> console.log(err));
      
     }
    
@@ -74,7 +74,7 @@ export const Event = () => {
                       {allevents.map((data, index) => (
                         <tr key={index}>
                           <td>
-                            <img src={data.image} className="me-2"/>
+                            <img src={data.image} className="me-2" alt=""/>
                             
                           </td>
                        <td>{data.title}</td>

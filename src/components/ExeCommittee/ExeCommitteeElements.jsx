@@ -190,30 +190,3 @@ export const P = styled.div`
   }
 `;
 
-export const Button = styled.div`
-  background-color: #ff2162;
-  border: 0.5px solid #ff2162;
-  transition: 0.5s ease-in-out;
-  padding: 5px 10px;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  a {
-    text-decoration: none;
-    color: #fff;
-    &:hover {
-      color: #333;
-   
-  }
-  }
-  &:hover {
-    background-color: #fff;
-   
-  }
-  @media screen and (max-width: 575px) {
-    padding: 2px 5px;
-    a{
-      font-size: 12px;
-    }
-  }
-`;

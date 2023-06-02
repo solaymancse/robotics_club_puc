@@ -1,4 +1,5 @@
 import {
+  Wrapper,
   Section,
   Img,
   Links,
@@ -7,17 +8,18 @@ import {
   MDiv,
   P,
   RDiv,
-  Youtube,
-  Facebook,
-  Square,
-  Instagram,
   ArrowRight,
 } from "./FooterElements";
+import { AiOutlineYoutube, AiOutlineTwitter } from "react-icons/ai";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import logo from "../../images/logo.jpg";
 import { Col, Row } from "react-bootstrap";
+import { footerData } from "../../Data";
 
 export const Footer = () => {
   return (
+    <Wrapper>
+  
     <Section>
       <Row>
         <Col>
@@ -31,8 +33,6 @@ export const Footer = () => {
           </MDiv>
           <hr style={{ color: "#fff", width: "70px" }} />
           <hr style={{ color: "#fff", width: "140px", marginTop: "-10px" }} />
-
-          <div>
             <P>
               The club was founded in, 2010. From then, it has organized three
               line following robot competition (Robo Sprint) and one project
@@ -42,98 +42,47 @@ export const Footer = () => {
               workshops and seminars organized by the department in last three
               years are listed below.
             </P>
-          </div>
+         
         </Col>
-        <Col className="m-3">
+        <Col className="mt-3">
           <H2>Quick Links</H2>
           <hr style={{ color: "#fff", width: "70px" }} />
           <hr style={{ color: "#fff", width: "140px", marginTop: "-10px" }} />
           <Row xs={1} md={2}>
-            <Col>
-              <Links to="/registration">
-                <ArrowRight />
-                Apply For Membership
-              </Links>
-            </Col>
-            <Col>
-              <Links to="/">
-                {" "}
-                <ArrowRight />
-                How to apply
-              </Links>
-            </Col>
-            <Col>
-              <Links to="/">
-                {" "}
-                <ArrowRight />
-                Rules and Regulations
-              </Links>
-            </Col>
-            <Col>
-              <Links to="/">
-                {" "}
-                <ArrowRight />
-                Events Details
-              </Links>
-            </Col>
-            <Col>
-              <Links to="/">
-                {" "}
-                <ArrowRight /> Blog
-              </Links>
-            </Col>
-            <Col>
-              <Links to="/">
-                {" "}
-                <ArrowRight />
-                Gallary
-              </Links>
-            </Col>
-            <Col>
-              <Links to="/">
-                {" "}
-                <ArrowRight />
-                Premier University Chittagong
-              </Links>
-            </Col>
-            <Col>
-              <Links to="/">
-                {" "}
-                <ArrowRight />
-                UGC, Bangladesh{" "}
-              </Links>
-            </Col>
-            <Col>
-              <Links to="/">
-                {" "}
-                <ArrowRight />
-                Minister of Education, Bangladesh
-              </Links>
-            </Col>
+            {footerData.map((data, index) => (
+              <Col key={index}>
+                <Links to={data.link}>
+                  <ArrowRight />
+                  {data.title}
+                </Links>
+              </Col>
+            ))}
           </Row>
         </Col>
-        <Col>
+        <Col className="mt-3">
           <H2>Contact Us</H2>
           <hr style={{ color: "#fff", width: "70px" }} />
           <hr style={{ color: "#fff", width: "140px", marginTop: "-10px" }} />
-          <Links to="/">info@domain.com</Links>
+          <Links to="/">roboticspuc@gmail.com</Links>
           <RDiv>
             <a href="/">
-              <Youtube />
+              <AiOutlineYoutube />
             </a>
             <a href="/">
-              <Facebook />
+              <FaFacebookF />
             </a>
             <a href="/">
-              <Square />
+              <AiOutlineTwitter />
             </a>
             <a href="/">
               {" "}
-              <Instagram />
+              <FaInstagram />
             </a>
           </RDiv>
         </Col>
       </Row>
     </Section>
+        
+    </Wrapper>
   );
 };

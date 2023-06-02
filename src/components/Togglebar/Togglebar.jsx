@@ -6,7 +6,7 @@ import { RiProjectorFill } from "react-icons/ri";
 import { GrFormClose } from "react-icons/gr";
 import { NavLink } from "react-router-dom";
 import { CloseIcon,Menu } from "./ToggleElement";
-import { MdOutlineConnectWithoutContact } from "react-icons/md";
+import { MdOutlineConnectWithoutContact,MdOutlineContacts } from "react-icons/md";
 
 
 export const Togglebar = ({open, onClose}) => {
@@ -22,6 +22,7 @@ export const Togglebar = ({open, onClose}) => {
             <NavLink to="/events"><GiClockwork/>Events</NavLink>
             <NavLink to="/gallary"><RiProjectorFill/>Gallary</NavLink>
             <NavLink to="/contact"><MdOutlineConnectWithoutContact/>Contact</NavLink>
+            <NavLink to="/register"><MdOutlineContacts/>Register</NavLink>
           </Menu>
         </Box>
       </Drawer>

@@ -11,7 +11,7 @@ export const UpComingEvents = (props) => {
 
   useEffect(() => {
     const fetchPosts = async ()=> {
-      const res = await axios.get("/all-events");
+      const res = await axios.get("/upcoming-events");
       setEvents(res.data);
     }
 

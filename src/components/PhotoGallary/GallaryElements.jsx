@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   min-height: 100vh;
   position: relative;
   padding: 50px 150px;
-
+margin-top: 60px;
 
   @media (min-width: 1024px) and (max-width: 1200px) {
     padding: 20px;
@@ -16,11 +16,10 @@ export const Wrapper = styled.div`
 `
 export const Portfolio = styled.div`
   width: 100%;
-  min-height: 100vh;
   background: #ffffff;
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
   grid-template-rows: 1fr 1fr;
   grid-gap: 2px;
 
@@ -135,5 +134,19 @@ img{
   width: 100%;
   height: 100%;
 }
+
+`
+export const Div = styled.div`
+  position: relative;
+  background: #f2dad7;
+  overflow: hidden;
+  height: 300px;
+  img{
+    position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+  }
+
 
 `

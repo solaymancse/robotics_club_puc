@@ -10,6 +10,9 @@ export const Wrapper = styled.div`
     @media (min-width: 320px) and (max-width: 480px){
       height: 50px;
     }
+    @media  (max-width: 767px){
+      display: none;
+    }
 
 `
 export const Div = styled.div`
