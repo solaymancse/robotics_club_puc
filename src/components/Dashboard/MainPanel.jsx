@@ -1,15 +1,25 @@
-import { AiFillHome } from "react-icons/ai";
-import { FaUser } from "react-icons/fa";
 import "./Dashboard.css";
-import {useState, useEffect} from 'react';
 import axios from 'axios'
+import { AiFillHome } from "react-icons/ai";
+import {useState, useEffect} from 'react';
+import { useNavigate } from "react-router-dom";
 
 export const MainPanel = () => {
 const [members, setMembers] = useState();
+const [countMembers, setCountMembers] = useState();
+const navigate = useNavigate()
+const handleChange = async (memberId) => {
 
+  await axios.put(`/approve/${memberId}`)
+  .then(()=> navigate('/dashboard/members'))
+  .catch((err)=>console.log(err));
+}
 
 useEffect( async ()=> {
   await axios.get('/all-member').then((res)=> setMembers(res.data)).catch((err)=>console.log(err));
+},[])
+useEffect( async ()=> {
+  await axios.get('/count-member').then((res)=> setCountMembers(res.data)).catch((err)=>console.log(err));
 },[])
 
 
@@ -38,9 +48,8 @@ useEffect( async ()=> {
               <div className="card-body">
                 <h4 className="font-weight-normal mb-3">
                  Total Members{" "}
-
                 </h4>
-                <h2 className="mb-5"></h2>
+                <h2 className="mb-5" >{countMembers?.total}</h2>     
                 <h6 className="card-text">Increased by 60%</h6>
               </div>
             </div>
@@ -86,9 +95,9 @@ useEffect( async ()=> {
                       </tr>
                     </thead>
                     <tbody>
-                      {members?.map((data,index)=> (
+                      {members?.map((data)=> (
                         
-                        <tr key={index}>
+                        <tr key={data._id}>
                           
                         <td>
                           <img
@@ -99,10 +108,10 @@ useEffect( async ()=> {
                           />
                          {data.name}
                         </td>
-                        <td> Fund is not recieved </td>
-                        <td> {new Date(data.createdAt).getMonth()}</td>
+                        <td> {data.department} </td>
+                        <td> {new Date(data.createdAt).getDate()} / {new Date(data.createdAt).getMonth()} / {new Date(data.createdAt).getFullYear()} </td>
                         <td>
-                          {data.paid == 0 ? <label className="badge badge-gradient-danger">
+                          {data.paid == 0 ? <label className="badge badge-gradient-danger"  onClick={()=>handleChange(data._id)}>
                             unpaid
                           </label>
                         :  <label className="badge badge-gradient-success">
@@ -121,7 +130,7 @@ useEffect( async ()=> {
             </div>
           </div>
         </div>
-        <div className="row">
+        {/* <div className="row">
           <div className="col-md-7 grid-margin stretch-card">
             <div className="card">
               <div className="card-body">
@@ -150,10 +159,7 @@ useEffect( async ()=> {
               </div>
             </div>
           </div>
-        </div>
-  
- 
-
+        </div> */}
       </div>
     </div>
   );

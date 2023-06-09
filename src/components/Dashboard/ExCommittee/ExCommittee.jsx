@@ -18,24 +18,24 @@ export const ExCommittee = () => {
   const [getLastCommittee, setGetLastCommittee] = useState();
   const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(()=> {
-const getlastsession  = async ()=> {
-await axios.get('/last-session').then((res)=> setGetLastSession(res.data)).catch((err)=> console.log(err));
-}
-getlastsession();
-  },[])
-  console.log(getSession);
+
+
   // selected value
   const handleSelectChange = (e) => {
-    setSelectedSession(e.target.value);
+   ;
   };
   useEffect(() => {
+    const getlastsession  = async ()=> {
+      await axios.get('/last-session').then((res)=> setGetLastSession(res.data)).catch((err)=> console.log(err));
+      }
     const getSelectedSession = async () => {
       await axios
         .get(`/all-session`)
         .then((res) => setGetSession(res.data))
         .catch((err) => console.log(err));
     };
+    
+    getlastsession();
     getSelectedSession();
   }, []);
 
@@ -53,7 +53,7 @@ getlastsession();
 
     getCommittee();
   }, [selectedSession]);
-
+  console.log(selectedSession);
   return (
     <div className="main-panel">
       <div className="content-wrapper">
@@ -68,11 +68,11 @@ getlastsession();
                         <Form.Select
                           aria-label="Default select example"
                           value={selectedSession}
-                          onChange={handleSelectChange}
+                          onChange={(e)=>  setSelectedSession(e.target.value)}
                         >
                           {getSession &&
                             getSession.map((data) => (
-                              <option value={data._id} key={data._id}>
+                              <option value={data._id} key={data._id} >
                                 {data.year}
                               </option>
                             ))}

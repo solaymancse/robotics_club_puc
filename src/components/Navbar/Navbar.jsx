@@ -57,10 +57,10 @@ export const Navbar = () => {
         </ToggleDiv>
         <NavMenu>
           <Item>
-            <NavLink to="/">HOME</NavLink>
+            <NavLink to="/">Home</NavLink>
           </Item>
           <Items>
-            <NavLink to="/about">ABOUT</NavLink>
+            <NavLink to="/about">About</NavLink>
             <Dropdown>
               <Link to="/puc.ac.bd"> About PUC</Link>
 
@@ -72,13 +72,13 @@ export const Navbar = () => {
             </Dropdown>
           </Items>
           <Item>
-            <NavLink to="/events">EVENTS</NavLink>
+            <NavLink to="/events">Events</NavLink>
           </Item>
           <Item>
-            <NavLink to="/gallary">GALLARY</NavLink>
+            <NavLink to="/gallary">Gallary</NavLink>
           </Item>
           <Item>
-            <NavLink to="/contact">CONTACT</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
           </Item>
         </NavMenu>
         <NavBtn>

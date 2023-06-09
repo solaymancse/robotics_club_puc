@@ -2,6 +2,9 @@ import img1 from './images/image1.jpg'
 import img2 from './images/image2.jpg'
 import img3 from './images/image3.jpg'
 import img9 from "./images/image9.jpg";
+import {AiOutlineMail,AiOutlineProject} from 'react-icons/ai'
+import {FiFacebook} from 'react-icons/fi'
+
 
 export const sliderImage = [
     {img:`${img1}`,title:"Award Receiving For best Performing from The honarable Teacher"},
@@ -9,10 +12,10 @@ export const sliderImage = [
     {img:`${img3}`,title:"Final project showing to our honarable teacher and Guest"},
 ];
 export const topBar = [
-    {title:'Traning & Research',link:"/all-project"},
-    {title:'Conference & Workshops',link:"/all-seminer"},
-    {title:'Image Gallery',link:"/gallary"},
-    {title:'Contact',link:'/contact'},
+    {title:'roboticspuc@gmail.com',link:"/roboticspuc@gmail.com",icon:<AiOutlineMail/>},
+    {title:'Conference & Workshops',link:"/all-seminer",icon:<AiOutlineProject/>},
+    {title:'Follow US',link:"/https://www.facebook.com/groups/pucrobotics/?ref=share",icon:<FiFacebook/>},
+    {title:'info@puc.ac.bd',link:'/info@puc.ac.bd',icon:<AiOutlineMail/>},
    
 ];
 

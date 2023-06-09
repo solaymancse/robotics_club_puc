@@ -1,7 +1,7 @@
+import "./Dashboard.css";
 import { Sidebar } from "./Sidebar";
 import { Navbar } from "./Navbar";
 import { MainPanel } from "./MainPanel";
-import "./Dashboard.css";
 import { Route, Routes } from "react-router-dom";
 import { Event } from "./Event/Event";
 import { ExCommittee } from "./ExCommittee/ExCommittee";

@@ -27,6 +27,8 @@ a{
     text-decoration: none;
     padding-right: 10px;
     border-right: 1px solid #fff;
+   display: flex;
+   align-items: center;
 
     &:hover{
       text-decoration: underline;

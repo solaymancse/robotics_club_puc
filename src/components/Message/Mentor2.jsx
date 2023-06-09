@@ -14,13 +14,13 @@ import {
   Qoute
 } from "../Message/MessageElements";
 
-export const AdviserMessage = () => {
+export const Mentor2 = () => {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
   return (
     <Wrapper>
-      <Title size="10px">Adviser Of Robotics Club</Title>
+      <Title size="10px">Mentor Of Robotics Club</Title>
       <MainDiv data-aos="fade-right">
         <LeftSide>
           <ImgDiv>
@@ -28,8 +28,8 @@ export const AdviserMessage = () => {
           </ImgDiv>
 
           <H2>
-            Mohammed Saifuddin Munna <br />
-            Assistant Professor <br />
+            Sujan Chowdhury <br />
+            Lecturer <br />
             Department of Electrical and Electronic Engineering
           </H2>
         </LeftSide>

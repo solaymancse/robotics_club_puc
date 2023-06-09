@@ -17,6 +17,15 @@ export const Content = styled.div`
     margin: 0;
   }
 `;
+export const ItemDiv = styled.div`
+ display: flex;
+ width: 100%;
+ margin-bottom: 20px;
+
+`;
+export const Item = styled.div`
+ margin: 0 auto;
+`;
 
 export const H1 = styled.h1`
   font-size: 24px;
@@ -87,47 +96,21 @@ export const H1 = styled.h1`
   }
 `;
 
-export const TopCardDiv = styled.div`
-margin-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  &:hover {
-    background-color: #fff;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  }
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
- 
-`;
-export const BottomCardDiv = styled.div`
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  &:hover {
-    background-color: #fff;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  }
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 
 
-`;
 export const ImgDiv = styled.div`
   width: 120px;
   height: 120px;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin: 10px auto;
+
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
   
   @media screen and (max-width: 575px) {
     width: 100px;
@@ -158,35 +141,13 @@ export const Bottom = styled.div`
   text-align: center;
   justify-content: center;
   flex-wrap: wrap;
-`;
-export const TopCom = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 40px;
-  grid-row-gap: 20px;
-  
-  
-`;
-export const BottCom = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 40px;
-  grid-row-gap: 20px;
-  
- 
-  @media (min-width: 320px) and (max-width: 575px) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    padding: 0 10px;
-  }
-  
-`;
-export const P = styled.div`
-  @media screen and (max-width: 575px) {
- 
-      font-size: 12px;
+  img{
+    width: 100%;
+    height: 100%;
   
   }
 `;
+
+
+
 

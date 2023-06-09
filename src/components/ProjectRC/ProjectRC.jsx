@@ -10,7 +10,7 @@ import {
 import axios from "axios";
 import { useState ,useEffect} from "react";
 import { Link } from "react-router-dom";
-import { H2 } from "../SeminerWorkshop/SeminerWorkshopElements";
+import { H2 } from "./ProjectRCElements";
 
 
 export const ProjectRC = () => {

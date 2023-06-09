@@ -13,7 +13,7 @@ import {
 export const ChairmanMessage = () => {
   return (
     <Wrapper>
-      <Title2>Honorable Chairman Of EEE</Title2>
+      <Title2>Chief Adviser Of Robotics Club</Title2>
       <MainDiv data-aos="fade-left">
         <LeftSide>
           <ImgDiv>
@@ -22,7 +22,7 @@ export const ChairmanMessage = () => {
           <H2>
             Tuton Chandra Mallick <br />
             Associate Professor & Chairman <br />
-            Department of EEE
+            Department of Electrical and Electronic Engineering
           </H2>
         </LeftSide>
         <RightSide>

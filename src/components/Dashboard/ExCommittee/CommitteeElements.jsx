@@ -5,6 +5,7 @@ export const Right = styled.div`
   height: 100%;
   padding: 0px 50px;
   display: flex;
+  flex-wrap: wrap;
 `;
 export const Card = styled.div`
   width: 200px;

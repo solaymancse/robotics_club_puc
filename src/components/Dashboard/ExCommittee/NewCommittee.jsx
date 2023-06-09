@@ -1,30 +1,23 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Form } from "react-bootstrap";
-import { FaTrash } from "react-icons/fa";
-import { Div, AddButton, InputDiv, Button, Icon } from "./CommitteeElements";
+import { Div, Button, Icon,InputDiv } from "./CommitteeElements";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 export const NewCommittee = () => {
   const [getSession, setGetSession] = useState();
   const [storeSession, setStoreSession] = useState();
-  const navigate = useNavigate();
-
+  const [image,setImage] = useState(null);
   const [members, setMembers] = useState([
-    { name: "", designation: "", role: "", image: null, sessionId: "" },
+    { name: "", designation: "", role: "", sessionId: "" },
   ]);
 
+  const navigate = useNavigate();
+
   // onChange Handler
-  const handleChange = (e, index) => {
-    const { name, value, files } = e.target;
-    const newMembers = [...members];
-    if (name === "image") {
-      newMembers[index].image = files[0];
-    } else {
-      newMembers[index][name] = value;
-    }
-    setMembers(newMembers);
+  const handleChange = (e) => {
+   setMembers({...members,[e.target.name]:e.target.value});
   };
 
  ;
@@ -42,13 +35,13 @@ export const NewCommittee = () => {
       formData.append(`designation`, members.designation);
       formData.append(`role`, members.role);
       formData.append(`sessionId`, storeSession);
-      formData.append(`image`, members.image);
+      formData.append(`image`, image);
   
 
     await axios
       .post("/create-committee", formData)
       .then((res) => console.log({ res })).then(()=> {
-        toast.success("Session Created Successfully.", {
+        toast.success("One Committee Member Created..", {
           position: "top-center",
           autoClose: 5000,
           hideProgressBar: false,
@@ -66,7 +59,7 @@ export const NewCommittee = () => {
   useEffect(() => {
     const getAllSession = async () => {
       await axios
-        .get("/all-session")
+        .get("/last-session")
         .then((res) => {
           setGetSession(res.data);
           if (res.data.length > 0) {
@@ -77,7 +70,7 @@ export const NewCommittee = () => {
     };
     getAllSession();
   }, []);
-
+console.log(storeSession)
   return (
     <div className="main-panel">
       <div className="content-wrapper">
@@ -87,12 +80,12 @@ export const NewCommittee = () => {
               <div className="card-body">
                 <Div>
                   <form onSubmit={handleSubmit}>
-                    <Form.Select aria-label="Default select example">
+                    <Form.Select aria-label="Default select example"  >
                       <option>---Select Session</option>
                       {getSession &&
                         getSession.map((item) => (
                           <option
-                            value={item._id}
+                         
                             key={item._id}
                             name="sessionId"
                             onChange={() => setStoreSession(item._id)}
@@ -101,15 +94,15 @@ export const NewCommittee = () => {
                           </option>
                         ))}
                     </Form.Select>
-                    {members.map((member, index) => (
-                      <InputDiv key={index}>
+                  
+                      <InputDiv>
                         <label>
                           Name:
                           <input
                             type="text"
                             name="name"
-                            value={member.name}
-                            onChange={(e) => handleChange(e, index)}
+                            value={members.name}
+                            onChange={(e) => handleChange(e)}
                           />
                         </label>
                         <label>
@@ -117,8 +110,8 @@ export const NewCommittee = () => {
                           <input
                             type="text"
                             name="designation"
-                            value={member.designation}
-                            onChange={(e) => handleChange(e, index)}
+                            value={members.designation}
+                            onChange={(e) => handleChange(e)}
                           />
                         </label>
                         <label>
@@ -126,8 +119,8 @@ export const NewCommittee = () => {
                           <input
                             type="text"
                             name="role"
-                            value={member.role}
-                            onChange={(e) => handleChange(e, index)}
+                            value={members.role}
+                            onChange={(e) => handleChange(e)}
                           />
                         </label>
                         <label>
@@ -135,12 +128,12 @@ export const NewCommittee = () => {
                           <input
                             type="file"
                             name="image"
-                            onChange={(e) => handleChange(e, index)}
+                            onChange={(e) => setImage(e.target.files[0])}
                           />
                         </label>
                      
                       </InputDiv>
-                    ))}
+                  
                 
                     <Button type="submit">Submit</Button>
                   </form>

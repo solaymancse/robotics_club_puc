@@ -14,14 +14,14 @@ export const RegForm = ({ close }) => {
     name: "",
     email: "",
     studentId: "",
-    dept: "",
+    department: "",
     gender: "",
     dob: "",
     bg: "",
     phone: "",
     address: "",
   });
-  const { name, email, studentId, dept, gender, dob, bg, phone, address } =
+  const { name, email, studentId, department, gender, dob, bg, phone, address } =
     newMember;
   const [file, setFile] = useState(null);
 
@@ -34,14 +34,14 @@ export const RegForm = ({ close }) => {
     formData.append("name", name);
     formData.append("email", email);
     formData.append("studentId", studentId);
-    formData.append("department", dept);
+    formData.append("department", department);
     formData.append("gender", gender);
     formData.append("dob", dob);
     formData.append("bloodGrp", bg);
     formData.append("phone", phone);
     formData.append("address", address);
     formData.append("image", file);
-
+    console.log(formData);
     await axios
       .post("/member", formData)
       .then(() => {
@@ -59,6 +59,7 @@ export const RegForm = ({ close }) => {
 
     sendRegisterReq();
   };
+  
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -112,11 +113,11 @@ export const RegForm = ({ close }) => {
             <Select
               labelId="demo-select-small"
               id="demo-select-small"
-              value={dept}
-              label="Age"
+              value={department}
+              label="Department"
               fullWidth
               onChange={handleChange}
-              name="dept"
+              name="department"
             >
               <MenuItem value=""></MenuItem>
               <MenuItem value="EEE">EEE</MenuItem>

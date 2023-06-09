@@ -9,7 +9,7 @@ export const TopBar = () => {
       <Container>
         <Div>
           {topBar.map((data, index) => (
-            <Link to={data.link} key={index}>{data.title}</Link>
+            <Link to={data.link} key={index}>{data.icon} &nbsp; {data.title}</Link>
           ))}
         </Div>
       </Container>

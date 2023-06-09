@@ -31,6 +31,7 @@ export const EventContent = styled.div`
   flex-direction: column;
   gap: 20px;
   text-align: justify;
+  margin-top: 150px;
   img{
     width: 100%;
     height: 500px;
