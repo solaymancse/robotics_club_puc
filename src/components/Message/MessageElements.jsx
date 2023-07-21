@@ -88,7 +88,7 @@ export const Left = styled.div`
 export const Middle = styled.div`
 display: flex;
 margin: 50px 0 80px 0;
-gap: 80px;
+gap: 20px;
 
 
 @media (min-width: 320px) and (max-width: 991px) {
@@ -184,12 +184,13 @@ export const Foot = styled.div`
 export const ImgDiv = styled.div`
   width: 200px;
   height: 200px;
-  border: 1px solid gray;
+  
 
 img{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: bottom;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {

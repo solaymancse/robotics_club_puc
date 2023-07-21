@@ -19,13 +19,17 @@ import {
   Dropdown,
   ToggleDiv,
 } from "./NavbarElements";
+
 import { Registration } from "../Registration/Registration";
 import { Link } from "react-router-dom";
 import { Togglebar } from "../Togglebar/Togglebar";
 
 export const Navbar = () => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [modalShow, setModalShow] = useState(false);
+  const [optSmModal, setOptSmModal] = useState(false);
+
+
+  const toggleShow = () => setOptSmModal(!optSmModal);
+
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -48,13 +52,13 @@ export const Navbar = () => {
             Premier University <br /> <SPAN>Robotics Club</SPAN>
           </H1>
         </Div>
-        <ToggleDiv>
+        {/* <ToggleDiv>
           <Bars onClick={() => setIsDrawerOpen(true)} />
           <Togglebar
             open={isDrawerOpen}
             onClose={() => setIsDrawerOpen(false)}
           />
-        </ToggleDiv>
+        </ToggleDiv> */}
         <NavMenu>
           <Item>
             <NavLink to="/">Home</NavLink>
@@ -81,16 +85,14 @@ export const Navbar = () => {
             <NavLink to="/contact">Contact</NavLink>
           </Item>
         </NavMenu>
-        <NavBtn>
-          <NavBtnLink to="#" onClick={setModalShow}>
+        <NavBtn onClick={toggleShow}>
+          <NavBtnLink to="#" >
             Registration
           </NavBtnLink>
-          <BsFillArrowRightCircleFill size="30px" onClick={setModalShow} />
+          <BsFillArrowRightCircleFill size="30px"/>
         </NavBtn>
         <Registration
-          show={modalShow}
-          close={setModalShow}
-          onHide={() => setModalShow(false)}
+          show={optSmModal}  setShow={setOptSmModal} toggleShow={toggleShow}
         />
       </Nav>
     </Wrapper>

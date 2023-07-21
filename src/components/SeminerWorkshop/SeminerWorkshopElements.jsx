@@ -63,6 +63,9 @@ export const H3 = styled.h3`
   font-size: 16px;
   color: grey;
   margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
   @media (max-width: 575px) {
     font-size: 14px;

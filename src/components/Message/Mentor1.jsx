@@ -30,7 +30,7 @@ export const Mentor1 = () => {
           <H2>
            Sumen Dutta <br />
            Lecturer <br />
-            Department of Electrical and Electronic Engineering
+            Department of EEE
           </H2>
         </LeftSide>
         <RightSide>

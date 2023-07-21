@@ -59,7 +59,7 @@ export const NewCommittee = () => {
   useEffect(() => {
     const getAllSession = async () => {
       await axios
-        .get("/last-session")
+        .get("/all-session")
         .then((res) => {
           setGetSession(res.data);
           if (res.data.length > 0) {
@@ -70,7 +70,7 @@ export const NewCommittee = () => {
     };
     getAllSession();
   }, []);
-console.log(storeSession)
+
   return (
     <div className="main-panel">
       <div className="content-wrapper">
@@ -85,7 +85,6 @@ console.log(storeSession)
                       {getSession &&
                         getSession.map((item) => (
                           <option
-                         
                             key={item._id}
                             name="sessionId"
                             onChange={() => setStoreSession(item._id)}

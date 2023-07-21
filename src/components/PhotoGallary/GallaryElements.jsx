@@ -14,35 +14,7 @@ margin-top: 60px;
     padding: 10px;
   }
 `
-export const Portfolio = styled.div`
-  width: 100%;
-  background: #ffffff;
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(250px, 1fr));
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 2px;
 
-  @media (min-width: 1024px) and (max-width: 1200px){
-    margin-top: 20px;
-    grid-gap: 20px;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
-    grid-template-rows: repeat(4, minmax(270px, 1fr));
-    height: 200px;
-  }
-  @media (min-width: 576px) and (max-width: 1023px){
-    margin-top: 20px;
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
-    grid-template-rows: repeat(8, minmax(200px, 1fr));
-    height: 200px;
-  }
-  @media (max-width: 575px){
-    margin-top: 20px;
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
-    grid-template-rows: repeat(8, minmax(200px, 1fr));
-    height: 200px;
-  }
-`
 export const Button = styled.button`
  background: none;
   outline: none;
@@ -134,19 +106,5 @@ img{
   width: 100%;
   height: 100%;
 }
-
-`
-export const Div = styled.div`
-  position: relative;
-  background: #f2dad7;
-  overflow: hidden;
-  height: 300px;
-  img{
-    position: absolute;
-width: 100%;
-height: 100%;
-object-fit: cover;
-  }
-
 
 `

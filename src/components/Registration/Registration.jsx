@@ -1,23 +1,26 @@
-import { Modal } from 'react-bootstrap';
-import { RegForm } from '../RegForm/RegForm';
+import {
+  MDBBtn,
+  MDBModal,
+  MDBModalDialog,
+  MDBModalContent,
+  MDBModalHeader,
+  MDBModalTitle,
+  MDBModalBody
+} from 'mdb-react-ui-kit';
 
-export const Registration = (props) => {
+export const Registration = ({show,setShow,toggleShow}) => {
   return <>
-    <Modal
-      {...props}
-      
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-         Registration
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <RegForm close={props.close}/>
-      </Modal.Body>   
-    </Modal>
+    <MDBModal show={show} setShow={setShow}>
+        <MDBModalDialog size='sm'>
+          <MDBModalContent>
+            <MDBModalHeader>
+              <MDBModalTitle>Small modal</MDBModalTitle>
+              <MDBBtn className='btn-close' color='none' onClick={toggleShow}></MDBBtn>
+            </MDBModalHeader>
+            <MDBModalBody>...</MDBModalBody>
+          </MDBModalContent>
+        </MDBModalDialog>
+      </MDBModal>
   
   </>
   

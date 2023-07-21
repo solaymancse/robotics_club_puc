@@ -1,15 +1,23 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { PreLoader } from "./components/PreLoader/PreLoader";
-import { Route, Routes } from "react-router-dom";
-import { PrivateRoute } from "./components/PrivateRoute/PrivateRoute";
-import { Dashboard } from "./components/Dashboard/Dashboard";
-import { MainPanel } from "./components/Dashboard/MainPanel";
+import { useState } from "react";
+import { GridLoader } from "react-spinners";
+import { HomePage } from "./pages/HomePage";
+import { useEffect } from "react";
 
 function App() {
+  const [done, setDone] = useState(undefined);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setDone(true);
+    }, 3000);
+  }, []);
   return (
     <div className="App">
-      <PreLoader />
+      {!done ? <div style={{textAlign:'center',display:'flex',marginTop:'25%',marginLeft:'50%'}}>
+        <GridLoader color="#36d7b7" />
+      </div> : <HomePage />}
       
     </div>
   );
